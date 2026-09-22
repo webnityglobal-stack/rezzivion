@@ -102,8 +102,8 @@ export default function Home() {
     <div className="overflow-hidden bg-white text-[#172033]">
 
       {/* =====================================================
-          HERO
-      ===================================================== */}
+    HERO
+===================================================== */}
       <section className="relative min-h-[650px] overflow-hidden bg-[#0D2342] lg:min-h-[720px]">
 
         {/* Background Image */}
@@ -113,19 +113,20 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
-        {/* Dark professional overlay */}
-        <div className="absolute inset-0 bg-[#07182F]/45" />
+        {/* Image Overlay */}
+        <div className="absolute inset-0 bg-[#07182F]/35" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/75 via-[#0D2342]/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/65 via-[#0D2342]/25 to-transparent" />
 
         {/* Hero Content */}
-        <div className="relative z-10 flex min-h-[650px] items-center px-5 py-16 sm:px-8 lg:min-h-[720px] lg:px-12">
+        <div className="relative z-10 flex min-h-[650px] items-center px-5 py-12 sm:px-8 lg:min-h-[720px] lg:px-12">
 
           <div className="mx-auto w-full max-w-[1440px]">
 
-            <div className="max-w-4xl rounded-[30px] border border-white/20 bg-[#0D2342]/65 px-7 py-10 shadow-[0_25px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:px-12 sm:py-12 lg:px-16 lg:py-14">
+            {/* Wide Transparent Glass Box */}
+            <div className="w-full max-w-5xl rounded-[26px] border border-white/20 bg-white/[0.08] px-7 py-8 shadow-[0_20px_70px_rgba(0,0,0,0.18)] backdrop-blur-md sm:px-10 sm:py-9 lg:px-14 lg:py-10">
 
-              <div className="mb-5 flex items-center gap-3">
+              <div className="flex items-center gap-3">
 
                 <span className="h-px w-10 bg-[#D8B36A]" />
 
@@ -135,19 +136,19 @@ export default function Home() {
 
               </div>
 
-              <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+              <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Smarter operations
                 <span className="block text-[#D8B36A]">
                   Stronger outcomes
                 </span>
               </h1>
 
-              <p className="mt-7 max-w-2xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
                 AI-enabled support and human-led quality built to improve
                 efficiency and optimize cost
               </p>
 
-              <div className="mt-9 flex flex-wrap gap-4">
+              <div className="mt-7 flex flex-wrap gap-4">
 
                 <Link
                   to="/services"
@@ -169,7 +170,7 @@ export default function Home() {
 
                 <Link
                   to="/contact"
-                  className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+                  className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/20"
                 >
                   Let's Talk
                 </Link>
@@ -181,6 +182,7 @@ export default function Home() {
           </div>
 
         </div>
+
       </section>
 
 
@@ -327,21 +329,24 @@ export default function Home() {
                 className="group block"
               >
 
-                <div className="grid overflow-hidden border border-[#E1E5EB] bg-white transition duration-500 hover:-translate-y-1 hover:border-[#B8924A]/50 hover:shadow-[0_18px_45px_rgba(13,35,66,0.09)] lg:grid-cols-[300px_1fr]">
+                <div className="grid overflow-hidden border border-[#E1E5EB] bg-white transition duration-500 hover:-translate-y-1 hover:border-[#B8924A]/50 hover:shadow-[0_18px_45px_rgba(13,35,66,0.09)] lg:grid-cols-[380px_1fr]">
 
                   {/* Image */}
 
-                  <div className="relative min-h-[210px] overflow-hidden bg-[#0D2342]">
+                  <div className="relative flex min-h-[230px] items-center justify-center overflow-hidden bg-[#EEF1F5] p-5 sm:min-h-[250px] lg:min-h-[260px] lg:p-7">
 
+                    {/* Service Image */}
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      className="h-full w-full object-contain transition duration-700 group-hover:scale-[1.03]"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/55 via-transparent to-transparent" />
+                    {/* Soft image overlay */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-[#0D2342]/10" />
 
-                    <div className="absolute bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-[#0D2342]/80 text-[#D8B36A] backdrop-blur-md">
+                    {/* Icon */}
+                    <div className="absolute bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-xl border border-white/30 bg-[#0D2342]/90 text-[#D8B36A] shadow-lg backdrop-blur-md">
 
                       <div className="h-5 w-5">
                         {service.icon}

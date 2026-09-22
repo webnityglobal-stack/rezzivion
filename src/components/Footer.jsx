@@ -22,7 +22,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#494e55] text-white">
+    <footer className="bg-[#0D2342] text-white">
 
       {/* Main Footer */}
       <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12 lg:py-20">
@@ -32,11 +32,15 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-sm">
 
-            <Link to="/" className="inline-block">
+            {/* Logo with white background */}
+            <Link
+              to="/"
+              className="inline-flex rounded-xl bg-white px-4 py-3 shadow-sm transition duration-300 hover:shadow-md"
+            >
               <img
                 src="/Rezzivion-logo.png"
                 alt="Rezzivion"
-                className="h-16 w-auto object-contain"
+                className="h-14 w-auto object-contain"
               />
             </Link>
 
@@ -51,6 +55,7 @@ export default function Footer() {
             </p>
 
           </div>
+
 
           {/* Company */}
           <div>
@@ -110,6 +115,7 @@ export default function Footer() {
 
           </div>
 
+
           {/* Services */}
           <div>
 
@@ -121,18 +127,21 @@ export default function Footer() {
 
               {serviceLinks.map((service) => (
                 <li key={service.path}>
+
                   <Link
                     to={service.path}
                     className="text-sm leading-6 text-white/70 transition hover:text-white"
                   >
                     {service.name}
                   </Link>
+
                 </li>
               ))}
 
             </ul>
 
           </div>
+
 
           {/* Contact */}
           <div>
@@ -148,8 +157,8 @@ export default function Footer() {
                 href="mailto:info@rezzivion.com"
                 className="group flex items-start gap-4"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] text-[#B8924A] transition group-hover:border-[#B8924A]/40">
 
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] text-[#B8924A] transition group-hover:border-[#B8924A]/40">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -167,10 +176,10 @@ export default function Footer() {
 
                     <path d="m3 7 9 6 9-6" />
                   </svg>
-
                 </span>
 
                 <div>
+
                   <p className="text-xs uppercase tracking-wider text-white/40">
                     Email
                   </p>
@@ -178,16 +187,18 @@ export default function Footer() {
                   <p className="mt-1 text-sm text-white/75 transition group-hover:text-white">
                     info@rezzivion.com
                   </p>
+
                 </div>
 
               </a>
+
 
               {/* Contact CTA */}
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-[#B8924A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9a663]"
               >
-                Let’s Talk
+                Let's Talk
 
                 <svg
                   viewBox="0 0 24 24"
@@ -209,6 +220,7 @@ export default function Footer() {
         </div>
 
       </div>
+
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
