@@ -54,23 +54,23 @@ function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md">
-            <div className="mx-auto max-w-[1440px] px-6 lg:px-10 xl:px-12">
+            <div className="mx-auto max-w-[1440px] px-5  sm:px-6 lg:px-10 xl:px-12">
 
                 {/* ================= NAVBAR ================= */}
 
-                <nav className="flex h-[82px] items-center justify-between">
+                <nav className="flex min-h-[92px] items-center justify-between">
 
                     {/* ================= LOGO ================= */}
 
                     <Link
                         to="/"
                         onClick={closeMenu}
-                        className="flex shrink-0 items-center"
+                        className="flex shrink-0 items-center overflow-visible py-1"
                     >
                         <img
                             src="/Rezzivion-logo.png"
                             alt="Rezzivion"
-                            className="h-20 w-auto object-contain"
+                            className="h-[86px] w-auto max-w-[250px] object-contain object-left overflow-visible"
                         />
                     </Link>
 
@@ -78,7 +78,7 @@ function Navbar() {
 
                     <div className="ml-auto hidden items-center lg:flex">
 
-                        <div className="flex items-center gap-8 xl:gap-10">
+                        <div className="flex items-center gap-7 xl:gap-9">
 
                             {navLinks.map((link) => {
 
@@ -93,7 +93,7 @@ function Navbar() {
                                             {/* Services Button */}
                                             <Link
                                                 to="/services"
-                                                className={`group/services flex h-[82px] items-center gap-1.5 text-[14px] font-medium transition-colors duration-300 ${isServicesActive
+                                                className={`group/services flex h-[104px] items-center gap-1.5 text-[14px] font-medium transition-colors duration-300 ${isServicesActive
                                                         ? "text-[#B8924A]"
                                                         : "text-[#172033] hover:text-[#B8924A]"
                                                     }`}
@@ -161,7 +161,7 @@ function Navbar() {
                                     <Link
                                         key={link.href}
                                         to={link.href}
-                                        className={`group relative flex h-[82px] items-center text-[14px] font-medium transition-colors duration-300 ${isActive(link.href)
+                                        className={`group relative flex h-[104px] items-center text-[14px] font-medium transition-colors duration-300 ${isActive(link.href)
                                             ? "text-[#B8924A]"
                                             : "text-[#172033] hover:text-[#B8924A]"
                                             }`}

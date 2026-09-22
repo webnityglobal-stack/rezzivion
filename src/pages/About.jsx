@@ -161,7 +161,7 @@ export default function About() {
           <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
             A dependable extension
             <span className="block text-[#DCC28B]">
-              of your business.
+              of your business
             </span>
           </h1>
 
@@ -188,7 +188,7 @@ export default function About() {
             </p>
 
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.03em] text-[#0D2342] sm:text-5xl">
-              Built around essential operations.
+              Built around essential operations
             </h2>
           </div>
 
@@ -276,7 +276,8 @@ export default function About() {
             </p>
 
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-[#0D2342] sm:text-5xl">
-              Lean delivery. Clear ownership. Consistent quality.
+              Lean delivery
+              ,Clear ownership  Consistent quality
             </h2>
 
           </div>
@@ -374,9 +375,9 @@ export default function About() {
               </p>
 
               <h2 className="relative mt-5 text-3xl font-semibold leading-tight sm:text-4xl">
-                Intelligent automation.
+                Intelligent automation
                 <span className="block text-[#DCC28B]">
-                  Human quality control.
+                  Human quality control
                 </span>
               </h2>
 
@@ -405,9 +406,9 @@ export default function About() {
               </p>
 
               <h2 className="relative mt-5 text-3xl font-semibold leading-tight sm:text-4xl">
-                Real-time controls.
+                Real-time controls
                 <span className="block">
-                  Audit-ready tracking.
+                  Audit-ready tracking
                 </span>
               </h2>
 
@@ -438,7 +439,7 @@ export default function About() {
             </p>
 
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-[#0D2342] sm:text-5xl">
-              Principles behind the way we operate.
+              Principles behind the way we operate
             </h2>
 
           </div>
@@ -516,7 +517,7 @@ export default function About() {
           </p>
 
           <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">
-            Let's build better operations together.
+            Let's build better operations together
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl leading-8 text-white/60">
