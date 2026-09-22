@@ -34,7 +34,7 @@ function BenefitIcon({ type }) {
       <svg
         viewBox="0 0 24 24"
         fill="none"
-        className="h-7 w-7"
+        className="h-8 w-8"
         aria-hidden="true"
       >
         <circle
@@ -72,7 +72,7 @@ function BenefitIcon({ type }) {
       <svg
         viewBox="0 0 24 24"
         fill="none"
-        className="h-7 w-7"
+        className="h-8 w-8"
         aria-hidden="true"
       >
         <path
@@ -102,7 +102,7 @@ function BenefitIcon({ type }) {
       <svg
         viewBox="0 0 24 24"
         fill="none"
-        className="h-7 w-7"
+        className="h-8 w-8"
         aria-hidden="true"
       >
         <path
@@ -146,7 +146,7 @@ function BenefitIcon({ type }) {
       <svg
         viewBox="0 0 24 24"
         fill="none"
-        className="h-7 w-7"
+        className="h-8 w-8"
         aria-hidden="true"
       >
         <path
@@ -183,7 +183,7 @@ function BenefitIcon({ type }) {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      className="h-7 w-7"
+      className="h-8 w-8"
       aria-hidden="true"
     >
       <path
@@ -203,6 +203,131 @@ function BenefitIcon({ type }) {
   );
 }
 
+
+function StepIcon({ number }) {
+  const common = {
+    viewBox: "0 0 24 24",
+    fill: "none",
+    className: "h-7 w-7",
+    "aria-hidden": true,
+  };
+
+  if (number === "01") {
+    return (
+      <svg {...common}>
+        <circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="1.7" />
+        <path
+          d="M16 16L21 21"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+        <path
+          d="M8.5 11H13.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (number === "02") {
+    return (
+      <svg {...common}>
+        <path
+          d="M4 6H20M4 12H20M4 18H20"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+        <circle cx="8" cy="6" r="2" fill="white" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="15" cy="12" r="2" fill="white" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="11" cy="18" r="2" fill="white" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+    );
+  }
+
+  if (number === "03") {
+    return (
+      <svg {...common}>
+        <path
+          d="M12 3L19 6V11.5C19 16.2 16.1 19.4 12 21C7.9 19.4 5 16.2 5 11.5V6L12 3Z"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M8.5 12L11 14.5L15.5 9.5"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  if (number === "04") {
+    return (
+      <svg {...common}>
+        <path
+          d="M4 12H18"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+        <path
+          d="M14 8L18 12L14 16"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M4 5V19"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg {...common}>
+      <path
+        d="M20 11A8 8 0 0 0 6.3 5.3L4 8"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4 4V8H8"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4 13A8 8 0 0 0 17.7 18.7L20 16"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20 20V16H16"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 const WhyRezzivion = () => {
   return (
     <main className="w-full bg-white">
@@ -210,19 +335,21 @@ const WhyRezzivion = () => {
       {/* =====================================================
           HERO SECTION
       ===================================================== */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative w-full min-h-[1040px] overflow-hidden sm:min-h-[900px] lg:min-h-0">
 
         {/* Hero Image */}
         <img
           src="/images/why-rezzivion-hero.png"
           alt="Why Rezzivion"
           className="
-            h-[620px]
+            absolute
+            inset-0
+            h-full
             w-full
             object-cover
             object-[68%_top]
-            sm:h-[600px]
             sm:object-[62%_top]
+            lg:static
             lg:h-[650px]
             lg:object-[58%_top]
           "
@@ -235,8 +362,8 @@ const WhyRezzivion = () => {
         <div className="absolute left-0 top-0 z-20 h-1 w-full bg-[#C99B43]" />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 z-10 flex items-center">
-          <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 xl:px-24">
+        <div className="relative z-10 flex min-h-[1040px] items-start sm:min-h-[900px] lg:absolute lg:inset-0 lg:min-h-0 lg:items-center">
+          <div className="mx-auto w-full max-w-[1440px] px-6 pb-24 pt-24 sm:px-10 sm:pb-20 sm:pt-24 lg:px-16 lg:pb-0 lg:pt-0 xl:px-24">
 
             <div className="max-w-3xl">
 
@@ -309,78 +436,27 @@ const WhyRezzivion = () => {
                 operational outcomes.
               </p>
 
-              {/* =================================================
-                  RESTORED FIVE HERO BENEFITS
-              ================================================= */}
-              <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
 
+              {/* Restored benefit highlights */}
+              <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
                 {benefits.map((benefit) => (
                   <div
                     key={benefit.icon}
-                    className="
-                      flex
-                      min-h-[92px]
-                      flex-col
-                      items-center
-                      justify-center
-                      rounded-xl
-                      border
-                      border-white/20
-                      bg-[#0D2342]/45
-                      px-3
-                      py-3
-                      text-center
-                      backdrop-blur-sm
-                      sm:min-h-[100px]
-                    "
+                    className="flex min-h-[92px] flex-col items-center justify-center rounded-xl border border-white/20 bg-[#0D2342]/45 px-3 py-3 text-center backdrop-blur-sm sm:min-h-[100px]"
                   >
-                    <div
-                      className="
-                        flex
-                        h-9
-                        w-9
-                        items-center
-                        justify-center
-                        rounded-full
-                        bg-[#F8F1E3]
-                        text-[#B8924A]
-                      "
-                    >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#F8F1E3] text-[#B8924A]">
                       <BenefitIcon type={benefit.icon} />
                     </div>
-
-                    <p
-                      className="
-                        mt-2
-                        text-[10px]
-                        font-bold
-                        leading-4
-                        tracking-[0.8px]
-                        text-white
-                        sm:text-[11px]
-                      "
-                    >
+                    <p className="mt-2 text-[10px] font-bold leading-4 tracking-[0.8px] text-white sm:text-[11px]">
                       {benefit.title}
                     </p>
-
-                    <p
-                      className="
-                        text-[10px]
-                        font-bold
-                        leading-4
-                        tracking-[0.8px]
-                        text-[#E3B95E]
-                        sm:text-[11px]
-                      "
-                    >
+                    <p className="text-[10px] font-bold leading-4 tracking-[0.8px] text-[#E3B95E] sm:text-[11px]">
                       {benefit.subtitle}
                     </p>
                   </div>
                 ))}
-
               </div>
 
-              {/* CTA */}
               <a
                 href="/contact"
                 className="
@@ -422,7 +498,6 @@ const WhyRezzivion = () => {
             sm:h-9
           "
         />
-
       </section>
 
 
@@ -430,11 +505,9 @@ const WhyRezzivion = () => {
           WHY BUSINESSES CHOOSE REZZIVION
       ===================================================== */}
       <section className="w-full bg-[#F7F8FA] py-20 sm:py-24">
-
         <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16 xl:px-24">
 
           <div className="mx-auto max-w-3xl text-center">
-
             <span className="text-xs font-bold tracking-[4px] text-[#C99B43]">
               THE REZZIVION DIFFERENCE
             </span>
@@ -465,40 +538,13 @@ const WhyRezzivion = () => {
               Practical operations, intelligent execution and measurable
               outcomes designed around the way your business works.
             </p>
-
           </div>
-
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
             {/* Accuracy */}
-            <div
-              className="
-                group
-                rounded-2xl
-                border
-                border-[#E1E5EB]
-                bg-white
-                p-7
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#D8B66A]
-                hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]
-              "
-            >
-              <div
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-[#F8F1E3]
-                  text-[#B8924A]
-                "
-              >
+            <div className="group rounded-2xl border border-[#E1E5EB] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D8B66A] hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
                 <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
                   <path
                     d="M5 12.5L9.5 17L19 7"
@@ -520,35 +566,9 @@ const WhyRezzivion = () => {
               </p>
             </div>
 
-
             {/* Efficiency */}
-            <div
-              className="
-                group
-                rounded-2xl
-                border
-                border-[#E1E5EB]
-                bg-white
-                p-7
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#D8B66A]
-                hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]
-              "
-            >
-              <div
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-[#F8F1E3]
-                  text-[#B8924A]
-                "
-              >
+            <div className="group rounded-2xl border border-[#E1E5EB] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D8B66A] hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
                 <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
                   <path
                     d="M13 2L4 14H11L10 22L20 9H13L13 2Z"
@@ -570,35 +590,9 @@ const WhyRezzivion = () => {
               </p>
             </div>
 
-
             {/* Scalability */}
-            <div
-              className="
-                group
-                rounded-2xl
-                border
-                border-[#E1E5EB]
-                bg-white
-                p-7
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#D8B66A]
-                hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]
-              "
-            >
-              <div
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-[#F8F1E3]
-                  text-[#B8924A]
-                "
-              >
+            <div className="group rounded-2xl border border-[#E1E5EB] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D8B66A] hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
                 <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
                   <path
                     d="M4 19L10 13L14 17L21 10"
@@ -627,35 +621,9 @@ const WhyRezzivion = () => {
               </p>
             </div>
 
-
             {/* Confidentiality */}
-            <div
-              className="
-                group
-                rounded-2xl
-                border
-                border-[#E1E5EB]
-                bg-white
-                p-7
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#D8B66A]
-                hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]
-              "
-            >
-              <div
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-[#F8F1E3]
-                  text-[#B8924A]
-                "
-              >
+            <div className="group rounded-2xl border border-[#E1E5EB] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D8B66A] hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
                 <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
                   <rect
                     x="5"
@@ -666,14 +634,12 @@ const WhyRezzivion = () => {
                     stroke="currentColor"
                     strokeWidth="1.7"
                   />
-
                   <path
                     d="M8 10V7.5C8 5.01 9.79 3 12 3C14.21 3 16 5.01 16 7.5V10"
                     stroke="currentColor"
                     strokeWidth="1.7"
                     strokeLinecap="round"
                   />
-
                   <circle
                     cx="12"
                     cy="15.5"
@@ -693,35 +659,9 @@ const WhyRezzivion = () => {
               </p>
             </div>
 
-
             {/* Cost Optimization */}
-            <div
-              className="
-                group
-                rounded-2xl
-                border
-                border-[#E1E5EB]
-                bg-white
-                p-7
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#D8B66A]
-                hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]
-              "
-            >
-              <div
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-[#F8F1E3]
-                  text-[#B8924A]
-                "
-              >
+            <div className="group rounded-2xl border border-[#E1E5EB] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D8B66A] hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
                 <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
                   <path
                     d="M12 3V21"
@@ -729,7 +669,6 @@ const WhyRezzivion = () => {
                     strokeWidth="1.7"
                     strokeLinecap="round"
                   />
-
                   <path
                     d="M16 7.5C15.2 6.5 13.8 6 12 6C9.8 6 8 7.2 8 9C8 12 11 12.5 12.5 13C14 13.5 16 14 16 16C16 18 14.2 19 12 19C10.2 19 8.7 18.4 8 17.2"
                     stroke="currentColor"
@@ -749,35 +688,9 @@ const WhyRezzivion = () => {
               </p>
             </div>
 
-
             {/* AI Enabled Operations */}
-            <div
-              className="
-                group
-                rounded-2xl
-                border
-                border-[#E1E5EB]
-                bg-white
-                p-7
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#D8B66A]
-                hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]
-              "
-            >
-              <div
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-[#F8F1E3]
-                  text-[#B8924A]
-                "
-              >
+            <div className="group rounded-2xl border border-[#E1E5EB] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D8B66A] hover:shadow-[0_18px_45px_rgba(13,35,66,0.08)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
                 <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
                   <rect
                     x="5"
@@ -788,13 +701,11 @@ const WhyRezzivion = () => {
                     stroke="currentColor"
                     strokeWidth="1.7"
                   />
-
                   <path
                     d="M9 9H15V15H9V9Z"
                     stroke="currentColor"
                     strokeWidth="1.5"
                   />
-
                   <path
                     d="M9 2V5M15 2V5M9 19V22M15 19V22M2 9H5M2 15H5M19 9H22M19 15H22"
                     stroke="currentColor"
@@ -823,50 +734,17 @@ const WhyRezzivion = () => {
           OPERATIONAL PARTNER SECTION
       ===================================================== */}
       <section className="w-full bg-white py-20 sm:py-24">
-
-        <div
-          className="
-            mx-auto
-            grid
-            max-w-[1440px]
-            items-center
-            gap-12
-            px-6
-            sm:px-10
-            lg:grid-cols-2
-            lg:px-16
-            xl:px-24
-          "
-        >
+        <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-6 sm:px-10 lg:grid-cols-2 lg:px-16 xl:px-24">
 
           {/* Image */}
           <div className="relative overflow-hidden rounded-[28px] bg-[#F7F8FA]">
-
             <img
               src="/images/why-operational-partner.png"
               alt="Rezzivion operational partnership"
-              className="
-                h-[420px]
-                w-full
-                object-cover
-                object-center
-                sm:h-[500px]
-              "
+              className="h-[420px] w-full object-cover sm:h-[500px]"
             />
 
-            <div
-              className="
-                absolute
-                bottom-5
-                left-5
-                rounded-xl
-                bg-[#10294B]
-                px-5
-                py-4
-                text-white
-                shadow-lg
-              "
-            >
+            <div className="absolute bottom-5 left-5 rounded-xl bg-[#10294B] px-5 py-4 text-white shadow-lg">
               <p className="text-xs font-semibold tracking-[2px] text-[#E3B95E]">
                 OPERATIONAL PARTNERSHIP
               </p>
@@ -875,74 +753,51 @@ const WhyRezzivion = () => {
                 Structure. Ownership. Execution.
               </p>
             </div>
-
           </div>
-
 
           {/* Content */}
           <div>
-
             <span className="text-xs font-bold tracking-[4px] text-[#C99B43]">
               BEYOND SERVICE DELIVERY
             </span>
 
-            <h2
-              className="
-                mt-4
-                max-w-xl
-                text-3xl
-                font-semibold
-                tracking-[-1px]
-                text-[#10294B]
-                sm:text-4xl
-                lg:text-5xl
-              "
-            >
+            <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-[-1px] text-[#10294B] sm:text-4xl lg:text-5xl">
               An Extension of Your Operations
             </h2>
 
-            <p
-              className="
-                mt-6
-                max-w-xl
-                text-sm
-                leading-7
-                text-[#667085]
-                sm:text-base
-              "
-            >
+            <p className="mt-6 max-w-xl text-sm leading-7 text-[#667085] sm:text-base">
               We don't simply execute tasks. We understand the process,
               take ownership and work alongside your teams to create
               reliable operational outcomes.
             </p>
 
-
             <div className="mt-8 space-y-5">
 
-              {/* 01 */}
               <div className="flex gap-4">
-
-                <div
-                  className="
-                    mt-1
-                    flex
-                    h-9
-                    w-9
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#F8F1E3]
-                    text-sm
-                    font-semibold
-                    text-[#B8924A]
-                  "
-                >
-                  01
+                <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
+                  <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
+                    <path
+                      d="M6 4H18C19.1 4 20 4.9 20 6V18C20 19.1 19.1 20 18 20H6C4.9 20 4 19.1 4 18V6C4 4.9 4.9 4 6 4Z"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                    />
+                    <path
+                      d="M8 8H16M8 12H16M8 16H13"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M15.5 16L17 17.5L20 14.5"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
 
                 <div>
-
                   <h3 className="font-semibold text-[#10294B]">
                     Process Ownership
                   </h3>
@@ -951,35 +806,29 @@ const WhyRezzivion = () => {
                     Clear ownership, documented workflows and defined
                     responsibilities.
                   </p>
-
                 </div>
               </div>
 
-
-              {/* 02 */}
               <div className="flex gap-4">
-
-                <div
-                  className="
-                    mt-1
-                    flex
-                    h-9
-                    w-9
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#F8F1E3]
-                    text-sm
-                    font-semibold
-                    text-[#B8924A]
-                  "
-                >
-                  02
+                <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
+                  <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
+                    <circle
+                      cx="12"
+                      cy="8"
+                      r="3"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                    />
+                    <path
+                      d="M5 20C5.4 15.8 7.6 13.5 12 13.5C16.4 13.5 18.6 15.8 19 20"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                 </div>
 
                 <div>
-
                   <h3 className="font-semibold text-[#10294B]">
                     Human Expertise
                   </h3>
@@ -988,35 +837,36 @@ const WhyRezzivion = () => {
                     Skilled teams working with structure, accountability
                     and attention to detail.
                   </p>
-
                 </div>
               </div>
 
-
-              {/* 03 */}
               <div className="flex gap-4">
-
-                <div
-                  className="
-                    mt-1
-                    flex
-                    h-9
-                    w-9
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#F8F1E3]
-                    text-sm
-                    font-semibold
-                    text-[#B8924A]
-                  "
-                >
-                  03
+                <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F8F1E3] text-[#B8924A]">
+                  <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
+                    <rect
+                      x="5"
+                      y="5"
+                      width="14"
+                      height="14"
+                      rx="3"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                    />
+                    <path
+                      d="M9 9H15V15H9V9Z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    />
+                    <path
+                      d="M9 2V5M15 2V5M9 19V22M15 19V22M2 9H5M2 15H5M19 9H22M19 15H22"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                 </div>
 
                 <div>
-
                   <h3 className="font-semibold text-[#10294B]">
                     Intelligent Execution
                   </h3>
@@ -1025,13 +875,11 @@ const WhyRezzivion = () => {
                     Technology and AI-assisted workflows applied where they
                     can improve operational performance.
                   </p>
-
                 </div>
               </div>
 
             </div>
           </div>
-
         </div>
       </section>
 
@@ -1040,26 +888,14 @@ const WhyRezzivion = () => {
           OPERATING APPROACH
       ===================================================== */}
       <section className="w-full bg-[#F7F8FA] py-20 sm:py-24">
-
         <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16 xl:px-24">
 
           <div className="mx-auto max-w-3xl text-center">
-
             <span className="text-xs font-bold tracking-[4px] text-[#C99B43]">
               OUR OPERATING APPROACH
             </span>
 
-            <h2
-              className="
-                mt-4
-                text-3xl
-                font-semibold
-                tracking-[-1px]
-                text-[#10294B]
-                sm:text-4xl
-                lg:text-5xl
-              "
-            >
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-1px] text-[#10294B] sm:text-4xl lg:text-5xl">
               How We Turn Processes Into Performance
             </h2>
 
@@ -1067,24 +903,11 @@ const WhyRezzivion = () => {
               A structured approach built around ownership, quality and
               continuous improvement.
             </p>
-
           </div>
-
 
           <div className="relative mt-14 grid gap-6 md:grid-cols-5">
 
-            <div
-              className="
-                absolute
-                left-[10%]
-                right-[10%]
-                top-8
-                hidden
-                h-px
-                bg-[#DDB04F]
-                md:block
-              "
-            />
+            <div className="absolute left-[10%] right-[10%] top-8 hidden h-px bg-[#DDB04F] md:block" />
 
             {[
               {
@@ -1117,45 +940,17 @@ const WhyRezzivion = () => {
                 key={step.number}
                 className="relative z-10 text-center"
               >
-
-                <div
-                  className="
-                    mx-auto
-                    flex
-                    h-16
-                    w-16
-                    items-center
-                    justify-center
-                    rounded-full
-                    border-2
-                    border-[#DDB04F]
-                    bg-white
-                    text-sm
-                    font-bold
-                    text-[#B8924A]
-                    shadow-sm
-                  "
-                >
-                  {step.number}
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#DDB04F] bg-white text-[#B8924A] shadow-sm">
+                  <StepIcon number={step.number} />
                 </div>
 
                 <h3 className="mt-5 text-lg font-semibold text-[#10294B]">
                   {step.title}
                 </h3>
 
-                <p
-                  className="
-                    mx-auto
-                    mt-3
-                    max-w-[220px]
-                    text-sm
-                    leading-6
-                    text-[#667085]
-                  "
-                >
+                <p className="mx-auto mt-3 max-w-[220px] text-sm leading-6 text-[#667085]">
                   {step.text}
                 </p>
-
               </div>
             ))}
 
@@ -1168,161 +963,69 @@ const WhyRezzivion = () => {
           AI SECTION
       ===================================================== */}
       <section className="w-full bg-white py-20 sm:py-24">
-
-        <div
-          className="
-            mx-auto
-            grid
-            max-w-[1440px]
-            items-center
-            gap-12
-            px-6
-            sm:px-10
-            lg:grid-cols-2
-            lg:px-16
-            xl:px-24
-          "
-        >
+        <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-6 sm:px-10 lg:grid-cols-2 lg:px-16 xl:px-24">
 
           {/* Content */}
           <div className="order-2 lg:order-1">
-
             <span className="text-xs font-bold tracking-[4px] text-[#C99B43]">
               INTELLIGENT OPERATIONS
             </span>
 
-            <h2
-              className="
-                mt-4
-                max-w-xl
-                text-3xl
-                font-semibold
-                tracking-[-1px]
-                text-[#10294B]
-                sm:text-4xl
-                lg:text-5xl
-              "
-            >
+            <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-[-1px] text-[#10294B] sm:text-4xl lg:text-5xl">
               Human Expertise.
               <span className="block text-[#B8924A]">
                 Strengthened by AI.
               </span>
             </h2>
 
-            <p
-              className="
-                mt-6
-                max-w-xl
-                text-sm
-                leading-7
-                text-[#667085]
-                sm:text-base
-              "
-            >
+            <p className="mt-6 max-w-xl text-sm leading-7 text-[#667085] sm:text-base">
               AI can help improve speed, consistency and operational
               visibility. At Rezzivion, technology works alongside human
               expertise, with review and accountability built into the
               process.
             </p>
 
-
             <div className="mt-8 space-y-4">
 
               <div className="flex items-center gap-4">
-
-                <div
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#F8F1E3]
-                    text-[#B8924A]
-                  "
-                >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8F1E3] text-[#B8924A]">
                   ✓
                 </div>
 
                 <span className="text-sm font-medium text-[#243B5B]">
                   AI-assisted workflows
                 </span>
-
               </div>
 
-
               <div className="flex items-center gap-4">
-
-                <div
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#F8F1E3]
-                    text-[#B8924A]
-                  "
-                >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8F1E3] text-[#B8924A]">
                   ✓
                 </div>
 
                 <span className="text-sm font-medium text-[#243B5B]">
                   Human review and accountability
                 </span>
-
               </div>
 
-
               <div className="flex items-center gap-4">
-
-                <div
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#F8F1E3]
-                    text-[#B8924A]
-                  "
-                >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8F1E3] text-[#B8924A]">
                   ✓
                 </div>
 
                 <span className="text-sm font-medium text-[#243B5B]">
                   Continuous improvement
                 </span>
-
               </div>
 
             </div>
           </div>
 
-
           {/* Image */}
-          <div
-            className="
-              order-1
-              overflow-hidden
-              rounded-[28px]
-              bg-[#F7F8FA]
-              lg:order-2
-            "
-          >
+          <div className="order-1 overflow-hidden rounded-[28px] bg-[#F7F8FA] lg:order-2">
             <img
               src="/images/why-ai-enabled.png"
               alt="Human expertise strengthened by AI"
-              className="
-                h-[400px]
-                w-full
-                object-cover
-                object-center
-                sm:h-[500px]
-              "
+              className="h-[400px] w-full object-cover sm:h-[500px]"
             />
           </div>
 
@@ -1333,15 +1036,7 @@ const WhyRezzivion = () => {
       {/* =====================================================
           FINAL CTA
       ===================================================== */}
-      <section
-        className="
-          relative
-          min-h-[430px]
-          overflow-hidden
-          bg-[#10294B]
-          sm:min-h-[460px]
-        "
-      >
+      <section className="relative min-h-[430px] overflow-hidden bg-[#10294B] sm:min-h-[460px]">
 
         {/* CTA Background Image */}
         <img
@@ -1363,26 +1058,7 @@ const WhyRezzivion = () => {
         {/* CTA Overlay */}
         <div className="absolute inset-0 bg-[#10294B]/45" />
 
-
-        <div
-          className="
-            relative
-            z-10
-            mx-auto
-            flex
-            min-h-[430px]
-            max-w-[1440px]
-            items-center
-            justify-center
-            px-6
-            py-20
-            text-center
-            sm:min-h-[460px]
-            sm:px-10
-            lg:px-16
-            xl:px-24
-          "
-        >
+        <div className="relative z-10 mx-auto flex min-h-[430px] max-w-[1440px] items-center justify-center px-6 py-20 text-center sm:min-h-[460px] sm:px-10 lg:px-16 xl:px-24">
 
           <div className="w-full">
 
@@ -1390,33 +1066,11 @@ const WhyRezzivion = () => {
               LET'S BUILD WHAT'S NEXT
             </span>
 
-            <h2
-              className="
-                mx-auto
-                mt-5
-                max-w-3xl
-                text-3xl
-                font-semibold
-                tracking-[-1px]
-                text-white
-                sm:text-4xl
-                lg:text-5xl
-              "
-            >
+            <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-[-1px] text-white sm:text-4xl lg:text-5xl">
               Ready to Build a More Efficient Operation?
             </h2>
 
-            <p
-              className="
-                mx-auto
-                mt-5
-                max-w-2xl
-                text-sm
-                leading-7
-                text-white/70
-                sm:text-base
-              "
-            >
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
               Start with one process, validate the value and scale with
               confidence.
             </p>

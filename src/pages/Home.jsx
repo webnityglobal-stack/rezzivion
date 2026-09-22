@@ -9,15 +9,11 @@ const services = [
     image: "/LPM.jpeg",
     path: "/services/legal-process-management",
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      >
-        <path d="M6 3h9l3 3v15H6z" />
-        <path d="M15 3v4h4" />
-        <path d="M9 11h6M9 15h6M9 19h3" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M6 4h8l4 4v12H6z" />
+        <path d="M14 4v5h5" />
+        <path d="M9 13h6M9 16h4" />
+        <path d="m15.5 17 1.5 1.5 3-4" />
       </svg>
     ),
   },
@@ -29,14 +25,10 @@ const services = [
     image: "/Finance.jpeg",
     path: "/services/finance-accounting",
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      >
-        <rect x="4" y="5" width="16" height="14" rx="2" />
-        <path d="M8 9h8M8 13h3M15 13h1M8 16h2M13 16h3" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <rect x="4" y="5" width="16" height="14" rx="2.5" />
+        <path d="M8 9h8M8 13h3M14 13h2M8 16h2" />
+        <path d="M15 16h2" />
       </svg>
     ),
   },
@@ -48,15 +40,11 @@ const services = [
     image: "/Data-AI.jpeg",
     path: "/services/data-ai-enablement",
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <rect x="6" y="6" width="12" height="12" rx="3" />
         <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
-        <path d="M10 10h4v4h-4z" />
+        <circle cx="12" cy="12" r="2.2" />
+        <path d="m10.5 13.5 3-3" />
       </svg>
     ),
   },
@@ -68,15 +56,12 @@ const services = [
     image: "/BFSI.jpeg",
     path: "/services/bfsi",
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      >
-        <path d="M3 10h18" />
-        <path d="M5 10v8M9 10v8M15 10v8M19 10v8" />
-        <path d="M2 18h20M4 7l8-4 8 4v3H4z" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="m3 9 9-5 9 5" />
+        <path d="M4 9h16v2H4z" />
+        <path d="M6 11v7M10 11v7M14 11v7M18 11v7" />
+        <path d="M3 18h18" />
+        <circle cx="12" cy="4" r="1" />
       </svg>
     ),
   },
@@ -87,14 +72,10 @@ const pillars = [
     title: "Efficiency",
     text: "Streamlined workflows",
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      >
-        <path d="M4 19V9M10 19V5M16 19v-8M22 19V3" />
-        <path d="m4 9 6-4 6 6 6-8" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M4 19h16" />
+        <path d="M6 16V9h3v7M11 16V6h3v10M16 16v-4h3v4" />
+        <path d="m5 7 3-3 3 2 4-3 4 2" />
       </svg>
     ),
   },
@@ -103,15 +84,10 @@ const pillars = [
     title: "Intelligence",
     text: "AI-assisted execution",
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      >
-        <rect x="5" y="5" width="14" height="14" rx="3" />
-        <path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" />
-        <path d="M9 9h6v6H9z" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+        <path d="M9 12h6M12 9v6" />
       </svg>
     ),
   },
@@ -120,14 +96,10 @@ const pillars = [
     title: "Value",
     text: "Cost-conscious delivery",
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      >
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 7v10M15.5 9H10a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8.5" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M5 18V9M10 18V6M15 18v-5M20 18V4" />
+        <path d="M3 20h18" />
+        <path d="m4 8 5-3 5 4 5-5" />
       </svg>
     ),
   },
@@ -137,32 +109,67 @@ const benefits = [
   {
     title: "Accuracy",
     text: "Quality-focused execution with defined checks",
-    icon: "✓",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M12 3.5 19 6v5.5c0 4.3-2.8 7.5-7 9-4.2-1.5-7-4.7-7-9V6L12 3.5Z" />
+        <path d="m8.5 12 2.3 2.3 4.7-5" />
+      </svg>
+    ),
   },
   {
     title: "Efficiency",
     text: "Streamlined workflows and faster turnaround",
-    icon: "↗",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M4 19V10M9.3 19V6M14.7 19v-9M20 19V3" />
+        <path d="m4 10 5.3-4 5.4 4 5.3-7" />
+      </svg>
+    ),
   },
   {
     title: "Scalability",
     text: "Flexible capacity that can expand with demand",
-    icon: "⌁",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <circle cx="7" cy="17" r="3" />
+        <circle cx="17" cy="7" r="3" />
+        <path d="M9.2 14.8 14.8 9.2" />
+        <path d="M14 4h6v6" />
+      </svg>
+    ),
   },
   {
     title: "Confidentiality",
     text: "Responsible handling of sensitive information",
-    icon: "◈",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <rect x="4" y="10" width="16" height="10" rx="2.5" />
+        <path d="M8 10V7.5a4 4 0 0 1 8 0V10" />
+        <circle cx="12" cy="15" r="1.2" />
+        <path d="M12 16.2v1.8" />
+      </svg>
+    ),
   },
   {
     title: "Cost Optimization",
     text: "Reduced operational overhead with process discipline",
-    icon: "₹",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M12 7v10M15.5 9.2H10.2a2.1 2.1 0 0 0 0 4.2h3.6a2.1 2.1 0 0 1 0 4.2H8.5" />
+      </svg>
+    ),
   },
   {
     title: "AI-Enabled Operations",
     text: "AI-assisted execution with human review",
-    icon: "✦",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <rect x="6" y="6" width="12" height="12" rx="3" />
+        <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
+        <path d="M10 10h4v4h-4z" />
+      </svg>
+    ),
   },
 ];
 
@@ -202,7 +209,7 @@ export default function Home() {
         <img
           src="/Home.png"
           alt="Rezzivion business process management"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
         />
 
         <div className="absolute inset-0 bg-[#07182F]/45" />
@@ -383,12 +390,12 @@ export default function Home() {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="h-full w-full object-contain p-3 transition duration-700 group-hover:scale-[1.03] sm:p-5"
+                    className="h-full w-full object-contain p-2 transition duration-700 group-hover:scale-[1.06] sm:p-4"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/45 via-transparent to-transparent" />
 
-                  <div className="absolute bottom-4 left-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0D2342]/95 text-[#D8B36A] shadow-xl backdrop-blur-md sm:bottom-5 sm:left-5 sm:h-16 sm:w-16">
+                  <div className="absolute bottom-4 left-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D8B36A]/25 bg-[#0D2342]/95 text-[#D8B36A] shadow-[0_12px_30px_rgba(7,24,47,0.28)] backdrop-blur-md transition duration-300 group-hover:-translate-y-1 group-hover:bg-[#B8924A] group-hover:text-white sm:bottom-5 sm:left-5 sm:h-16 sm:w-16">
 
                     <div className="h-7 w-7 sm:h-8 sm:w-8">
                       {service.icon}
@@ -465,10 +472,10 @@ export default function Home() {
                 className="group border border-[#E1E5EB] bg-white p-6 transition duration-300 hover:bg-[#F7F8FA] sm:p-8"
               >
 
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0D2342] text-xl font-semibold text-[#D8B36A] transition duration-300 group-hover:bg-[#B8924A] group-hover:text-white sm:mx-0 sm:h-16 sm:w-16">
-
-                  {item.icon}
-
+                <div className="relative mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-[#B8924A]/20 bg-[#0D2342] text-[#D8B36A] shadow-[0_10px_24px_rgba(13,35,66,0.12)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-[#B8924A] group-hover:text-white sm:mx-0 sm:h-16 sm:w-16">
+                  <div className="h-7 w-7 sm:h-8 sm:w-8">
+                    {item.icon}
+                  </div>
                 </div>
 
                 <h3 className="mt-5 text-lg font-semibold text-[#0D2342] sm:mt-7 sm:text-xl">
@@ -484,6 +491,57 @@ export default function Home() {
 
           </div>
 
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          OPERATIONS VISUAL
+      ===================================================== */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-[1440px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-20">
+          <div className="grid items-stretch gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-6">
+            <div className="group relative min-h-[300px] overflow-hidden rounded-[28px] bg-[#0D2342]">
+              <img
+                src="/why-operational-partner.png"
+                alt="Operational process management"
+                className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.06]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/90 via-[#0D2342]/55 to-transparent" />
+              <div className="relative z-10 flex min-h-[300px] max-w-xl flex-col justify-end p-7 sm:p-10">
+                <span className="mb-3 inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D8B36A] backdrop-blur-md">
+                  Operational Intelligence
+                </span>
+                <h3 className="max-w-lg text-2xl font-semibold leading-tight text-white sm:text-3xl">
+                  Structured operations built for clarity, control and scale
+                </h3>
+              </div>
+            </div>
+
+            <div className="group relative min-h-[300px] overflow-hidden rounded-[28px] bg-[#07182F]">
+              <img
+                src="/why-ai-enabled.png"
+                alt="AI-enabled operations"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 transition duration-700 group-hover:scale-[1.06]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/95 via-[#07182F]/45 to-transparent" />
+              <div className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/10 text-[#D8B36A] backdrop-blur-md sm:right-7 sm:top-7">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
+                  <rect x="6" y="6" width="12" height="12" rx="3" />
+                  <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
+                  <path d="M10 10h4v4h-4z" />
+                </svg>
+              </div>
+              <div className="relative z-10 flex min-h-[300px] flex-col justify-end p-7 sm:p-10">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#D8B36A]">
+                  Human + AI
+                </p>
+                <h3 className="mt-2 text-2xl font-semibold leading-tight text-white sm:text-3xl">
+                  Technology that supports people, not replaces judgment
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -514,7 +572,7 @@ export default function Home() {
 
 
           {/* Approach Flow */}
-          <div className="relative mt-12 sm:mt-16 lg:mt-20">
+          <div className="relative mt-10 overflow-hidden sm:mt-14 lg:mt-20">
 
             {/* Connecting line - desktop */}
             <div className="absolute left-[10%] right-[10%] top-[48px] hidden h-px bg-[#B8924A]/30 lg:block" />
@@ -686,28 +744,51 @@ export default function Home() {
 
       <section className="bg-white">
 
-        <div className="mx-auto max-w-[1440px] px-5 py-16 text-center sm:px-8 sm:py-20 lg:px-12 lg:py-28">
+        <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28">
 
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A] sm:text-sm">
-            Let's Explore The Right Fit
-          </p>
+          <div className="relative overflow-hidden rounded-[28px] bg-[#0D2342]">
 
-          <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold leading-tight text-[#0D2342] sm:mt-5 sm:text-4xl lg:text-5xl">
-            Start with one process, validate the value, and scale with confidence
-          </h2>
+            <div className="grid items-stretch lg:grid-cols-[1.05fr_0.95fr]">
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#667085] sm:mt-6 sm:text-lg sm:leading-8">
-            We would welcome the opportunity to discuss a focused pilot or
-            defined process scope
-          </p>
+              <div className="relative z-10 flex flex-col justify-center p-7 sm:p-10 lg:p-14 xl:p-16">
 
-          <Link
-            to="/contact"
-            className="mt-7 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-[#0D2342] px-7 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#17365f] sm:mt-8 sm:px-8"
-          >
-            Start a Conversation
-            <span>→</span>
-          </Link>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A] sm:text-sm">
+                  Let's Explore The Right Fit
+                </p>
+
+                <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight text-white sm:mt-5 sm:text-4xl lg:text-5xl">
+                  Start with one process, validate the value, and scale with confidence
+                </h2>
+
+                <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:mt-6 sm:text-lg sm:leading-8">
+                  We would welcome the opportunity to discuss a focused pilot or
+                  defined process scope
+                </p>
+
+                <div>
+                  <Link
+                    to="/contact"
+                    className="mt-7 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-[#B8924A] px-7 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#c9a663] sm:mt-8 sm:px-8"
+                  >
+                    Start a Conversation
+                    <span>→</span>
+                  </Link>
+                </div>
+
+              </div>
+
+              <div className="relative min-h-[260px] overflow-hidden sm:min-h-[330px] lg:min-h-[420px]">
+                <img
+                  src="/how-we-work-cta.png"
+                  alt="Business consultation and conversation"
+                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0D2342] via-[#0D2342]/20 to-transparent lg:from-[#0D2342]/75 lg:via-transparent" />
+                <div className="absolute inset-0 bg-[#0D2342]/10" />
+              </div>
+
+            </div>
+          </div>
 
         </div>
 
