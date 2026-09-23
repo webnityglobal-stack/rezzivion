@@ -1,191 +1,376 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer.jsx";
+
+const capabilities = [
+  {
+    title: "Legal Data Entry & Document Management",
+    text: "Structured handling of legal data and documentation to keep information organized and accessible",
+  },
+  {
+    title: "Document Review & Indexing",
+    text: "Review, indexing and organization of documents to support efficient retrieval and legal workflows",
+  },
+  {
+    title: "Case File & Records Management",
+    text: "Organized management of case files and records to support consistent legal operations",
+  },
+  {
+    title: "Legal Research Support",
+    text: "Operational support for documentation-intensive legal research activities and related workflows",
+  },
+  {
+    title: "Contract Administration",
+    text: "Structured administrative support for contract-related processes and documentation",
+  },
+  {
+    title: "Litigation Support",
+    text: "Operational assistance across documentation-heavy litigation support activities",
+  },
+  {
+    title: "Database & Administrative Support",
+    text: "Reliable database and administrative support for day-to-day legal operations",
+  },
+];
+
+const impact = [
+  {
+    title: "Organized Legal Operations",
+    text: "Better organization of legal information, documentation and recurring processes",
+  },
+  {
+    title: "Improved Productivity",
+    text: "Efficient operational support helping teams process documentation-heavy work effectively",
+  },
+  {
+    title: "More Time for High-Value Work",
+    text: "Reduced administrative workload allows legal professionals to focus on higher-value legal work",
+  },
+];
+
+const relatedServices = [
+  {
+    title: "Finance & Accounting",
+    path: "/services/finance-accounting",
+    image: "/Finance.jpeg",
+  },
+  {
+    title: "Data & AI Enablement",
+    path: "/services/data-ai-enablement",
+    image: "/Data-AI.jpeg",
+  },
+  {
+    title: "BFSI",
+    path: "/services/bfsi",
+    image: "/BFSI.jpeg",
+  },
+];
+
+function Arrow() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}
 
 export default function LegalProcessManagement() {
-  const supportAreas = [
-    "Legal data entry and document management",
-    "Document review indexing and organization",
-    "Case file and records management",
-    "Legal research support",
-    "Contract administration",
-    "Litigation support",
-    "Database and administrative support",
-  ];
-
   return (
-    <div className="bg-white text-[#172033]">
+    <main className="bg-white text-[#172033]">
 
-      {/* Hero */}
-      <section className="bg-[#0D2342] text-white">
-        <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-12 lg:py-28">
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-[#07182F] text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(184,146,74,0.18),transparent_35%)]" />
 
-          <div>
-            <Link
-              to="/services"
-              className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-[#B8924A] transition hover:text-white"
-            >
-              ← Back to Services
-            </Link>
+        <div className="relative mx-auto max-w-[1440px] px-6 py-8 sm:px-8 lg:px-12">
+          <Link
+            to="/services"
+            className="mb-12 inline-flex items-center gap-3 text-sm text-white/65 transition hover:text-[#D8B36A]"
+          >
+            ← All Services
+          </Link>
 
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-              Legal Process Management
-            </p>
-
-            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              Structured support for documentation intensive legal processes
-            </h1>
-
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/75">
-              Operational support for law firms and businesses managing
-              documentation heavy legal processes
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="rounded-[32px] border border-white/10 bg-white/[0.06] p-8 shadow-2xl backdrop-blur">
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#B8924A]/15 text-[#B8924A]">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  className="h-8 w-8"
-                >
-                  <path d="M7 3h7l4 4v14H7z" />
-                  <path d="M14 3v5h5" />
-                  <path d="M10 13h5M10 17h5" />
-                </svg>
+          <div className="grid items-center gap-14 pb-20 lg:grid-cols-2 lg:pb-24">
+            <div>
+              <div className="mb-7 flex items-center gap-3">
+                <span className="h-px w-10 bg-[#D8B36A]" />
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A]">
+                  Legal Process Management
+                </span>
               </div>
 
-              <h2 className="text-2xl font-semibold">
-                Organized legal operations
-              </h2>
+              <h1 className="text-4xl font-semibold leading-[1.08] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
+                Structured support for documentation-heavy legal processes
+              </h1>
 
-              <p className="mt-4 leading-7 text-white/65">
-                Structured workflows designed to support accuracy,
-                organization and productivity across legal operations
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
+                Operational support for law firms and businesses managing
+                documentation-heavy legal processes
               </p>
+
+              <div className="mt-9">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#D8B36A]"
+                >
+                  Let’s Talk
+                  <Arrow />
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-[28px] border border-white/10">
+              <img
+                src="/legal-hero.png"
+                alt="Legal Process Management"
+                className="h-[360px] w-full object-cover sm:h-[470px]"
+              />
+
+              <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-[#07182F]/80 p-5 backdrop-blur-md">
+                <p className="text-xs uppercase tracking-[0.18em] text-[#D8B36A]">
+                  Legal Operations
+                </p>
+                <p className="mt-2 text-sm leading-6 text-white/80">
+                  Organized processes, reliable execution and operational
+                  support
+                </p>
+              </div>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 lg:py-24">
-        <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
 
+      {/* OVERVIEW */}
+      <section className="py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto grid max-w-[1240px] gap-12 px-6 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-              What We Support
-            </p>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+              Legal Operations
+            </span>
 
-            <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
-              Reliable operational support for legal teams
+            <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-[-0.025em] text-[#07182F] sm:text-4xl lg:text-5xl">
+              A dependable operational extension for legal teams
             </h2>
           </div>
 
-          <div>
+          <div className="lg:pt-8">
             <p className="text-lg leading-8 text-[#667085]">
-              Rezzivion provides operational support for law firms and
-              businesses handling documentation heavy legal processes
+              Legal processes involve large volumes of documentation, records
+              and recurring administrative activities that require accuracy,
+              organization and consistency
             </p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {supportAreas.map((item) => (
+            <p className="mt-6 text-base leading-8 text-[#667085]">
+              Rezzivion provides structured operational support for defined
+              legal processes, helping law firms and businesses manage
+              documentation-intensive workflows while enabling their teams to
+              focus on higher-value legal work
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      {/* CAPABILITIES */}
+      <section className="bg-[#F7F8FA] py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <div className="max-w-3xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+              Our Capabilities
+            </span>
+
+            <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl lg:text-5xl">
+              Comprehensive support across legal operations
+            </h2>
+
+            <p className="mt-5 text-base leading-8 text-[#667085] sm:text-lg">
+              Structured support across documentation, records, research and
+              administrative workflows
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-px overflow-hidden rounded-[28px] border border-[#E4E7EC] bg-[#E4E7EC] md:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((item) => (
+              <div
+                key={item.title}
+                className="group bg-white p-7 transition hover:bg-[#07182F] sm:p-8"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/10 text-[#B8924A]">
+                  <Arrow />
+                </div>
+
+                <h3 className="mt-7 text-lg font-semibold leading-7 text-[#07182F] group-hover:text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-7 text-[#667085] group-hover:text-white/60">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* PROCESS */}
+      <section className="py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto grid max-w-[1240px] items-center gap-14 px-6 sm:px-8 lg:grid-cols-2 lg:px-10">
+          <div className="overflow-hidden rounded-[28px] bg-[#F7F8FA]">
+            <img
+              src="/legal-process.png"
+              alt="Legal operations"
+              className="min-h-[380px] w-full object-cover sm:min-h-[500px]"
+            />
+          </div>
+
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+              Structured Execution
+            </span>
+
+            <h2 className="mt-5 text-3xl font-semibold leading-tight text-[#07182F] sm:text-4xl">
+              Built for documentation-intensive legal work
+            </h2>
+
+            <p className="mt-6 text-base leading-8 text-[#667085]">
+              Rezzivion supports defined legal processes through trained
+              professionals, structured workflows and consistent execution
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {[
+                "Understand",
+                "Process",
+                "Verify",
+                "Deliver",
+                "Improve",
+              ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-start gap-4 rounded-2xl border border-[#E7EAF0] bg-[#F7F8FA] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#B8924A]/40"
+                  className="flex items-center gap-4 border-b border-[#EAECF0] pb-4"
                 >
-                  <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0D2342] text-[#B8924A]">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      className="h-4 w-4"
-                    >
-                      <path d="m6 12 4 4 8-8" />
-                    </svg>
-                  </span>
-
-                  <span className="text-sm font-medium leading-6 text-[#172033]">
-                    {item}
-                  </span>
+                  <span className="h-2 w-2 rounded-full bg-[#B8924A]" />
+                  <span className="font-medium text-[#344054]">{item}</span>
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* Impact */}
-      <section className="bg-[#F7F8FA]">
-        <div className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 lg:py-24">
 
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-              Business Impact
-            </p>
+      {/* IMPACT */}
+      <section className="bg-[#07182F] py-20 text-white sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
+            Business Impact
+          </span>
 
-            <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-              More organized legal operations
-            </h2>
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold sm:text-4xl lg:text-5xl">
+            Practical outcomes for legal teams
+          </h2>
 
-            <p className="mt-5 text-lg leading-8 text-[#667085]">
-              Our support helps improve productivity and creates more time
-              for high value legal work
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-
-            {[
-              ["Organized", "Structured legal operations and accessible records"],
-              ["Productive", "Reduced administrative effort across processes"],
-              ["Focused", "More time for high value legal work"],
-            ].map(([title, text]) => (
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
+            {impact.map((item) => (
               <div
-                key={title}
-                className="rounded-3xl border border-[#E7EAF0] bg-white p-8"
+                key={item.title}
+                className="rounded-[24px] border border-white/10 bg-white/[0.04] p-8"
               >
-                <h3 className="text-xl font-semibold text-[#0D2342]">
-                  {title}
+                <div className="h-10 w-10 rounded-xl bg-[#B8924A]/20" />
+
+                <h3 className="mt-7 text-xl font-semibold">
+                  {item.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-[#667085]">
-                  {text}
+                <p className="mt-4 text-sm leading-7 text-white/60">
+                  {item.text}
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#0D2342]">
-        <div className="mx-auto max-w-[1440px] px-6 py-20 text-center lg:px-12 lg:py-24">
 
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-            Let’s explore the right fit
+      {/* RELATED SERVICES */}
+      <section className="py-20 sm:py-24">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+            Explore More
+          </span>
+
+          <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+            Explore our other capabilities
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl leading-7 text-white/65">
-            Start with one process, validate the value and scale with confidence
-          </p>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {relatedServices.map((service) => (
+              <Link
+                key={service.path}
+                to={service.path}
+                className="group overflow-hidden rounded-[24px] border border-[#E4E7EC]"
+              >
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex rounded-full bg-[#B8924A] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#c9a663]"
-          >
-            Start a Conversation
-          </Link>
-
+                <div className="flex items-center justify-between p-6">
+                  <h3 className="font-semibold text-[#07182F]">
+                    {service.title}
+                  </h3>
+                  <Arrow />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-    </div>
+
+      {/* CTA */}
+      <section className="relative overflow-hidden">
+        <img
+          src="/legal-cta.png"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-[#07182F]/85" />
+
+        <div className="relative mx-auto max-w-[1240px] px-6 py-24 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
+            Let’s Explore the Right Fit
+          </span>
+
+          <h2 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+            Start with one process, validate the value, and scale with confidence
+          </h2>
+
+          <Link
+            to="/contact"
+            className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-7 py-4 text-sm font-semibold text-white hover:bg-[#D8B36A]"
+          >
+            Let’s Talk
+            <Arrow />
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 }

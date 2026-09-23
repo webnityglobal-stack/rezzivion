@@ -330,13 +330,13 @@ export default function Home() {
                 Rezzivion is a Business Process Management services company
                 supporting essential back-office functions through structured
                 delivery, trained professionals, quality controls and practical
-                technology adoption
+                technology adoption.
               </p>
 
               <p className="mt-5 text-base leading-7 text-[#667085] sm:text-lg sm:leading-8">
                 We take ownership of defined operational processes and provide
                 flexible capacity, so your team can focus on customers, growth
-                and strategic priorities
+                and strategic priorities.
               </p>
 
             </div>

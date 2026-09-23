@@ -1,189 +1,352 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer.jsx";
+
+const capabilities = [
+  {
+    title: "Accounts Payable & Accounts Receivable",
+    text: "Support for recurring AP and AR processes with structured handling of financial transactions",
+  },
+  {
+    title: "Invoice Processing & Verification",
+    text: "Process and verify invoices through defined workflows for accurate and timely execution",
+  },
+  {
+    title: "Bookkeeping & Ledger Support",
+    text: "Operational support for bookkeeping and ledger-related activities",
+  },
+  {
+    title: "Bank & Account Reconciliation",
+    text: "Structured support for reconciling bank and account records",
+  },
+  {
+    title: "Expense Management & Data Entry",
+    text: "Processing and maintenance of expense-related information and financial data",
+  },
+  {
+    title: "Payment Processing",
+    text: "Operational support for defined payment processing workflows",
+  },
+  {
+    title: "Reporting & MIS",
+    text: "Support for recurring financial reporting and management information requirements",
+  },
+  {
+    title: "Month-End & Year-End Support",
+    text: "Structured operational assistance across month-end and year-end activities",
+  },
+];
+
+const impact = [
+  {
+    title: "Better Accuracy",
+    text: "Structured processing helps support accuracy across recurring accounting activities",
+  },
+  {
+    title: "Faster Processing",
+    text: "Efficient execution helps improve the turnaround of routine finance processes",
+  },
+  {
+    title: "Reduced Administrative Workload",
+    text: "Operational support helps finance teams spend less time on recurring administrative activities",
+  },
+];
+
+const relatedServices = [
+  {
+    title: "Legal Process Management",
+    path: "/services/legal-process-management",
+    image: "/LPM.jpeg",
+  },
+  {
+    title: "Data & AI Enablement",
+    path: "/services/data-ai-enablement",
+    image: "/Data-AI.jpeg",
+  },
+  {
+    title: "BFSI",
+    path: "/services/bfsi",
+    image: "/BFSI.jpeg",
+  },
+];
+
+function Arrow() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}
 
 export default function FinanceAccounting() {
-  const supportAreas = [
-    "Accounts payable and accounts receivable",
-    "Invoice processing and verification",
-    "Bookkeeping and ledger support",
-    "Bank and account reconciliation",
-    "Expense management and data entry",
-    "Payment processing",
-    "Reporting and MIS support",
-    "Month end and year end support",
-  ];
-
   return (
-    <div className="bg-white text-[#172033]">
+    <main className="bg-white text-[#172033]">
 
-      {/* Hero */}
-      <section className="bg-[#0D2342] text-white">
-        <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-12 lg:py-28">
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-[#07182F] text-white">
+        <div className="relative mx-auto max-w-[1440px] px-6 py-8 sm:px-8 lg:px-12">
 
-          <div>
-            <Link
-              to="/services"
-              className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-[#B8924A] transition hover:text-white"
-            >
-              ← Back to Services
-            </Link>
+          <Link
+            to="/services"
+            className="mb-12 inline-flex items-center gap-3 text-sm text-white/65 hover:text-[#D8B36A]"
+          >
+            ← All Services
+          </Link>
 
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-              Finance & Accounting
-            </p>
-
-            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              Reliable support for everyday finance operations
-            </h1>
-
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/75">
-              Structured accounting support designed to improve accuracy and
-              processing efficiency
-            </p>
-          </div>
-
-          <div>
-            <div className="rounded-[32px] border border-white/10 bg-white/[0.06] p-8 shadow-2xl">
-
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#B8924A]/15 text-[#B8924A]">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  className="h-8 w-8"
-                >
-                  <rect x="4" y="3" width="16" height="18" rx="2" />
-                  <path d="M8 7h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h8" />
-                </svg>
+          <div className="grid items-center gap-14 pb-20 lg:grid-cols-2 lg:pb-24">
+            <div>
+              <div className="mb-7 flex items-center gap-3">
+                <span className="h-px w-10 bg-[#D8B36A]" />
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A]">
+                  Finance & Accounting
+                </span>
               </div>
 
-              <h2 className="text-2xl font-semibold">
-                Accurate financial operations
-              </h2>
+              <h1 className="text-4xl font-semibold leading-[1.08] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
+                Reliable support for essential finance and accounting operations
+              </h1>
 
-              <p className="mt-4 leading-7 text-white/65">
-                Support across accounting workflows to help reduce
-                administrative workload and improve processing speed
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
+                Structured accounting support designed to improve accuracy,
+                processing efficiency and reduce administrative workload
               </p>
 
+              <Link
+                to="/contact"
+                className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold hover:bg-[#D8B36A]"
+              >
+                Let’s Talk
+                <Arrow />
+              </Link>
+            </div>
+
+            <div className="overflow-hidden rounded-[28px] border border-white/10">
+              <img
+                src="/Finance.jpeg"
+                alt="Finance and Accounting"
+                className="h-[360px] w-full object-cover sm:h-[470px]"
+              />
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* Support */}
-      <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 lg:py-24">
 
-        <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
-
+      {/* OVERVIEW */}
+      <section className="py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto grid max-w-[1240px] gap-12 px-6 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-              What We Support
-            </p>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+              Finance Operations
+            </span>
 
-            <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
-              Structured finance and accounting support
+            <h2 className="mt-5 text-3xl font-semibold leading-tight text-[#07182F] sm:text-4xl lg:text-5xl">
+              Supporting finance teams with reliable execution
             </h2>
           </div>
 
-          <div>
+          <div className="lg:pt-8">
             <p className="text-lg leading-8 text-[#667085]">
-              Rezzivion provides reliable accounting support across routine
-              finance operations and reporting activities
+              Finance operations require accuracy, timely processing and
+              consistent handling of recurring accounting activities
             </p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-
-              {supportAreas.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-start gap-4 rounded-2xl border border-[#E7EAF0] bg-[#F7F8FA] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#B8924A]/40"
-                >
-                  <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0D2342] text-[#B8924A]">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      className="h-4 w-4"
-                    >
-                      <path d="m6 12 4 4 8-8" />
-                    </svg>
-                  </span>
-
-                  <span className="text-sm font-medium leading-6">
-                    {item}
-                  </span>
-                </div>
-              ))}
-
-            </div>
+            <p className="mt-6 text-base leading-8 text-[#667085]">
+              Rezzivion provides structured operational support across
+              essential finance and accounting workflows, helping teams reduce
+              administrative effort while maintaining reliable processing
+            </p>
           </div>
-
         </div>
       </section>
 
-      {/* Impact */}
-      <section className="bg-[#F7F8FA]">
-        <div className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 lg:py-24">
 
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-            Business Impact
-          </p>
+      {/* CAPABILITIES */}
+      <section className="bg-[#F7F8FA] py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+            Key Capabilities
+          </span>
 
-          <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-            Better financial operations
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold text-[#07182F] sm:text-4xl lg:text-5xl">
+            Comprehensive support across finance and accounting
           </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-
-            {[
-              ["Accuracy", "Better accuracy across routine accounting activities"],
-              ["Speed", "Faster processing across finance workflows"],
-              ["Efficiency", "Reduced administrative workload"],
-            ].map(([title, text]) => (
+          <div className="mt-14 grid gap-px overflow-hidden rounded-[28px] border border-[#E4E7EC] bg-[#E4E7EC] md:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((item) => (
               <div
-                key={title}
-                className="rounded-3xl border border-[#E7EAF0] bg-white p-8"
+                key={item.title}
+                className="group bg-white p-7 transition hover:bg-[#07182F] sm:p-8"
               >
-                <h3 className="text-xl font-semibold text-[#0D2342]">
-                  {title}
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/10 text-[#B8924A]">
+                  <Arrow />
+                </div>
+
+                <h3 className="mt-7 text-lg font-semibold leading-7 text-[#07182F] group-hover:text-white">
+                  {item.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-[#667085]">
-                  {text}
+                <p className="mt-3 text-sm leading-7 text-[#667085] group-hover:text-white/60">
+                  {item.text}
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#0D2342]">
-        <div className="mx-auto max-w-[1440px] px-6 py-20 text-center lg:px-12 lg:py-24">
 
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-            Let’s explore the right fit
-          </h2>
+      {/* PROCESS */}
+      <section className="py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto grid max-w-[1240px] items-center gap-14 px-6 sm:px-8 lg:grid-cols-2 lg:px-10">
+          <div className="overflow-hidden rounded-[28px] bg-[#F7F8FA]">
+            <img
+              src="/Finance.jpeg"
+              alt="Finance operations"
+              className="min-h-[380px] w-full object-cover sm:min-h-[500px]"
+            />
+          </div>
 
-          <p className="mx-auto mt-5 max-w-2xl leading-7 text-white/65">
-            Start with one process, validate the value and scale with confidence
-          </p>
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+              Structured Execution
+            </span>
 
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex rounded-full bg-[#B8924A] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#c9a663]"
-          >
-            Start a Conversation
-          </Link>
+            <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+              Making finance operations more efficient
+            </h2>
 
+            <p className="mt-6 text-base leading-8 text-[#667085]">
+              Finance and accounting processes require consistent execution
+              across high-volume recurring activities
+            </p>
+
+            <p className="mt-5 text-base leading-8 text-[#667085]">
+              Rezzivion supports defined finance workflows through structured
+              processing and reliable operational execution
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {["Process", "Verify", "Deliver", "Improve"].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-4 border-b border-[#EAECF0] pb-4"
+                >
+                  <span className="h-2 w-2 rounded-full bg-[#B8924A]" />
+                  <span className="font-medium text-[#344054]">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-    </div>
+
+      {/* IMPACT */}
+      <section className="bg-[#07182F] py-20 text-white sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
+            Business Impact
+          </span>
+
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold sm:text-4xl lg:text-5xl">
+            Designed for better financial operations
+          </h2>
+
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
+            {impact.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[24px] border border-white/10 bg-white/[0.04] p-8"
+              >
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-white/60">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* RELATED */}
+      <section className="py-20 sm:py-24">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+            Explore More
+          </span>
+
+          <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+            Explore our other capabilities
+          </h2>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {relatedServices.map((service) => (
+              <Link
+                key={service.path}
+                to={service.path}
+                className="group overflow-hidden rounded-[24px] border border-[#E4E7EC]"
+              >
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex items-center justify-between p-6">
+                  <h3 className="font-semibold text-[#07182F]">
+                    {service.title}
+                  </h3>
+                  <Arrow />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* CTA */}
+      <section className="relative overflow-hidden">
+        <img
+          src="/how-we-work-cta.png"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-[#07182F]/85" />
+
+        <div className="relative mx-auto max-w-[1240px] px-6 py-24 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
+            Let’s Explore the Right Fit
+          </span>
+
+          <h2 className="mt-6 max-w-4xl text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">
+            Start with one process, validate the value, and scale with confidence
+          </h2>
+
+          <Link
+            to="/contact"
+            className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-7 py-4 text-sm font-semibold text-white hover:bg-[#D8B36A]"
+          >
+            Let’s Talk
+            <Arrow />
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 }

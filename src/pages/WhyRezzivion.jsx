@@ -415,9 +415,9 @@ const WhyRezzivion = () => {
                   sm:tracking-[2px]
                 "
               >
-                BUILT FOR ACCURACY. DESIGNED FOR SCALE.
+                BUILT FOR ACCURACY. DESIGNED FOR SCALE
                 <br className="hidden sm:block" />
-                DRIVEN BY INTELLIGENT OPERATIONS.
+                DRIVEN BY INTELLIGENT OPERATIONS
               </h2>
 
               <p

@@ -248,27 +248,21 @@ export default function About() {
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#07182F]/70 to-[#07182F]/20" />
 
-        <div className="relative mx-auto flex min-h-[560px] max-w-[1440px] items-center px-5 py-24 sm:min-h-[620px] sm:px-8 lg:min-h-[680px] lg:px-16">
+        <div className="relative flex min-h-[560px] max-w-[1440px] items-center px-5 py-8 sm:min-h-[620px] sm:px-8 sm:py-16 lg:min-h-[680px] lg:px-16 lg:py-20">
 
           <div className="w-full max-w-3xl">
 
             <div className="mb-5 flex items-center gap-3 sm:mb-6">
               <span className="h-px w-8 bg-[#D8B36A] sm:w-10" />
 
-              <p className="text-[10px] font-semibold tracking-[0.25em] text-[#D8B36A] sm:text-xs sm:tracking-[0.28em]">
+              <p className="text-[20px] font-semibold tracking-[0.25em] text-[#D8B36A] sm:text- sm:tracking-[0.28em]">
                 ABOUT REZZIVION
               </p>
             </div>
 
-            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
-              A dependable extension of your business
-            </h1>
 
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-white/80 sm:mt-7 sm:text-base sm:leading-8 lg:text-lg">
-              Rezzivion is a business process management company supporting
-              essential back-office functions through structured delivery,
-              trained professionals, quality controls and practical technology
-              adoption
+            <p className="mt-6 max-w-2xl text-sm font-bold leading-7 text-white/80 sm:mt-7 sm:text-base sm:leading-8 lg:text-lg">
+              Rezzivion is a business process management company supporting essential back-office functions through structured delivery, trained professionals, quality controls, and practical technology adoption. We help organizations streamline operations, improve efficiency, and build reliable workflows by combining people, processes, and technology. Our focus is on delivering consistent, transparent, and scalable operational support aligned with evolving business needs.
             </p>
 
             <div className="mt-8 sm:mt-9">

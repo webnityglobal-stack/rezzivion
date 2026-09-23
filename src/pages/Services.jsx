@@ -5,7 +5,7 @@ const services = [
   {
     title: "Legal Process Management",
     eyebrow: "Legal Operations",
-    image: "/LPM.jpeg",
+    image: "/Lpm.png",
     description:
       "Operational support for law firms and businesses managing documentation intensive legal processes",
     support: [
@@ -24,7 +24,7 @@ const services = [
   {
     title: "Finance & Accounting",
     eyebrow: "Financial Operations",
-    image: "/Finance-&-Accounting.jpeg",
+    image: "/finance-&-Accounting.png",
     description:
       "Reliable accounting support across essential finance operations and reporting activities",
     support: [
@@ -44,7 +44,7 @@ const services = [
   {
     title: "Data & AI Enablement",
     eyebrow: "Data Operations",
-    image: "/Data-AI.jpeg",
+    image: "/Data-AI.png",
     description:
       "Trained operations teams structured workflows and selected AI capabilities working together",
     support: [
@@ -66,7 +66,7 @@ const services = [
   {
     title: "Banking Financial Services & Insurance",
     eyebrow: "BFSI Operations",
-    image: "/BFSI.jpeg",
+    image: "/BFSI.png",
     description:
       "Structured back office execution for banks fintechs lenders insurers and financial services organizations",
     support: [

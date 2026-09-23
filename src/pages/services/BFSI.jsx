@@ -1,254 +1,390 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer.jsx";
+
+const capabilities = [
+  {
+    title: "Customer Onboarding & Account Opening",
+    text: "Support for onboarding documentation and account opening processes",
+  },
+  {
+    title: "KYC & KYB Processing",
+    text: "KYC and KYB processing, indexing and data validation",
+  },
+  {
+    title: "Loan & Credit Documentation",
+    text: "Operational support for loan and credit-related documentation",
+  },
+  {
+    title: "Payment & Transaction Processing",
+    text: "Structured support for payment operations and transaction processing",
+  },
+  {
+    title: "Reconciliation & Exception Management",
+    text: "Processing support for reconciliation and exception workflows",
+  },
+  {
+    title: "Disputes & Chargebacks",
+    text: "Operational support for disputes, chargebacks and service requests",
+  },
+  {
+    title: "Collections & Recovery",
+    text: "Support for defined collections and recovery processes",
+  },
+  {
+    title: "Customer & Account Data",
+    text: "Maintenance and quality support for customer and account information",
+  },
+  {
+    title: "Insurance Operations",
+    text: "Support for insurance policy servicing and claims documentation",
+  },
+  {
+    title: "MIS & Reporting",
+    text: "Operational reporting, MIS and dashboard support",
+  },
+];
+
+const controls = [
+  {
+    title: "Maker-Checker Controls",
+    text: "Independent checking across defined workflows",
+  },
+  {
+    title: "Access Controls",
+    text: "Controlled access aligned with process requirements",
+  },
+  {
+    title: "Quality Sampling",
+    text: "Structured quality checks across processed work",
+  },
+  {
+    title: "Exception Queues",
+    text: "Defined handling of identified exceptions",
+  },
+  {
+    title: "SOP-Based Execution",
+    text: "Processes aligned with defined operating procedures",
+  },
+  {
+    title: "Audit-Ready Records",
+    text: "Structured records supporting traceability and review",
+  },
+];
+
+const relatedServices = [
+  {
+    title: "Legal Process Management",
+    path: "/services/legal-process-management",
+    image: "/LPM.jpeg",
+  },
+  {
+    title: "Finance & Accounting",
+    path: "/services/finance-accounting",
+    image: "/Finance.jpeg",
+  },
+  {
+    title: "Data & AI Enablement",
+    path: "/services/data-ai-enablement",
+    image: "/Data-AI.jpeg",
+  },
+];
+
+function Arrow() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}
 
 export default function BFSI() {
-  const processes = [
-    "Customer onboarding and account opening documentation",
-    "KYC and KYB processing indexing and data validation",
-    "Loan and credit documentation",
-    "Payment operations and transaction processing",
-    "Reconciliation and exception management",
-    "Dispute chargeback and service requests",
-    "Collections and recovery support",
-    "Customer and account data maintenance",
-    "Insurance policy servicing and claims documentation",
-    "MIS reporting and dashboard support",
-  ];
-
-  const controls = [
-    "Maker checker controls",
-    "Access controls",
-    "Quality sampling",
-    "Exception queues",
-    "Standard operating procedures",
-    "Audit ready records",
-  ];
-
   return (
-    <div className="bg-white text-[#172033]">
+    <main className="bg-white text-[#172033]">
 
-      {/* Hero */}
-      <section className="bg-[#0D2342] text-white">
-        <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-12 lg:py-28">
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-[#07182F] text-white">
+        <div className="relative mx-auto max-w-[1440px] px-6 py-8 sm:px-8 lg:px-12">
 
-          <div>
-            <Link
-              to="/services"
-              className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-[#B8924A] transition hover:text-white"
-            >
-              ← Back to Services
-            </Link>
+          <Link
+            to="/services"
+            className="mb-12 inline-flex items-center gap-3 text-sm text-white/65 hover:text-[#D8B36A]"
+          >
+            ← All Services
+          </Link>
 
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-              Banking Financial Services & Insurance
-            </p>
+          <div className="grid items-center gap-14 pb-20 lg:grid-cols-2 lg:pb-24">
+            <div>
+              <div className="mb-7 flex items-center gap-3">
+                <span className="h-px w-10 bg-[#D8B36A]" />
 
-            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              Structured back office execution for BFSI operations
-            </h1>
-
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/75">
-              Operational support for banks fintechs lenders insurers and
-              financial services organizations
-            </p>
-          </div>
-
-          <div>
-            <div className="rounded-[32px] border border-white/10 bg-white/[0.06] p-8 shadow-2xl">
-
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#B8924A]/15 text-[#B8924A]">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  className="h-8 w-8"
-                >
-                  <path d="M3 10h18" />
-                  <path d="M5 10v9M9 10v9M15 10v9M19 10v9" />
-                  <path d="M3 19h18M12 4l9 6H3z" />
-                </svg>
-              </div>
-
-              <h2 className="text-2xl font-semibold">
-                Control focused operations
-              </h2>
-
-              <p className="mt-4 leading-7 text-white/65">
-                Structured processes designed for high volume financial
-                operations with quality and control requirements
-              </p>
-
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Processes */}
-      <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 lg:py-24">
-
-        <div className="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
-
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-              Operational Support
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
-              Support across essential BFSI processes
-            </h2>
-
-            <p className="mt-5 leading-7 text-[#667085]">
-              Structured back office execution designed for high volume
-              financial services operations
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-
-            {processes.map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-4 rounded-2xl border border-[#E7EAF0] bg-[#F7F8FA] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#B8924A]/40"
-              >
-                <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0D2342] text-[#B8924A]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="h-4 w-4"
-                  >
-                    <path d="m6 12 4 4 8-8" />
-                  </svg>
-                </span>
-
-                <span className="text-sm font-medium leading-6">
-                  {item}
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A]">
+                  BFSI
                 </span>
               </div>
-            ))}
 
-          </div>
+              <h1 className="text-4xl font-semibold leading-[1.08] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
+                Structured back-office support for financial services operations
+              </h1>
 
-        </div>
-      </section>
-
-      {/* Controls */}
-      <section className="bg-[#F7F8FA]">
-        <div className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 lg:py-24">
-
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-              Control Mindset
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-              Built around quality and operational controls
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-[#667085]">
-              Processes can incorporate control mechanisms aligned with client
-              requirements and operating procedures
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-
-            {controls.map((item) => (
-              <div
-                key={item}
-                className="rounded-3xl border border-[#E7EAF0] bg-white p-7"
-              >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#0D2342] text-[#B8924A]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-6 w-6"
-                  >
-                    <path d="M12 3 20 6v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
-                </div>
-
-                <h3 className="text-lg font-semibold text-[#0D2342]">
-                  {item}
-                </h3>
-              </div>
-            ))}
-
-          </div>
-
-          <div className="mt-10 rounded-3xl border border-[#E7EAF0] bg-white p-7">
-            <p className="leading-7 text-[#667085]">
-              Rezzivion provides operational support while regulated decisions
-              and approvals remain with the client where required
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Impact */}
-      <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 lg:py-24">
-
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B8924A]">
-          Business Impact
-        </p>
-
-        <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-          Stronger operational execution
-        </h2>
-
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-
-          {[
-            ["Faster Processing", "Support for high volume workflows and operational processing"],
-            ["Better Data Quality", "Structured processes designed to improve data quality"],
-            ["Reduced Workload", "Reduced operational workload across routine activities"],
-          ].map(([title, text]) => (
-            <div
-              key={title}
-              className="rounded-3xl border border-[#E7EAF0] bg-[#F7F8FA] p-8"
-            >
-              <h3 className="text-xl font-semibold text-[#0D2342]">
-                {title}
-              </h3>
-
-              <p className="mt-4 leading-7 text-[#667085]">
-                {text}
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
+                Operational support for banks, fintechs, lenders, insurers and
+                financial services organizations managing high-volume processes
               </p>
-            </div>
-          ))}
 
+              <Link
+                to="/contact"
+                className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold hover:bg-[#D8B36A]"
+              >
+                Let’s Talk
+                <Arrow />
+              </Link>
+            </div>
+
+            <div className="overflow-hidden rounded-[28px] border border-white/10">
+              <img
+                src="/BFSI.jpeg"
+                alt="BFSI Operations"
+                className="h-[360px] w-full object-cover sm:h-[470px]"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#0D2342]">
-        <div className="mx-auto max-w-[1440px] px-6 py-20 text-center lg:px-12 lg:py-24">
 
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-            Let’s explore the right fit
+      {/* INTRO */}
+      <section className="py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1100px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+            BFSI Operations
+          </span>
+
+          <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-[-0.03em] text-[#07182F] sm:text-5xl">
+            Financial services operations are evolving rapidly
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl leading-7 text-white/65">
-            Start with one process, validate the value and scale with confidence
+          <div className="mt-8 max-w-4xl space-y-6 text-lg leading-8 text-[#667085]">
+            <p>
+              Banks, fintechs, lenders and insurers manage high volumes of
+              documentation, customer information and recurring operational
+              processes that require accuracy, consistency and strong controls
+            </p>
+
+            <p>
+              Rezzivion provides structured back-office support across
+              onboarding, KYC/KYB, loan documentation, payment operations,
+              reconciliation, disputes, collections, insurance servicing and
+              reporting
+            </p>
+          </div>
+
+          <div className="mt-12 overflow-hidden rounded-[28px]">
+            <img
+              src="/BFSI.jpeg"
+              alt="Financial services operations"
+              className="h-[300px] w-full object-cover sm:h-[480px]"
+            />
+          </div>
+        </div>
+      </section>
+
+
+      {/* CAPABILITIES */}
+      <section className="bg-[#F7F8FA] py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+            Key Capabilities
+          </span>
+
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold text-[#07182F] sm:text-4xl lg:text-5xl">
+            Supporting high-volume financial operations
+          </h2>
+
+          <div className="mt-14 grid gap-px overflow-hidden rounded-[28px] border border-[#E4E7EC] bg-[#E4E7EC] md:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((item) => (
+              <div
+                key={item.title}
+                className="group bg-white p-7 transition hover:bg-[#07182F] sm:p-8"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/10 text-[#B8924A]">
+                  <Arrow />
+                </div>
+
+                <h3 className="mt-7 text-lg font-semibold leading-7 text-[#07182F] group-hover:text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-7 text-[#667085] group-hover:text-white/60">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* CONTROLS */}
+      <section className="bg-[#07182F] py-20 text-white sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
+            Control & Quality
+          </span>
+
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold sm:text-4xl lg:text-5xl">
+            Built around controlled execution
+          </h2>
+
+          <p className="mt-6 max-w-3xl text-base leading-8 text-white/60">
+            BFSI operations can incorporate structured controls across defined
+            workflows, with regulated decisions and approvals remaining with
+            the client where required
           </p>
+
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {controls.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[24px] border border-white/10 bg-white/[0.04] p-8"
+              >
+                <div className="h-10 w-10 rounded-xl bg-[#B8924A]/20" />
+
+                <h3 className="mt-7 text-lg font-semibold">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-sm leading-7 text-white/60">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* IMPACT */}
+      <section className="py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+            Business Impact
+          </span>
+
+          <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+            Designed for practical BFSI outcomes
+          </h2>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {[
+              [
+                "Faster Processing",
+                "Efficient execution across recurring financial operations",
+              ],
+              [
+                "Stronger Data Quality",
+                "Structured processing and validation supporting reliable information",
+              ],
+              [
+                "Reduced Operational Workload",
+                "Operational support that helps internal teams focus on higher-value priorities",
+              ],
+            ].map(([title, text]) => (
+              <div
+                key={title}
+                className="rounded-[24px] border border-[#E4E7EC] bg-[#F7F8FA] p-8"
+              >
+                <h3 className="text-xl font-semibold text-[#07182F]">
+                  {title}
+                </h3>
+
+                <p className="mt-4 text-sm leading-7 text-[#667085]">
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* RELATED */}
+      <section className="py-20 sm:py-24">
+        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+            Explore More
+          </span>
+
+          <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+            Explore our other capabilities
+          </h2>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {relatedServices.map((service) => (
+              <Link
+                key={service.path}
+                to={service.path}
+                className="group overflow-hidden rounded-[24px] border border-[#E4E7EC]"
+              >
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex items-center justify-between p-6">
+                  <h3 className="font-semibold text-[#07182F]">
+                    {service.title}
+                  </h3>
+                  <Arrow />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* CTA */}
+      <section className="relative overflow-hidden">
+        <img
+          src="/how-we-work-cta.png"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-[#07182F]/85" />
+
+        <div className="relative mx-auto max-w-[1240px] px-6 py-24 sm:px-8 lg:px-10">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
+            Let’s Explore the Right Fit
+          </span>
+
+          <h2 className="mt-6 max-w-4xl text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">
+            Start with one process, validate the value, and scale with confidence
+          </h2>
 
           <Link
             to="/contact"
-            className="mt-8 inline-flex rounded-full bg-[#B8924A] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#c9a663]"
+            className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-7 py-4 text-sm font-semibold text-white hover:bg-[#D8B36A]"
           >
-            Start a Conversation
+            Let’s Talk
+            <Arrow />
           </Link>
-
         </div>
       </section>
 
-    </div>
+      <Footer />
+    </main>
   );
 }
