@@ -22,7 +22,6 @@ const services = [
       </svg>
     ),
   },
-
   {
     title: "Finance & Accounting",
     description:
@@ -37,11 +36,11 @@ const services = [
         strokeWidth="1.6"
       >
         <rect x="4" y="5" width="16" height="14" rx="2.5" />
-        <path d="M8 9h8M8 13h3M14 13h2M8 16h2M15 16h2" />
+        <path d="M8 9h8M8 13h3M14 13h2M8 16h2" />
+        <path d="M15 16h2" />
       </svg>
     ),
   },
-
   {
     title: "Data & AI Enablement",
     description:
@@ -62,7 +61,6 @@ const services = [
       </svg>
     ),
   },
-
   {
     title: "Banking, Financial Services & Insurance",
     description:
@@ -85,6 +83,7 @@ const services = [
     ),
   },
 ];
+
 const pillars = [
   {
     title: "Efficiency",
@@ -102,7 +101,6 @@ const pillars = [
       </svg>
     ),
   },
-
   {
     title: "Intelligence",
     text: "AI-assisted execution",
@@ -119,7 +117,6 @@ const pillars = [
       </svg>
     ),
   },
-
   {
     title: "Value",
     text: "Cost-conscious delivery",
@@ -154,7 +151,6 @@ const benefits = [
       </svg>
     ),
   },
-
   {
     title: "Efficiency",
     text: "Streamlined workflows and faster turnaround",
@@ -170,7 +166,6 @@ const benefits = [
       </svg>
     ),
   },
-
   {
     title: "Scalability",
     text: "Flexible capacity that can expand with demand",
@@ -188,7 +183,6 @@ const benefits = [
       </svg>
     ),
   },
-
   {
     title: "Confidentiality",
     text: "Responsible handling of sensitive information",
@@ -206,7 +200,6 @@ const benefits = [
       </svg>
     ),
   },
-
   {
     title: "Cost Optimization",
     text: "Reduced operational overhead with process discipline",
@@ -222,7 +215,6 @@ const benefits = [
       </svg>
     ),
   },
-
   {
     title: "AI-Enabled Operations",
     text: "AI-assisted execution with human review",
@@ -267,7 +259,7 @@ export default function Home() {
 
             <div className="w-full max-w-4xl rounded-[24px] border border-white/15 bg-[#07182F]/30 px-6 py-8 backdrop-blur-md sm:px-10 sm:py-10 lg:px-14 lg:py-11">
 
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D8B36A] sm:text-sm sm:tracking-[0.22em]">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D8B36A] sm:text-sm">
                 Business Process Management
               </p>
 
@@ -281,7 +273,7 @@ export default function Home() {
               <p className="mt-5 max-w-2xl text-[15px] leading-7 text-white/80 sm:text-lg">
                 AI-enabled support. Human-led quality.
                 <span className="block">
-                  Built to improve efficiency and optimize cost.
+                  Built to improve efficiency and optimize cost
                 </span>
               </p>
 
@@ -352,7 +344,9 @@ export default function Home() {
           </div>
 
 
-          {/* PILLARS */}
+          {/* =====================================================
+              PILLARS
+          ===================================================== */}
 
           <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
 
@@ -410,67 +404,102 @@ export default function Home() {
           </div>
 
 
-          {/* SERVICE CARDS */}
+          {/* =====================================================
+              PREMIUM ALTERNATING SERVICE LAYOUT
+          ===================================================== */}
 
-          <div className="mt-10 grid gap-6 sm:mt-12 lg:grid-cols-2">
+          <div className="mt-10 space-y-6 sm:mt-14 sm:space-y-8 lg:mt-16 lg:space-y-10">
 
-            {services.map((service) => (
+            {services.map((service, index) => {
 
-              <Link
-                key={service.title}
-                to={service.path}
-                className="group overflow-hidden rounded-[24px] border border-[#E1E5EB] bg-white transition duration-500 hover:-translate-y-1 hover:border-[#B8924A]/50 hover:shadow-[0_25px_60px_rgba(13,35,66,0.10)]"
-              >
+              const imageLeft = index % 2 === 0;
 
-                {/* IMAGE */}
+              return (
+                <Link
+                  key={service.title}
+                  to={service.path}
+                  className="group block"
+                >
 
-                <div className="relative h-[240px] overflow-hidden bg-[#E9EDF2] sm:h-[290px] lg:h-[310px]">
+                  <div
+                    className={`grid overflow-hidden rounded-[28px] border border-[#E1E5EB] bg-white shadow-[0_10px_40px_rgba(13,35,66,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-[#B8924A]/35 hover:shadow-[0_24px_60px_rgba(13,35,66,0.10)] lg:min-h-[390px] lg:grid-cols-2 ${
+                      imageLeft ? "" : "lg:[&>div:first-child]:order-2"
+                    }`}
+                  >
 
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.04]"
-                  />
+                    {/* ================= IMAGE ================= */}
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/55 via-transparent to-transparent" />
+                    <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#EEF1F5] sm:min-h-[320px] lg:min-h-[390px]">
 
-                  {/* ICON */}
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="h-full w-full object-contain object-center transition duration-700 ease-out group-hover:scale-[1.025]"
+                      />
 
-                  <div className="absolute bottom-5 left-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-[#0D2342]/95 text-[#D8B36A] shadow-[0_12px_30px_rgba(7,24,47,0.28)] backdrop-blur-md transition duration-300 group-hover:-translate-y-1 group-hover:bg-[#B8924A] group-hover:text-white sm:h-16 sm:w-16">
+                      {/* subtle image overlay */}
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0D2342]/10 via-transparent to-white/5" />
 
-                    <div className="h-7 w-7 sm:h-8 sm:w-8">
-                      {service.icon}
+                      {/* service icon */}
+                      <div className="absolute left-5 top-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/30 bg-[#0D2342]/95 text-[#D8B36A] shadow-[0_12px_30px_rgba(13,35,66,0.20)] backdrop-blur-md transition duration-300 group-hover:bg-[#B8924A] group-hover:text-white sm:left-6 sm:top-6 sm:h-16 sm:w-16">
+
+                        <div className="h-7 w-7 sm:h-8 sm:w-8">
+                          {service.icon}
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
+                    {/* ================= CONTENT ================= */}
+
+                    <div className="flex flex-col justify-center bg-white px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 xl:px-16">
+
+                      <div className="max-w-xl">
+
+                        <div className="mb-5 h-px w-12 bg-[#B8924A] transition-all duration-500 group-hover:w-20" />
+
+                        <h3 className="text-2xl font-semibold leading-tight tracking-tight text-[#0D2342] sm:text-3xl lg:text-[2.35rem]">
+
+                          {service.title}
+
+                        </h3>
+
+                        <p className="mt-4 max-w-lg text-sm leading-7 text-[#667085] sm:mt-5 sm:text-base sm:leading-8">
+
+                          {service.description}
+
+                        </p>
+
+
+                        <div className="mt-7 inline-flex items-center gap-3 text-sm font-semibold text-[#0D2342] sm:mt-8">
+
+                          <span className="relative">
+
+                            Explore Service
+
+                            <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#B8924A] transition-all duration-300 group-hover:w-full" />
+
+                          </span>
+
+                          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#DDE2E8] text-[#B8924A] transition-all duration-300 group-hover:translate-x-1 group-hover:border-[#B8924A] group-hover:bg-[#B8924A] group-hover:text-white">
+
+                            →
+
+                          </span>
+
+                        </div>
+
+                      </div>
+
                     </div>
 
                   </div>
 
-                </div>
-
-
-                {/* CONTENT */}
-
-                <div className="p-6 sm:p-7 lg:p-8">
-
-                  <h3 className="text-xl font-semibold leading-snug text-[#0D2342] sm:text-2xl">
-                    {service.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-6 text-[#667085] sm:mt-4 sm:text-base sm:leading-7">
-                    {service.description}
-                  </p>
-
-                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#B8924A] sm:mt-6">
-                    Explore Service
-                    <span className="transition group-hover:translate-x-1">
-                      →
-                    </span>
-                  </div>
-
-                </div>
-
-              </Link>
-
-            ))}
+                </Link>
+              );
+            })}
 
           </div>
 
@@ -503,8 +532,6 @@ export default function Home() {
 
           </div>
 
-
-          {/* BENEFITS */}
 
           <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
 
@@ -654,164 +681,88 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-5 lg:gap-5">
 
-              {/* UNDERSTAND */}
+              {[
+                {
+                  title: "Understand",
+                  text: "Map the process, requirements, risks and success measures",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                      <circle cx="11" cy="11" r="6.5" />
+                      <path d="m16 16 4 4" />
+                      <path d="M11 8v6M8 11h6" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: "Process",
+                  text: "Build a clear workflow with ownership, documentation and controls",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                      <rect x="3.5" y="4" width="6" height="6" rx="1" />
+                      <rect x="14.5" y="4" width="6" height="6" rx="1" />
+                      <rect x="9" y="14" width="6" height="6" rx="1" />
+                      <path d="M9.5 7h5M17.5 10v2.5M12 10v4" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: "Verify",
+                  text: "Apply quality checks, exception handling and review mechanisms",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                      <path d="M12 3.5 19 6v5.5c0 4.3-2.8 7.5-7 9-4.2-1.5-7-4.7-7-9V6l7-2.5Z" />
+                      <path d="m8.5 12 2.3 2.3 4.7-5" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: "Deliver",
+                  text: "Execute consistently with agreed SLAs, reporting and communication",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                      <path d="M4 12h13" />
+                      <path d="m13 7 5 5-5 5" />
+                      <path d="M4 5h5M4 19h5" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: "Improve",
+                  text: "Use insights, feedback and technology to refine performance",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                      <path d="M4 17 9 12l3 3 7-8" />
+                      <path d="M15 7h4v4" />
+                      <path d="M4 20h16" />
+                    </svg>
+                  ),
+                },
+              ].map((item, index) => (
 
-              <div className="group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6">
+                <div
+                  key={item.title}
+                  className={`group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6 ${
+                    index === 4 ? "col-span-2 lg:col-span-1" : ""
+                  }`}
+                >
 
-                <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
+                  <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
+                    {item.icon}
+                  </div>
 
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="h-9 w-9 sm:h-10 sm:w-10"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                  >
-                    <circle cx="11" cy="11" r="6.5" />
-                    <path d="m16 16 4 4" />
-                    <path d="M11 8v6M8 11h6" />
-                  </svg>
+                  <h3 className="mt-6 text-lg font-semibold text-[#0D2342] sm:text-xl">
+                    {item.title}
+                  </h3>
 
-                </div>
-
-                <h3 className="mt-6 text-lg font-semibold text-[#0D2342] sm:text-xl">
-                  Understand
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-[#667085]">
-                  Map the process, requirements, risks and success measures
-                </p>
-
-              </div>
-
-
-              {/* PROCESS */}
-
-              <div className="group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6">
-
-                <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
-
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="h-9 w-9 sm:h-10 sm:w-10"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                  >
-                    <rect x="3.5" y="4" width="6" height="6" rx="1" />
-                    <rect x="14.5" y="4" width="6" height="6" rx="1" />
-                    <rect x="9" y="14" width="6" height="6" rx="1" />
-                    <path d="M9.5 7h5" />
-                    <path d="M17.5 10v2.5" />
-                    <path d="M12 10v4" />
-                  </svg>
-
-                </div>
-
-                <h3 className="mt-6 text-lg font-semibold text-[#0D2342] sm:text-xl">
-                  Process
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-[#667085]">
-                  Build a clear workflow with ownership, documentation and controls
-                </p>
-
-              </div>
-
-
-              {/* VERIFY */}
-
-              <div className="group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6">
-
-                <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
-
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="h-9 w-9 sm:h-10 sm:w-10"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                  >
-                    <path d="M12 3.5 19 6v5.5c0 4.3-2.8 7.5-7 9-4.2-1.5-7-4.7-7-9V6l7-2.5Z" />
-                    <path d="m8.5 12 2.3 2.3 4.7-5" />
-                  </svg>
+                  <p className="mt-3 text-sm leading-6 text-[#667085]">
+                    {item.text}
+                  </p>
 
                 </div>
 
-                <h3 className="mt-6 text-lg font-semibold text-[#0D2342] sm:text-xl">
-                  Verify
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-[#667085]">
-                  Apply quality checks, exception handling and review mechanisms
-                </p>
-
-              </div>
-
-
-              {/* DELIVER */}
-
-              <div className="group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6">
-
-                <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
-
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="h-9 w-9 sm:h-10 sm:w-10"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                  >
-                    <path d="M4 12h13" />
-                    <path d="m13 7 5 5-5 5" />
-                    <path d="M4 5h5M4 19h5" />
-                  </svg>
-
-                </div>
-
-                <h3 className="mt-6 text-lg font-semibold text-[#0D2342] sm:text-xl">
-                  Deliver
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-[#667085]">
-                  Execute consistently with agreed SLAs, reporting and communication
-                </p>
-
-              </div>
-
-
-              {/* IMPROVE */}
-
-              <div className="group relative col-span-2 rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:col-span-1 lg:p-6">
-
-                <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
-
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="h-9 w-9 sm:h-10 sm:w-10"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                  >
-                    <path d="M4 17 9 12l3 3 7-8" />
-                    <path d="M15 7h4v4" />
-                    <path d="M4 20h16" />
-                  </svg>
-
-                </div>
-
-                <h3 className="mt-6 text-lg font-semibold text-[#0D2342] sm:text-xl">
-                  Improve
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-[#667085]">
-                  Use insights, feedback and technology to refine performance
-                </p>
-
-              </div>
+              ))}
 
             </div>
-
           </div>
 
         </div>
@@ -819,33 +770,28 @@ export default function Home() {
 
 
       {/* =====================================================
-          CTA WITH BACKGROUND IMAGE
+          CTA
       ===================================================== */}
 
       <section className="bg-white">
 
         <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28">
 
-          <div className="group relative min-h-[460px] overflow-hidden rounded-[28px] bg-[#0D2342] sm:min-h-[500px] lg:min-h-[540px]">
+          <div className="relative min-h-[420px] overflow-hidden rounded-[28px] bg-[#0D2342]">
 
             {/* CTA BACKGROUND IMAGE */}
 
             <img
-              src="/why-cta.png"
-              alt="Business consultation"
-              className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.03]"
+              src="/how-we-work-cta.png"
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover object-center"
             />
 
-            {/* DARK OVERLAY */}
+            {/* CTA OVERLAY */}
 
-            <div className="absolute inset-0 bg-[#07182F]/45" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#0D2342]/75 to-[#0D2342]/30" />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#0D2342]/75 to-[#0D2342]/20" />
-
-
-            {/* CTA CONTENT */}
-
-            <div className="relative z-10 flex min-h-[460px] items-center px-7 py-12 sm:min-h-[500px] sm:px-10 sm:py-14 lg:min-h-[540px] lg:px-16 xl:px-20">
+            <div className="relative z-10 flex min-h-[420px] items-center px-7 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-20">
 
               <div className="max-w-3xl">
 
@@ -853,13 +799,13 @@ export default function Home() {
                   Let's Explore The Right Fit
                 </p>
 
-                <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight text-white sm:mt-5 sm:text-4xl lg:text-5xl xl:text-[3.4rem]">
+                <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
                   Start with one process, validate the value, and scale with confidence
                 </h2>
 
                 <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:mt-6 sm:text-lg sm:leading-8">
-                  We would welcome the opportunity to discuss a focused pilot or
-                  defined process scope
+                  We would welcome the opportunity to discuss a focused pilot
+                  or defined process scope
                 </p>
 
                 <Link
@@ -877,7 +823,6 @@ export default function Home() {
           </div>
 
         </div>
-
       </section>
 
     </div>
