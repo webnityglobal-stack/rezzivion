@@ -6,10 +6,15 @@ const services = [
     title: "Legal Process Management",
     description:
       "Operational support for law firms and businesses managing documentation-heavy legal processes",
-    image: "/LPM.jpeg",
+    image: "/Lpm.png",
     path: "/services/legal-process-management",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <path d="M6 4h8l4 4v12H6z" />
         <path d="M14 4v5h5" />
         <path d="M9 13h6M9 16h4" />
@@ -22,13 +27,17 @@ const services = [
     title: "Finance & Accounting",
     description:
       "Reliable accounting support to maintain accurate financial records and improve day-to-day financial operations",
-    image: "/Finance.jpeg",
+    image: "/finance-&-Accounting.png",
     path: "/services/finance-accounting",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <rect x="4" y="5" width="16" height="14" rx="2.5" />
-        <path d="M8 9h8M8 13h3M14 13h2M8 16h2" />
-        <path d="M15 16h2" />
+        <path d="M8 9h8M8 13h3M14 13h2M8 16h2M15 16h2" />
       </svg>
     ),
   },
@@ -37,10 +46,15 @@ const services = [
     title: "Data & AI Enablement",
     description:
       "Trained operations teams, structured workflows and selected AI capabilities for accurate, organized and accessible data",
-    image: "/Data-AI.jpeg",
+    image: "/Data-AI.png",
     path: "/services/data-ai-enablement",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <rect x="6" y="6" width="12" height="12" rx="3" />
         <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
         <circle cx="12" cy="12" r="2.2" />
@@ -53,10 +67,15 @@ const services = [
     title: "Banking, Financial Services & Insurance",
     description:
       "Structured back-office execution designed for high-volume financial operations",
-    image: "/BFSI.jpeg",
+    image: "/BFSI.png",
     path: "/services/bfsi",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <path d="m3 9 9-5 9 5" />
         <path d="M4 9h16v2H4z" />
         <path d="M6 11v7M10 11v7M14 11v7M18 11v7" />
@@ -66,13 +85,17 @@ const services = [
     ),
   },
 ];
-
 const pillars = [
   {
     title: "Efficiency",
     text: "Streamlined workflows",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <path d="M4 19h16" />
         <path d="M6 16V9h3v7M11 16V6h3v10M16 16v-4h3v4" />
         <path d="m5 7 3-3 3 2 4-3 4 2" />
@@ -84,7 +107,12 @@ const pillars = [
     title: "Intelligence",
     text: "AI-assisted execution",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <circle cx="12" cy="12" r="4" />
         <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
         <path d="M9 12h6M12 9v6" />
@@ -96,7 +124,12 @@ const pillars = [
     title: "Value",
     text: "Cost-conscious delivery",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <path d="M5 18V9M10 18V6M15 18v-5M20 18V4" />
         <path d="M3 20h18" />
         <path d="m4 8 5-3 5 4 5-5" />
@@ -110,27 +143,44 @@ const benefits = [
     title: "Accuracy",
     text: "Quality-focused execution with defined checks",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <path d="M12 3.5 19 6v5.5c0 4.3-2.8 7.5-7 9-4.2-1.5-7-4.7-7-9V6L12 3.5Z" />
         <path d="m8.5 12 2.3 2.3 4.7-5" />
       </svg>
     ),
   },
+
   {
     title: "Efficiency",
     text: "Streamlined workflows and faster turnaround",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <path d="M4 19V10M9.3 19V6M14.7 19v-9M20 19V3" />
         <path d="m4 10 5.3-4 5.4 4 5.3-7" />
       </svg>
     ),
   },
+
   {
     title: "Scalability",
     text: "Flexible capacity that can expand with demand",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <circle cx="7" cy="17" r="3" />
         <circle cx="17" cy="7" r="3" />
         <path d="M9.2 14.8 14.8 9.2" />
@@ -138,11 +188,17 @@ const benefits = [
       </svg>
     ),
   },
+
   {
     title: "Confidentiality",
     text: "Responsible handling of sensitive information",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <rect x="4" y="10" width="16" height="10" rx="2.5" />
         <path d="M8 10V7.5a4 4 0 0 1 8 0V10" />
         <circle cx="12" cy="15" r="1.2" />
@@ -150,49 +206,38 @@ const benefits = [
       </svg>
     ),
   },
+
   {
     title: "Cost Optimization",
     text: "Reduced operational overhead with process discipline",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <circle cx="12" cy="12" r="8.5" />
         <path d="M12 7v10M15.5 9.2H10.2a2.1 2.1 0 0 0 0 4.2h3.6a2.1 2.1 0 0 1 0 4.2H8.5" />
       </svg>
     ),
   },
+
   {
     title: "AI-Enabled Operations",
     text: "AI-assisted execution with human review",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
         <rect x="6" y="6" width="12" height="12" rx="3" />
         <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
         <path d="M10 10h4v4h-4z" />
       </svg>
     ),
-  },
-];
-
-const approach = [
-  {
-    title: "Understand",
-    text: "Map the process, requirements, risks and success measures",
-  },
-  {
-    title: "Process",
-    text: "Build a clear workflow with ownership, documentation and controls",
-  },
-  {
-    title: "Verify",
-    text: "Apply quality checks, exception handling and review mechanisms",
-  },
-  {
-    title: "Deliver",
-    text: "Execute consistently with agreed SLAs, reporting and communication",
-  },
-  {
-    title: "Improve",
-    text: "Use insights, feedback and technology to refine performance",
   },
 ];
 
@@ -260,7 +305,6 @@ export default function Home() {
               </div>
 
             </div>
-
           </div>
         </div>
       </section>
@@ -294,13 +338,13 @@ export default function Home() {
                 Rezzivion is a Business Process Management services company
                 supporting essential back-office functions through structured
                 delivery, trained professionals, quality controls and practical
-                technology adoptio.
+                technology adoption
               </p>
 
               <p className="mt-5 text-base leading-7 text-[#667085] sm:text-lg sm:leading-8">
                 We take ownership of defined operational processes and provide
                 flexible capacity, so your team can focus on customers, growth
-                and strategic priorities.
+                and strategic priorities
               </p>
 
             </div>
@@ -310,42 +354,36 @@ export default function Home() {
 
           {/* PILLARS */}
 
-<div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
 
-  {pillars.map((item) => (
-    <div
-      key={item.title}
-      className="group border border-[#E1E5EB] bg-[#F7F8FA] p-6 text-center transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_50px_rgba(13,35,66,0.08)] sm:p-8 md:text-left"
-    >
+            {pillars.map((item) => (
 
-      {/* ICON */}
+              <div
+                key={item.title}
+                className="group border border-[#E1E5EB] bg-[#F7F8FA] p-6 text-center transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_50px_rgba(13,35,66,0.08)] sm:p-8 md:text-left"
+              >
 
-      <div className="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] transition duration-500 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20 md:mx-0">
+                <div className="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] transition duration-500 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20 md:mx-0">
 
-        <div className="h-8 w-8 sm:h-9 sm:w-9">
-          {item.icon}
-        </div>
+                  <div className="h-8 w-8 sm:h-9 sm:w-9">
+                    {item.icon}
+                  </div>
 
-      </div>
+                </div>
 
+                <h3 className="mt-5 text-xl font-semibold text-[#0D2342] sm:mt-7 sm:text-2xl">
+                  {item.title}
+                </h3>
 
-      {/* TITLE */}
+                <p className="mx-auto mt-2 max-w-xs text-sm leading-6 text-[#667085] sm:mt-3 sm:text-base sm:leading-7 md:mx-0">
+                  {item.text}
+                </p>
 
-      <h3 className="mt-5 text-xl font-semibold text-[#0D2342] sm:mt-7 sm:text-2xl">
-        {item.title}
-      </h3>
+              </div>
 
+            ))}
 
-      {/* DESCRIPTION */}
-
-      <p className="mx-auto mt-2 max-w-xs text-sm leading-6 text-[#667085] sm:mt-3 sm:text-base sm:leading-7 md:mx-0">
-        {item.text}
-      </p>
-
-    </div>
-  ))}
-
-</div>
+          </div>
 
         </div>
       </section>
@@ -374,28 +412,31 @@ export default function Home() {
 
           {/* SERVICE CARDS */}
 
-          <div className="mt-10 grid gap-5 sm:mt-12 lg:grid-cols-2">
+          <div className="mt-10 grid gap-6 sm:mt-12 lg:grid-cols-2">
 
             {services.map((service) => (
+
               <Link
                 key={service.title}
                 to={service.path}
-                className="group overflow-hidden border border-[#E1E5EB] bg-white transition duration-500 hover:-translate-y-1 hover:border-[#B8924A]/50 hover:shadow-[0_20px_50px_rgba(13,35,66,0.08)]"
+                className="group overflow-hidden rounded-[24px] border border-[#E1E5EB] bg-white transition duration-500 hover:-translate-y-1 hover:border-[#B8924A]/50 hover:shadow-[0_25px_60px_rgba(13,35,66,0.10)]"
               >
 
                 {/* IMAGE */}
 
-                <div className="relative h-[220px] overflow-hidden bg-[#EEF1F5] sm:h-[260px]">
+                <div className="relative h-[240px] overflow-hidden bg-[#E9EDF2] sm:h-[290px] lg:h-[310px]">
 
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="h-full w-full object-contain p-2 transition duration-700 group-hover:scale-[1.06] sm:p-4"
+                    className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.04]"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/45 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/55 via-transparent to-transparent" />
 
-                  <div className="absolute bottom-4 left-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D8B36A]/25 bg-[#0D2342]/95 text-[#D8B36A] shadow-[0_12px_30px_rgba(7,24,47,0.28)] backdrop-blur-md transition duration-300 group-hover:-translate-y-1 group-hover:bg-[#B8924A] group-hover:text-white sm:bottom-5 sm:left-5 sm:h-16 sm:w-16">
+                  {/* ICON */}
+
+                  <div className="absolute bottom-5 left-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-[#0D2342]/95 text-[#D8B36A] shadow-[0_12px_30px_rgba(7,24,47,0.28)] backdrop-blur-md transition duration-300 group-hover:-translate-y-1 group-hover:bg-[#B8924A] group-hover:text-white sm:h-16 sm:w-16">
 
                     <div className="h-7 w-7 sm:h-8 sm:w-8">
                       {service.icon}
@@ -428,6 +469,7 @@ export default function Home() {
                 </div>
 
               </Link>
+
             ))}
 
           </div>
@@ -467,15 +509,18 @@ export default function Home() {
           <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
 
             {benefits.map((item) => (
+
               <div
                 key={item.title}
                 className="group border border-[#E1E5EB] bg-white p-6 transition duration-300 hover:bg-[#F7F8FA] sm:p-8"
               >
 
                 <div className="relative mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-[#B8924A]/20 bg-[#0D2342] text-[#D8B36A] shadow-[0_10px_24px_rgba(13,35,66,0.12)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-[#B8924A] group-hover:text-white sm:mx-0 sm:h-16 sm:w-16">
+
                   <div className="h-7 w-7 sm:h-8 sm:w-8">
                     {item.icon}
                   </div>
+
                 </div>
 
                 <h3 className="mt-5 text-lg font-semibold text-[#0D2342] sm:mt-7 sm:text-xl">
@@ -487,6 +532,7 @@ export default function Home() {
                 </p>
 
               </div>
+
             ))}
 
           </div>
@@ -498,50 +544,80 @@ export default function Home() {
       {/* =====================================================
           OPERATIONS VISUAL
       ===================================================== */}
+
       <section className="bg-white">
+
         <div className="mx-auto max-w-[1440px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-20">
+
           <div className="grid items-stretch gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-6">
+
             <div className="group relative min-h-[300px] overflow-hidden rounded-[28px] bg-[#0D2342]">
+
               <img
                 src="/why-operational-partner.png"
                 alt="Operational process management"
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.06]"
               />
+
               <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/90 via-[#0D2342]/55 to-transparent" />
+
               <div className="relative z-10 flex min-h-[300px] max-w-xl flex-col justify-end p-7 sm:p-10">
+
                 <span className="mb-3 inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D8B36A] backdrop-blur-md">
                   Operational Intelligence
                 </span>
+
                 <h3 className="max-w-lg text-2xl font-semibold leading-tight text-white sm:text-3xl">
                   Structured operations built for clarity, control and scale
                 </h3>
+
               </div>
+
             </div>
 
+
             <div className="group relative min-h-[300px] overflow-hidden rounded-[28px] bg-[#07182F]">
+
               <img
                 src="/why-ai-enabled.png"
                 alt="AI-enabled operations"
                 className="absolute inset-0 h-full w-full object-cover object-center opacity-90 transition duration-700 group-hover:scale-[1.06]"
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/95 via-[#07182F]/45 to-transparent" />
+
               <div className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/10 text-[#D8B36A] backdrop-blur-md sm:right-7 sm:top-7">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  className="h-6 w-6"
+                >
                   <rect x="6" y="6" width="12" height="12" rx="3" />
                   <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
                   <path d="M10 10h4v4h-4z" />
                 </svg>
+
               </div>
+
               <div className="relative z-10 flex min-h-[300px] flex-col justify-end p-7 sm:p-10">
+
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#D8B36A]">
                   Human + AI
                 </p>
+
                 <h3 className="mt-2 text-2xl font-semibold leading-tight text-white sm:text-3xl">
                   Technology that supports people, not replaces judgment
                 </h3>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
       </section>
 
@@ -549,10 +625,11 @@ export default function Home() {
       {/* =====================================================
           OPERATING APPROACH
       ===================================================== */}
+
       <section className="bg-[#F7F8FA]">
+
         <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28">
 
-          {/* Heading */}
           <div className="mx-auto max-w-3xl text-center">
 
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A] sm:text-sm">
@@ -571,15 +648,14 @@ export default function Home() {
           </div>
 
 
-          {/* Approach Flow */}
           <div className="relative mt-10 overflow-hidden sm:mt-14 lg:mt-20">
 
-            {/* Connecting line - desktop */}
             <div className="absolute left-[10%] right-[10%] top-[48px] hidden h-px bg-[#B8924A]/30 lg:block" />
 
             <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-5 lg:gap-5">
 
-              {/* Understand */}
+              {/* UNDERSTAND */}
+
               <div className="group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6">
 
                 <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
@@ -609,7 +685,8 @@ export default function Home() {
               </div>
 
 
-              {/* Process */}
+              {/* PROCESS */}
+
               <div className="group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6">
 
                 <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
@@ -624,7 +701,6 @@ export default function Home() {
                     <rect x="3.5" y="4" width="6" height="6" rx="1" />
                     <rect x="14.5" y="4" width="6" height="6" rx="1" />
                     <rect x="9" y="14" width="6" height="6" rx="1" />
-
                     <path d="M9.5 7h5" />
                     <path d="M17.5 10v2.5" />
                     <path d="M12 10v4" />
@@ -643,7 +719,8 @@ export default function Home() {
               </div>
 
 
-              {/* Verify */}
+              {/* VERIFY */}
+
               <div className="group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6">
 
                 <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
@@ -672,7 +749,8 @@ export default function Home() {
               </div>
 
 
-              {/* Deliver */}
+              {/* DELIVER */}
+
               <div className="group relative rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:p-6">
 
                 <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
@@ -702,7 +780,8 @@ export default function Home() {
               </div>
 
 
-              {/* Improve */}
+              {/* IMPROVE */}
+
               <div className="group relative col-span-2 rounded-2xl border border-[#E1E5EB] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#B8924A]/50 hover:shadow-[0_20px_45px_rgba(13,35,66,0.10)] sm:p-7 lg:col-span-1 lg:p-6">
 
                 <div className="relative z-10 flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-[#0D2342] text-[#D8B36A] shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B8924A] group-hover:text-white sm:h-20 sm:w-20">
@@ -732,6 +811,7 @@ export default function Home() {
               </div>
 
             </div>
+
           </div>
 
         </div>
@@ -739,60 +819,67 @@ export default function Home() {
 
 
       {/* =====================================================
-    CTA
-===================================================== */}
+          CTA WITH BACKGROUND IMAGE
+      ===================================================== */}
 
       <section className="bg-white">
 
         <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28">
 
-          <div className="relative overflow-hidden rounded-[28px] bg-[#0D2342]">
+          <div className="group relative min-h-[460px] overflow-hidden rounded-[28px] bg-[#0D2342] sm:min-h-[500px] lg:min-h-[540px]">
 
-            <div className="grid items-stretch lg:grid-cols-[1.05fr_0.95fr]">
+            {/* CTA BACKGROUND IMAGE */}
 
-              <div className="relative z-10 flex flex-col justify-center p-7 sm:p-10 lg:p-14 xl:p-16">
+            <img
+              src="/why-cta.png"
+              alt="Business consultation"
+              className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.03]"
+            />
+
+            {/* DARK OVERLAY */}
+
+            <div className="absolute inset-0 bg-[#07182F]/45" />
+
+            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#0D2342]/75 to-[#0D2342]/20" />
+
+
+            {/* CTA CONTENT */}
+
+            <div className="relative z-10 flex min-h-[460px] items-center px-7 py-12 sm:min-h-[500px] sm:px-10 sm:py-14 lg:min-h-[540px] lg:px-16 xl:px-20">
+
+              <div className="max-w-3xl">
 
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A] sm:text-sm">
                   Let's Explore The Right Fit
                 </p>
 
-                <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight text-white sm:mt-5 sm:text-4xl lg:text-5xl">
+                <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight text-white sm:mt-5 sm:text-4xl lg:text-5xl xl:text-[3.4rem]">
                   Start with one process, validate the value, and scale with confidence
                 </h2>
 
-                <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:mt-6 sm:text-lg sm:leading-8">
+                <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:mt-6 sm:text-lg sm:leading-8">
                   We would welcome the opportunity to discuss a focused pilot or
                   defined process scope
                 </p>
 
-                <div>
-                  <Link
-                    to="/contact"
-                    className="mt-7 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-[#B8924A] px-7 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#c9a663] sm:mt-8 sm:px-8"
-                  >
-                    Start a Conversation
-                    <span>→</span>
-                  </Link>
-                </div>
+                <Link
+                  to="/contact"
+                  className="mt-7 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-[#B8924A] px-7 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#c9a663] sm:mt-8 sm:px-8"
+                >
+                  Start a Conversation
+                  <span>→</span>
+                </Link>
 
-              </div>
-
-              <div className="relative min-h-[260px] overflow-hidden sm:min-h-[330px] lg:min-h-[420px]">
-                <img
-                  src="/how-we-work-cta.png"
-                  alt="Business consultation and conversation"
-                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0D2342] via-[#0D2342]/20 to-transparent lg:from-[#0D2342]/75 lg:via-transparent" />
-                <div className="absolute inset-0 bg-[#0D2342]/10" />
               </div>
 
             </div>
+
           </div>
 
         </div>
 
       </section>
+
     </div>
   );
 }

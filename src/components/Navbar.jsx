@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import EnquiryModal from "./EnquiryModal.jsx";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -32,6 +33,7 @@ const serviceLinks = [
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
+    const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
 
     const location = useLocation();
 
@@ -94,8 +96,8 @@ function Navbar() {
                                             <Link
                                                 to="/services"
                                                 className={`group/services flex h-[104px] items-center gap-1.5 text-[14px] font-medium transition-colors duration-300 ${isServicesActive
-                                                        ? "text-[#B8924A]"
-                                                        : "text-[#172033] hover:text-[#B8924A]"
+                                                    ? "text-[#B8924A]"
+                                                    : "text-[#172033] hover:text-[#B8924A]"
                                                     }`}
                                             >
                                                 <span className="relative">
@@ -103,8 +105,8 @@ function Navbar() {
 
                                                     <span
                                                         className={`absolute left-0 -bottom-1 h-[1px] bg-[#B8924A] transition-all duration-300 ${isServicesActive
-                                                                ? "w-full"
-                                                                : "w-0 group-hover/services:w-full"
+                                                            ? "w-full"
+                                                            : "w-0 group-hover/services:w-full"
                                                             }`}
                                                     />
                                                 </span>
@@ -184,12 +186,13 @@ function Navbar() {
 
                         {/* ================= DESKTOP CTA ================= */}
 
-                        <Link
-                            to="/contact"
+                        <button
+                            type="button"
+                            onClick={() => setIsEnquiryOpen(true)}
                             className="ml-8 inline-flex h-[44px] min-w-[118px] items-center justify-center rounded-[4px] bg-[#0D2342] px-5 text-[14px] font-medium text-white transition-all duration-300 hover:bg-[#B8924A] xl:ml-10"
                         >
                             Let's Talk
-                        </Link>
+                        </button>
 
                     </div>
 
@@ -374,13 +377,16 @@ function Navbar() {
 
                             {/* Mobile CTA */}
 
-                            <Link
-                                to="/contact"
-                                onClick={closeMenu}
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    closeMenu();
+                                    setIsEnquiryOpen(true);
+                                }}
                                 className="mt-3 inline-flex h-11 items-center justify-center rounded-[4px] bg-[#0D2342] text-[14px] font-medium text-white transition-colors hover:bg-[#B8924A]"
                             >
                                 Let's Talk
-                            </Link>
+                            </button>
 
                         </div>
 
@@ -388,6 +394,10 @@ function Navbar() {
 
                 </div>
 
+                <EnquiryModal
+                    isOpen={isEnquiryOpen}
+                    onClose={() => setIsEnquiryOpen(false)}
+                />
             </div>
         </header>
     );
