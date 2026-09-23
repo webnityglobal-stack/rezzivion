@@ -52,17 +52,17 @@ const relatedServices = [
   {
     title: "Finance & Accounting",
     path: "/services/finance-accounting",
-    image: "/Finance.jpeg",
+    image: "/finance-&-Accounting.png",
   },
   {
     title: "Data & AI Enablement",
     path: "/services/data-ai-enablement",
-    image: "/Data-AI.jpeg",
+    image: "/Data-AI.png",
   },
   {
     title: "BFSI",
     path: "/services/bfsi",
-    image: "/BFSI.jpeg",
+    image: "/BFSI.png",
   },
 ];
 

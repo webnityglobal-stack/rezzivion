@@ -422,14 +422,14 @@ export default function Home() {
                 >
 
                   <div
-                    className={`grid overflow-hidden rounded-[28px] border border-[#E1E5EB] bg-white shadow-[0_10px_40px_rgba(13,35,66,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-[#B8924A]/35 hover:shadow-[0_24px_60px_rgba(13,35,66,0.10)] lg:min-h-[390px] lg:grid-cols-2 ${
+                    className={`grid overflow-hidden bg-white transition-all duration-500 sm:rounded-[28px] sm:border sm:border-[#E1E5EB] sm:shadow-[0_10px_40px_rgba(13,35,66,0.04)] hover:-translate-y-1 hover:border-[#B8924A]/35 hover:shadow-[0_24px_60px_rgba(13,35,66,0.10)] lg:min-h-[390px] lg:grid-cols-2 ${
                       imageLeft ? "" : "lg:[&>div:first-child]:order-2"
                     }`}
                   >
 
                     {/* ================= IMAGE ================= */}
 
-                    <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#EEF1F5] sm:min-h-[320px] lg:min-h-[390px]">
+                    <div className="relative -mx-5 flex min-h-[260px] items-center justify-center overflow-hidden bg-[#EEF1F5] sm:mx-0 sm:min-h-[320px] lg:min-h-[390px]">
 
                       <img
                         src={service.image}
