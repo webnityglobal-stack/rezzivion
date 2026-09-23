@@ -88,7 +88,7 @@ function Arrow() {
 
 export default function DataAIEnablement() {
   return (
-    <main className="bg-white text-[#172033]">
+    <main className="w-full overflow-x-hidden bg-white text-[#172033]">
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#07182F] text-white">
@@ -101,41 +101,46 @@ export default function DataAIEnablement() {
             ← All Services
           </Link>
 
-          <div className="grid items-center gap-7 pb-10 lg:grid-cols-2 lg:gap-10 lg:pb-12">
-            <div>
-              <div className="mb-5 flex items-center gap-3">
-                <span className="h-px w-10 bg-[#D8B36A]" />
+          <div className="relative mt-2 min-h-[520px] overflow-hidden rounded-[24px] sm:min-h-[560px] lg:min-h-[620px]">
 
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A]">
-                  Data & AI Enablement
-                </span>
+            <img
+              src="/Data-AI.png"
+              alt="Data and AI Enablement"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#07182F]/65 to-[#07182F]/15" />
+
+            <div className="relative z-10 flex min-h-[520px] items-center px-5 py-12 sm:min-h-[560px] sm:px-10 sm:py-16 lg:min-h-[620px] lg:px-16">
+              <div className="max-w-3xl">
+
+                <div className="mb-5 flex items-center gap-3">
+                  <span className="h-px w-10 bg-[#D8B36A]" />
+
+                  <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A] sm:text-sm">
+                    Data & AI Enablement
+                  </span>
+                </div>
+
+                <h1 className="text-4xl font-semibold leading-[1.06] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
+                  Structured data operations with focused AI capabilities
+                </h1>
+
+                <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+                  Trained operations teams, structured workflows and selected AI
+                  capabilities designed to improve data quality, processing
+                  efficiency and turnaround
+                </p>
+
+                <Link
+                  to="/contact"
+                  className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#D8B36A]"
+                >
+                  Let’s Talk
+                  <Arrow />
+                </Link>
+
               </div>
-
-              <h1 className="text-4xl font-semibold leading-[1.08] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
-                Structured data operations with focused AI capabilities
-              </h1>
-
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-                Trained operations teams, structured workflows and selected AI
-                capabilities designed to improve data quality, processing
-                efficiency and turnaround
-              </p>
-
-              <Link
-                to="/contact"
-                className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3 text-sm font-semibold hover:bg-[#D8B36A]"
-              >
-                Let’s Talk
-                <Arrow />
-              </Link>
-            </div>
-
-            <div className="overflow-hidden rounded-[28px] border border-white/10">
-              <img
-                src="/Data-AI.png"
-                alt="Data and AI Enablement"
-                className="block h-full w-full object-fill"
-              />
             </div>
           </div>
         </div>
@@ -145,11 +150,7 @@ export default function DataAIEnablement() {
       {/* EDITORIAL INTRO */}
       <section className="py-10 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
-            Data Operations
-          </span>
-
-          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#07182F] sm:text-4xl lg:text-5xl">
+          <h2 className="mt-0 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#07182F] sm:text-4xl lg:text-5xl">
             Turning data into smarter operations
           </h2>
 
@@ -172,11 +173,11 @@ export default function DataAIEnablement() {
             </p>
           </div>
 
-          <div className="mt-7 overflow-hidden rounded-[24px]">
+          <div className="mt-7 w-full overflow-hidden rounded-[24px] bg-[#F7F8FA]">
             <img
-              src="/Data-AI.png"
-              alt="Data and AI operations"
-              className="block h-full w-full aspect-[16/8] object-fill sm:aspect-[16/7]"
+              src="/images/why-ai-enabled.png"
+              alt="AI-enabled operations"
+              className="block w-full h-auto object-cover"
             />
           </div>
         </div>
@@ -184,7 +185,7 @@ export default function DataAIEnablement() {
 
 
       {/* DATA CAPABILITIES */}
-      <section className="bg-[#F7F8FA] py-10 sm:py-14 lg:py-16">
+      <section className="bg-[#F7F8FA] py-9 sm:py-12 lg:py-14">
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
             Data Operations
@@ -194,21 +195,21 @@ export default function DataAIEnablement() {
             Structured support across data-intensive processes
           </h2>
 
-          <div className="mt-8 grid gap-px overflow-hidden rounded-[24px] border border-[#E4E7EC] bg-[#E4E7EC] md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
             {dataCapabilities.map((item) => (
               <div
                 key={item.title}
-                className="group bg-white p-6 transition hover:bg-[#07182F] sm:p-7"
+                className="group flex flex-col rounded-[20px] border border-[#E4E7EC] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#07182F] hover:border-[#07182F] hover:shadow-[0_16px_35px_rgba(7,24,47,0.10)] sm:p-6"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/10 text-[#B8924A]">
                   <Arrow />
                 </div>
 
-                <h3 className="mt-5 text-lg font-semibold text-[#07182F] group-hover:text-white">
+                <h3 className="mt-4 text-lg font-semibold leading-6 text-[#07182F] group-hover:text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-[#667085] group-hover:text-white/60">
+                <p className="mt-2 text-sm leading-6 text-[#667085] group-hover:text-white/60">
                   {item.text}
                 </p>
               </div>
@@ -379,11 +380,11 @@ export default function DataAIEnablement() {
                 to={service.path}
                 className="group overflow-hidden rounded-[24px] border border-[#E4E7EC]"
               >
-                <div className="aspect-[16/10] w-full overflow-hidden">
+                <div className="w-full overflow-hidden bg-[#F7F8FA]">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="block h-full w-full object-fill transition duration-500 group-hover:scale-[1.02]"
+                    className="block w-full h-auto object-contain transition duration-500 group-hover:scale-[1.02]"
                   />
                 </div>
 

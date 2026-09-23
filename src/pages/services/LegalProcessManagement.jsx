@@ -88,61 +88,56 @@ export default function LegalProcessManagement() {
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#07182F] text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(184,146,74,0.18),transparent_35%)]" />
+        <div className="relative mx-auto w-full max-w-[1440px] px-4 py-6 sm:px-8 sm:py-8 lg:px-12">
 
-        <div className="relative mx-auto max-w-[1440px] px-6 py-8 sm:px-8 lg:px-12">
           <Link
             to="/services"
-            className="mb-12 inline-flex items-center gap-3 text-sm text-white/65 transition hover:text-[#D8B36A]"
+            className="mb-8 inline-flex items-center gap-3 text-sm text-white/65 hover:text-[#D8B36A]"
           >
             ← All Services
           </Link>
 
-          <div className="grid items-center gap-14 pb-20 lg:grid-cols-2 lg:pb-24">
-            <div>
-              <div className="mb-7 flex items-center gap-3">
-                <span className="h-px w-10 bg-[#D8B36A]" />
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A]">
-                  Legal Process Management
-                </span>
-              </div>
+          <div className="relative min-h-[560px] overflow-hidden rounded-[28px] border border-white/10 sm:min-h-[620px] lg:min-h-[680px]">
 
-              <h1 className="text-4xl font-semibold leading-[1.08] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
-                Structured support for documentation-heavy legal processes
-              </h1>
+            <img
+              src="/legal-hero.png"
+              alt="Legal Process Management"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
 
-              <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-                Operational support for law firms and businesses managing
-                documentation-heavy legal processes
-              </p>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#07182F]/65 to-[#07182F]/15" />
 
-              <div className="mt-9">
+            <div className="relative z-10 flex min-h-[560px] items-center px-5 py-12 sm:min-h-[620px] sm:px-10 lg:min-h-[680px] lg:px-16 -translate-y-8 sm:-translate-y-10 lg:-translate-y-12">
+
+              <div className="max-w-4xl">
+
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="h-px w-12 bg-[#D8B36A]" />
+
+                  <span className="text-base font-bold uppercase tracking-[0.24em] text-[#D8B36A] sm:text-lg">
+                    Legal Process Management
+                  </span>
+                </div>
+
+                <h1 className="text-4xl font-semibold leading-[1.06] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
+                  Structured support for documentation-heavy legal processes
+                </h1>
+
+                <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+                  Operational support for law firms and businesses managing
+                  documentation-heavy legal processes
+                </p>
+
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#D8B36A]"
+                  className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold text-white hover:bg-[#D8B36A]"
                 >
                   Let’s Talk
                   <Arrow />
                 </Link>
-              </div>
-            </div>
 
-            <div className="relative overflow-hidden rounded-[28px] border border-white/10">
-              <img
-                src="/legal-hero.png"
-                alt="Legal Process Management"
-                className="h-[360px] w-full object-cover sm:h-[470px]"
-              />
-
-              <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-[#07182F]/80 p-5 backdrop-blur-md">
-                <p className="text-xs uppercase tracking-[0.18em] text-[#D8B36A]">
-                  Legal Operations
-                </p>
-                <p className="mt-2 text-sm leading-6 text-white/80">
-                  Organized processes, reliable execution and operational
-                  support
-                </p>
               </div>
+
             </div>
           </div>
         </div>
@@ -454,6 +449,6 @@ export default function LegalProcessManagement() {
       </section>
 
       <Footer />
-    </main>
+    </main >
   );
 }

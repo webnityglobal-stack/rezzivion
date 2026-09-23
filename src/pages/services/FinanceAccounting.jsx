@@ -90,75 +90,61 @@ export default function FinanceAccounting() {
   return (
     <main className="w-full overflow-x-hidden bg-white text-[#172033]">
 
-      {/* =====================================================
-          HERO
-      ===================================================== */}
-
+      {/* HERO */}
       <section className="relative overflow-hidden bg-[#07182F] text-white">
-
-        <div className="relative mx-auto w-full max-w-[1440px] px-5 py-8 sm:px-8 lg:px-12">
+        <div className="relative mx-auto w-full max-w-[1440px] px-4 py-6 sm:px-8 sm:py-8 lg:px-12">
 
           <Link
             to="/services"
-            className="mb-10 inline-flex items-center gap-3 text-sm text-white/65 transition hover:text-[#D8B36A] sm:mb-12"
+            className="mb-8 inline-flex items-center gap-3 text-sm text-white/65 hover:text-[#D8B36A]"
           >
             ← All Services
           </Link>
 
-          <div className="grid items-center gap-10 pb-16 lg:grid-cols-2 lg:gap-14 lg:pb-24">
+          <div className="relative min-h-[560px] overflow-hidden rounded-[28px] border border-white/10 sm:min-h-[620px] lg:min-h-[680px]">
 
-            {/* HERO CONTENT */}
+            <img
+              src="/finance-&-Accounting.png"
+              alt="Finance & Accounting Operations"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
 
-            <div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#07182F]/65 to-[#07182F]/15" />
 
-              <div className="mb-7 flex items-center gap-3">
-                <span className="h-px w-10 bg-[#D8B36A]" />
+            <div className="relative z-10 flex min-h-[560px] items-center px-5 py-12 sm:min-h-[620px] sm:px-10 lg:min-h-[680px] lg:px-16 -translate-y-8 sm:-translate-y-10 lg:-translate-y-12">
 
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A]">
-                  Finance & Accounting
-                </span>
-              </div>
+              <div className="max-w-4xl">
 
-              <h1 className="text-4xl font-semibold leading-[1.08] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
-                Reliable support for essential finance and accounting operations
-              </h1>
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="h-px w-12 bg-[#D8B36A]" />
 
-              <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-                Structured accounting support designed to improve accuracy,
-                processing efficiency and reduce administrative workload
-              </p>
+                  <span className="text-base font-bold uppercase tracking-[0.24em] text-[#D8B36A] sm:text-lg">
+                    Finance & Accounting
+                  </span>
+                </div>
 
-              <Link
-                to="/contact"
-                className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold transition hover:bg-[#D8B36A]"
-              >
-                Let’s Talk
-                <Arrow />
-              </Link>
+                <h1 className="text-4xl font-semibold leading-[1.06] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
+                  Reliable support for essential finance and accounting operations
+                </h1>
 
-            </div>
+                <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+                  Structured accounting support designed to improve accuracy,
+                  processing efficiency and reduce administrative workload
+                </p>
 
-
-            {/* HERO IMAGE */}
-
-            <div className="w-full overflow-hidden rounded-[28px] border border-white/10 bg-[#F7F8FA]">
-
-              <div className="w-full aspect-[4/3] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/3]">
-
-                <img
-                  src="/finance-&-Accounting.png"
-                  alt="Finance and Accounting"
-                  className="block h-full w-full object-fill"
-                />
+                <Link
+                  to="/contact"
+                  className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold text-white hover:bg-[#D8B36A]"
+                >
+                  Let’s Talk
+                  <Arrow />
+                </Link>
 
               </div>
 
             </div>
-
           </div>
-
         </div>
-
       </section>
 
 

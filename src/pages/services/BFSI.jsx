@@ -121,40 +121,41 @@ export default function BFSI() {
             ← All Services
           </Link>
 
-          <div className="grid items-center gap-8 pb-10 sm:gap-10 sm:pb-14 lg:grid-cols-2 lg:gap-14 lg:pb-20">
-            <div>
-              <div className="mb-5 flex items-center gap-3 sm:mb-7">
-                <span className="h-px w-10 bg-[#D8B36A]" />
+          <div className="relative min-h-[560px] overflow-hidden rounded-[28px] border border-white/10 sm:min-h-[620px] lg:min-h-[680px]">
+            <img
+              src="/BFSI.png"
+              alt="BFSI Operations"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
 
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A]">
-                  BFSI
-                </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#07182F]/65 to-[#07182F]/15" />
+
+             <div className="relative z-10 flex min-h-[560px] items-center px-5 py-12 sm:min-h-[620px] sm:px-10 lg:min-h-[680px] lg:px-16 -translate-y-8 sm:-translate-y-10 lg:-translate-y-12">
+              <div className="max-w-4xl">
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="h-px w-12 bg-[#D8B36A]" />
+                  <span className="text-base font-bold uppercase tracking-[0.24em] text-[#D8B36A] sm:text-lg">
+                    BFSI
+                  </span>
+                </div>
+
+                <h1 className="text-4xl font-semibold leading-[1.06] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
+                  Structured back-office support for financial services operations
+                </h1>
+
+                <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+                  Operational support for banks, fintechs, lenders, insurers and
+                  financial services organizations managing high-volume processes
+                </p>
+
+                <Link
+                  to="/contact"
+                  className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold text-white hover:bg-[#D8B36A]"
+                >
+                  Let’s Talk
+                  <Arrow />
+                </Link>
               </div>
-
-              <h1 className="text-4xl font-semibold leading-[1.08] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
-                Structured back-office support for financial services operations
-              </h1>
-
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:mt-7 sm:text-lg sm:leading-8">
-                Operational support for banks, fintechs, lenders, insurers and
-                financial services organizations managing high-volume processes
-              </p>
-
-              <Link
-                to="/contact"
-                className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold hover:bg-[#D8B36A]"
-              >
-                Let’s Talk
-                <Arrow />
-              </Link>
-            </div>
-
-            <div className="w-full overflow-hidden rounded-[24px] border border-white/10">
-              <img
-                src="/BFSI.png"
-                alt="BFSI Operations"
-                className="block aspect-[4/3] h-auto w-full object-fill sm:aspect-[5/4] lg:aspect-[4/3]"
-              />
             </div>
           </div>
         </div>
@@ -187,11 +188,11 @@ export default function BFSI() {
             </p>
           </div>
 
-          <div className="mt-8 w-full overflow-hidden rounded-[24px]">
+          <div className="mt-8 w-full overflow-hidden rounded-[24px] bg-[#F7F8FA]">
             <img
-              src="/BFSI.png"
+              src="/images/why-operational-partner.png"
               alt="Financial services operations"
-              className="block aspect-[16/9] h-auto w-full object-fill"
+              className="block h-auto w-full object-cover"
             />
           </div>
         </div>
@@ -209,21 +210,21 @@ export default function BFSI() {
             Supporting high-volume financial operations
           </h2>
 
-          <div className="mt-10 grid gap-px overflow-hidden rounded-[28px] border border-[#E4E7EC] bg-[#E4E7EC] md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {capabilities.map((item) => (
               <div
                 key={item.title}
-                className="group bg-white p-6 transition hover:bg-[#07182F] sm:p-7"
+                className="group rounded-[22px] border border-[#E4E7EC] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#07182F] hover:bg-[#07182F] hover:shadow-[0_18px_40px_rgba(7,24,47,0.10)] sm:p-6"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/10 text-[#B8924A]">
                   <Arrow />
                 </div>
 
-                <h3 className="mt-5 text-lg font-semibold leading-7 text-[#07182F] group-hover:text-white">
+                <h3 className="mt-4 text-lg font-semibold leading-6 text-[#07182F] group-hover:text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-[#667085] group-hover:text-white/60">
+                <p className="mt-2 text-sm leading-6 text-[#667085] group-hover:text-white/60">
                   {item.text}
                 </p>
               </div>
@@ -256,7 +257,48 @@ export default function BFSI() {
                 key={item.title}
                 className="rounded-[22px] border border-white/10 bg-white/[0.04] p-6 sm:p-7"
               >
-                <div className="h-10 w-10 rounded-xl bg-[#B8924A]/20" />
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/20 text-[#D8B36A]">
+                  {item.title === "Maker-Checker Controls" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
+                      <circle cx="9" cy="8" r="3" />
+                      <path d="M3.5 19a5.5 5.5 0 0 1 11 0" />
+                      <path d="m15 14 2 2 4-4" />
+                    </svg>
+                  )}
+                  {item.title === "Access Controls" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
+                      <rect x="5" y="10" width="14" height="10" rx="2" />
+                      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                      <circle cx="12" cy="15" r="1" />
+                    </svg>
+                  )}
+                  {item.title === "Quality Sampling" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
+                      <path d="M12 3 19 6v5.5c0 4.3-2.8 7.5-7 9-4.2-1.5-7-4.7-7-9V6l7-3Z" />
+                      <path d="m8.5 12 2.3 2.3 4.7-5" />
+                    </svg>
+                  )}
+                  {item.title === "Exception Queues" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
+                      <rect x="5" y="4" width="14" height="16" rx="2" />
+                      <path d="M8 8h8M8 12h5M8 16h3" />
+                      <path d="m16 14 3 3" />
+                    </svg>
+                  )}
+                  {item.title === "SOP-Based Execution" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
+                      <path d="M6 4h9l3 3v13H6z" />
+                      <path d="M15 4v4h4M9 12h6M9 16h5" />
+                    </svg>
+                  )}
+                  {item.title === "Audit-Ready Records" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
+                      <path d="M6 4h12v16H6z" />
+                      <path d="M9 8h6M9 12h6M9 16h3" />
+                      <path d="m15 16 1.5 1.5 3-3" />
+                    </svg>
+                  )}
+                </div>
 
                 <h3 className="mt-5 text-lg font-semibold">
                   {item.title}
@@ -370,11 +412,11 @@ export default function BFSI() {
                 to={service.path}
                 className="group overflow-hidden rounded-[22px] border border-[#E4E7EC]"
               >
-                <div className="aspect-[16/10] w-full overflow-hidden">
+                <div className="w-full overflow-hidden bg-[#F7F8FA]">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="block h-full w-full object-fill transition duration-500 group-hover:scale-[1.02]"
+                    className="block h-auto w-full object-contain transition duration-500 group-hover:scale-[1.02]"
                   />
                 </div>
 
@@ -396,7 +438,7 @@ export default function BFSI() {
         <img
           src="/images/how-we-work-cta.png"
           alt=""
-          className="absolute inset-0 h-full w-full object-fill"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-[#07182F]/85" />
