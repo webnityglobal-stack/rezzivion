@@ -434,7 +434,7 @@ export default function Home() {
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="h-full w-full object-contain object-center transition duration-700 ease-out group-hover:scale-[1.025]"
+                        className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 ease-out group-hover:scale-[1.025]"
                       />
 
                       {/* subtle image overlay */}
@@ -461,32 +461,24 @@ export default function Home() {
                         <div className="mb-5 h-px w-12 bg-[#B8924A] transition-all duration-500 group-hover:w-20" />
 
                         <h3 className="text-2xl font-semibold leading-tight tracking-tight text-[#0D2342] sm:text-3xl lg:text-[2.35rem]">
-
                           {service.title}
-
                         </h3>
 
                         <p className="mt-4 max-w-lg text-sm leading-7 text-[#667085] sm:mt-5 sm:text-base sm:leading-8">
-
                           {service.description}
-
                         </p>
 
 
                         <div className="mt-7 inline-flex items-center gap-3 text-sm font-semibold text-[#0D2342] sm:mt-8">
 
                           <span className="relative">
-
                             Explore Service
 
                             <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#B8924A] transition-all duration-300 group-hover:w-full" />
-
                           </span>
 
                           <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#DDE2E8] text-[#B8924A] transition-all duration-300 group-hover:translate-x-1 group-hover:border-[#B8924A] group-hover:bg-[#B8924A] group-hover:text-white">
-
                             →
-
                           </span>
 
                         </div>
@@ -581,7 +573,7 @@ export default function Home() {
             <div className="group relative min-h-[300px] overflow-hidden rounded-[28px] bg-[#0D2342]">
 
               <img
-                src="/why-operational-partner.png"
+                src="/images/why-operational-partner.png"
                 alt="Operational process management"
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.06]"
               />
@@ -606,7 +598,7 @@ export default function Home() {
             <div className="group relative min-h-[300px] overflow-hidden rounded-[28px] bg-[#07182F]">
 
               <img
-                src="/why-ai-enabled.png"
+                src="/images/why-ai-enabled.png"
                 alt="AI-enabled operations"
                 className="absolute inset-0 h-full w-full object-cover object-center opacity-90 transition duration-700 group-hover:scale-[1.06]"
               />
@@ -686,7 +678,13 @@ export default function Home() {
                   title: "Understand",
                   text: "Map the process, requirements, risks and success measures",
                   icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-9 w-9 sm:h-10 sm:w-10"
+                    >
                       <circle cx="11" cy="11" r="6.5" />
                       <path d="m16 16 4 4" />
                       <path d="M11 8v6M8 11h6" />
@@ -697,7 +695,13 @@ export default function Home() {
                   title: "Process",
                   text: "Build a clear workflow with ownership, documentation and controls",
                   icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-9 w-9 sm:h-10 sm:w-10"
+                    >
                       <rect x="3.5" y="4" width="6" height="6" rx="1" />
                       <rect x="14.5" y="4" width="6" height="6" rx="1" />
                       <rect x="9" y="14" width="6" height="6" rx="1" />
@@ -709,7 +713,13 @@ export default function Home() {
                   title: "Verify",
                   text: "Apply quality checks, exception handling and review mechanisms",
                   icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-9 w-9 sm:h-10 sm:w-10"
+                    >
                       <path d="M12 3.5 19 6v5.5c0 4.3-2.8 7.5-7 9-4.2-1.5-7-4.7-7-9V6l7-2.5Z" />
                       <path d="m8.5 12 2.3 2.3 4.7-5" />
                     </svg>
@@ -719,7 +729,13 @@ export default function Home() {
                   title: "Deliver",
                   text: "Execute consistently with agreed SLAs, reporting and communication",
                   icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-9 w-9 sm:h-10 sm:w-10"
+                    >
                       <path d="M4 12h13" />
                       <path d="m13 7 5 5-5 5" />
                       <path d="M4 5h5M4 19h5" />
@@ -730,7 +746,13 @@ export default function Home() {
                   title: "Improve",
                   text: "Use insights, feedback and technology to refine performance",
                   icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-9 w-9 sm:h-10 sm:w-10">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      className="h-9 w-9 sm:h-10 sm:w-10"
+                    >
                       <path d="M4 17 9 12l3 3 7-8" />
                       <path d="M15 7h4v4" />
                       <path d="M4 20h16" />

@@ -56,17 +56,17 @@ const relatedServices = [
   {
     title: "Legal Process Management",
     path: "/services/legal-process-management",
-    image: "/LPM.jpeg",
+    image: "/Lpm.png",
   },
   {
     title: "Data & AI Enablement",
     path: "/services/data-ai-enablement",
-    image: "/Data-AI.jpeg",
+    image: "/Data-AI.png",
   },
   {
     title: "BFSI",
     path: "/services/bfsi",
-    image: "/BFSI.jpeg",
+    image: "/BFSI.png",
   },
 ];
 
@@ -88,23 +88,32 @@ function Arrow() {
 
 export default function FinanceAccounting() {
   return (
-    <main className="bg-white text-[#172033]">
+    <main className="w-full overflow-x-hidden bg-white text-[#172033]">
 
-      {/* HERO */}
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
       <section className="relative overflow-hidden bg-[#07182F] text-white">
-        <div className="relative mx-auto max-w-[1440px] px-6 py-8 sm:px-8 lg:px-12">
+
+        <div className="relative mx-auto w-full max-w-[1440px] px-5 py-8 sm:px-8 lg:px-12">
 
           <Link
             to="/services"
-            className="mb-12 inline-flex items-center gap-3 text-sm text-white/65 hover:text-[#D8B36A]"
+            className="mb-10 inline-flex items-center gap-3 text-sm text-white/65 transition hover:text-[#D8B36A] sm:mb-12"
           >
             ← All Services
           </Link>
 
-          <div className="grid items-center gap-14 pb-20 lg:grid-cols-2 lg:pb-24">
+          <div className="grid items-center gap-10 pb-16 lg:grid-cols-2 lg:gap-14 lg:pb-24">
+
+            {/* HERO CONTENT */}
+
             <div>
+
               <div className="mb-7 flex items-center gap-3">
                 <span className="h-px w-10 bg-[#D8B36A]" />
+
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A]">
                   Finance & Accounting
                 </span>
@@ -121,29 +130,48 @@ export default function FinanceAccounting() {
 
               <Link
                 to="/contact"
-                className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold hover:bg-[#D8B36A]"
+                className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold transition hover:bg-[#D8B36A]"
               >
                 Let’s Talk
                 <Arrow />
               </Link>
+
             </div>
 
-            <div className="overflow-hidden rounded-[28px] border border-white/10">
-              <img
-                src="/Finance.jpeg"
-                alt="Finance and Accounting"
-                className="h-[360px] w-full object-cover sm:h-[470px]"
-              />
+
+            {/* HERO IMAGE */}
+
+            <div className="w-full overflow-hidden rounded-[28px] border border-white/10 bg-[#F7F8FA]">
+
+              <div className="w-full aspect-[4/3] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/3]">
+
+                <img
+                  src="/finance-&-Accounting.png"
+                  alt="Finance and Accounting"
+                  className="block h-full w-full object-fill"
+                />
+
+              </div>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
 
-      {/* OVERVIEW */}
-      <section className="py-20 sm:py-24 lg:py-28">
-        <div className="mx-auto grid max-w-[1240px] gap-12 px-6 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
+      {/* =====================================================
+          OVERVIEW
+      ===================================================== */}
+
+      <section className="py-16 sm:py-24 lg:py-28">
+
+        <div className="mx-auto grid w-full max-w-[1240px] gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12 lg:px-10">
+
           <div>
+
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
               Finance Operations
             </span>
@@ -151,9 +179,11 @@ export default function FinanceAccounting() {
             <h2 className="mt-5 text-3xl font-semibold leading-tight text-[#07182F] sm:text-4xl lg:text-5xl">
               Supporting finance teams with reliable execution
             </h2>
+
           </div>
 
           <div className="lg:pt-8">
+
             <p className="text-lg leading-8 text-[#667085]">
               Finance operations require accuracy, timely processing and
               consistent handling of recurring accounting activities
@@ -164,63 +194,99 @@ export default function FinanceAccounting() {
               essential finance and accounting workflows, helping teams reduce
               administrative effort while maintaining reliable processing
             </p>
+
           </div>
+
         </div>
+
       </section>
 
 
-      {/* CAPABILITIES */}
-      <section className="bg-[#F7F8FA] py-20 sm:py-24 lg:py-28">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+      {/* =====================================================
+          KEY CAPABILITIES
+      ===================================================== */}
+
+      <section className="bg-[#F7F8FA] py-16 sm:py-24 lg:py-28">
+
+        <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
             Key Capabilities
           </span>
 
-          <h2 className="mt-5 max-w-3xl text-3xl font-semibold text-[#07182F] sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold leading-tight text-[#07182F] sm:text-4xl lg:text-5xl">
             Comprehensive support across finance and accounting
           </h2>
 
-          <div className="mt-14 grid gap-px overflow-hidden rounded-[28px] border border-[#E4E7EC] bg-[#E4E7EC] md:grid-cols-2 lg:grid-cols-3">
+
+          {/* CAPABILITY GRID */}
+
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+
             {capabilities.map((item) => (
+
               <div
                 key={item.title}
-                className="group bg-white p-7 transition hover:bg-[#07182F] sm:p-8"
+                className="group flex h-full min-h-[230px] flex-col rounded-[22px] border border-[#E4E7EC] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#07182F] hover:shadow-[0_18px_40px_rgba(7,24,47,0.10)] sm:min-h-[250px] sm:p-7"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/10 text-[#B8924A]">
+
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#B8924A]/10 text-[#B8924A] transition-colors duration-300 group-hover:bg-[#B8924A] group-hover:text-white">
                   <Arrow />
                 </div>
 
-                <h3 className="mt-7 text-lg font-semibold leading-7 text-[#07182F] group-hover:text-white">
+                <h3 className="mt-6 text-lg font-semibold leading-7 text-[#07182F] transition-colors duration-300 group-hover:text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-[#667085] group-hover:text-white/60">
+                <p className="mt-3 text-sm leading-6 text-[#667085] transition-colors duration-300 group-hover:text-white/65">
                   {item.text}
                 </p>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
 
 
-      {/* PROCESS */}
-      <section className="py-20 sm:py-24 lg:py-28">
-        <div className="mx-auto grid max-w-[1240px] items-center gap-14 px-6 sm:px-8 lg:grid-cols-2 lg:px-10">
-          <div className="overflow-hidden rounded-[28px] bg-[#F7F8FA]">
-            <img
-              src="/Finance.jpeg"
-              alt="Finance operations"
-              className="min-h-[380px] w-full object-cover sm:min-h-[500px]"
-            />
+      {/* =====================================================
+          PROCESS
+      ===================================================== */}
+
+      <section className="py-16 sm:py-24 lg:py-28">
+
+        <div className="mx-auto grid w-full max-w-[1240px] items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10">
+
+          {/* PROCESS IMAGE */}
+
+          <div className="w-full overflow-hidden rounded-[28px] bg-[#F7F8FA]">
+
+            <div className="w-full aspect-[4/3] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/3]">
+
+              <img
+                src="/finance-&-Accounting.png"
+                alt="Finance operations"
+                className="block h-full w-full object-fill"
+              />
+
+            </div>
+
           </div>
 
+
+          {/* PROCESS CONTENT */}
+
           <div>
+
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
               Structured Execution
             </span>
 
-            <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+            <h2 className="mt-5 text-3xl font-semibold leading-tight text-[#07182F] sm:text-4xl">
               Making finance operations more efficient
             </h2>
 
@@ -235,118 +301,183 @@ export default function FinanceAccounting() {
             </p>
 
             <div className="mt-8 space-y-4">
+
               {["Process", "Verify", "Deliver", "Improve"].map((item) => (
+
                 <div
                   key={item}
                   className="flex items-center gap-4 border-b border-[#EAECF0] pb-4"
                 >
-                  <span className="h-2 w-2 rounded-full bg-[#B8924A]" />
-                  <span className="font-medium text-[#344054]">{item}</span>
+
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8924A]" />
+
+                  <span className="font-medium text-[#344054]">
+                    {item}
+                  </span>
+
                 </div>
+
               ))}
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
 
-      {/* IMPACT */}
-      <section className="bg-[#07182F] py-20 text-white sm:py-24 lg:py-28">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+      {/* =====================================================
+          IMPACT
+      ===================================================== */}
+
+      <section className="bg-[#07182F] py-16 text-white sm:py-24 lg:py-28">
+
+        <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
             Business Impact
           </span>
 
-          <h2 className="mt-5 max-w-3xl text-3xl font-semibold sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
             Designed for better financial operations
           </h2>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-14 md:grid-cols-3">
+
             {impact.map((item) => (
+
               <div
                 key={item.title}
-                className="rounded-[24px] border border-white/10 bg-white/[0.04] p-8"
+                className="h-full rounded-[24px] border border-white/10 bg-white/[0.04] p-7 sm:p-8"
               >
-                <h3 className="text-xl font-semibold">{item.title}</h3>
+
+                <h3 className="text-xl font-semibold">
+                  {item.title}
+                </h3>
+
                 <p className="mt-4 text-sm leading-7 text-white/60">
                   {item.text}
                 </p>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
 
 
-      {/* RELATED */}
-      <section className="py-20 sm:py-24">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+      {/* =====================================================
+          RELATED SERVICES
+      ===================================================== */}
+
+      <section className="py-16 sm:py-24">
+
+        <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
             Explore More
           </span>
 
-          <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+          <h2 className="mt-5 text-3xl font-semibold leading-tight text-[#07182F] sm:text-4xl">
             Explore our other capabilities
           </h2>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+
+          <div className="mt-10 grid gap-5 sm:mt-12 md:grid-cols-3">
+
             {relatedServices.map((service) => (
+
               <Link
                 key={service.path}
                 to={service.path}
-                className="group overflow-hidden rounded-[24px] border border-[#E4E7EC]"
+                className="group flex h-full flex-col overflow-hidden rounded-[24px] border border-[#E4E7EC] bg-white"
               >
-                <div className="h-56 overflow-hidden">
+
+                {/* RELATED SERVICE IMAGE */}
+
+                <div className="aspect-[16/10] w-full overflow-hidden bg-[#F7F8FA]">
+
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="block h-full w-full object-fill transition duration-500 group-hover:scale-[1.02]"
                   />
+
                 </div>
 
-                <div className="flex items-center justify-between p-6">
+
+                {/* CONTENT */}
+
+                <div className="flex flex-1 items-center justify-between p-5 sm:p-6">
+
                   <h3 className="font-semibold text-[#07182F]">
                     {service.title}
                   </h3>
+
                   <Arrow />
+
                 </div>
+
               </Link>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
 
 
-      {/* CTA */}
+      {/* =====================================================
+          CTA
+      ===================================================== */}
+
       <section className="relative overflow-hidden">
+
         <img
           src="/how-we-work-cta.png"
           alt=""
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-[#07182F]/85" />
 
-        <div className="relative mx-auto max-w-[1240px] px-6 py-24 sm:px-8 lg:px-10">
+        <div className="relative mx-auto w-full max-w-[1240px] px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
             Let’s Explore the Right Fit
           </span>
 
-          <h2 className="mt-6 max-w-4xl text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">
+          <h2 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
             Start with one process, validate the value, and scale with confidence
           </h2>
 
           <Link
             to="/contact"
-            className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-7 py-4 text-sm font-semibold text-white hover:bg-[#D8B36A]"
+            className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-7 py-4 text-sm font-semibold text-white transition hover:bg-[#D8B36A]"
           >
             Let’s Talk
             <Arrow />
           </Link>
+
         </div>
+
       </section>
 
+
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
+
       <Footer />
+
     </main>
   );
 }

@@ -272,45 +272,81 @@ export default function BFSI() {
       </section>
 
 
-      {/* IMPACT */}
-      <section className="py-20 sm:py-24 lg:py-28">
+      {/* BUSINESS IMPACT */}
+      <section className="bg-[#07182F] py-20 text-white sm:py-24 lg:py-28">
         <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
             Business Impact
           </span>
 
-          <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+          <h2 className="mt-4 max-w-3xl text-3xl font-semibold sm:text-4xl lg:text-5xl">
             Designed for practical BFSI outcomes
           </h2>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+
             {[
-              [
-                "Faster Processing",
-                "Efficient execution across recurring financial operations",
-              ],
-              [
-                "Stronger Data Quality",
-                "Structured processing and validation supporting reliable information",
-              ],
-              [
-                "Reduced Operational Workload",
-                "Operational support that helps internal teams focus on higher-value priorities",
-              ],
-            ].map(([title, text]) => (
+              {
+                title: "Faster Processing",
+                text: "Efficient execution across recurring financial operations",
+                icon: "speed",
+              },
+              {
+                title: "Stronger Data Quality",
+                text: "Structured processing and validation supporting reliable information",
+                icon: "quality",
+              },
+              {
+                title: "Reduced Operational Workload",
+                text: "Operational support that helps internal teams focus on higher-value priorities",
+                icon: "work",
+              },
+            ].map((item) => (
               <div
-                key={title}
-                className="rounded-[24px] border border-[#E4E7EC] bg-[#F7F8FA] p-8"
+                key={item.title}
+                className="group rounded-[26px] border border-white/10 bg-white/[0.045] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#B8924A]/50 sm:p-9"
               >
-                <h3 className="text-xl font-semibold text-[#07182F]">
-                  {title}
+
+                <div className="flex h-[76px] w-[76px] items-center justify-center rounded-[22px] border border-[#B8924A]/30 bg-[#B8924A]/10 text-[#D8B36A]">
+
+                  {item.icon === "speed" && (
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M4 14a8 8 0 1 1 16 0" />
+                      <path d="m12 12 4-4" />
+                      <path d="M6 18h12" />
+                    </svg>
+                  )}
+
+                  {item.icon === "quality" && (
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z" />
+                      <path d="m8 12 2.5 2.5L16 9" />
+                    </svg>
+                  )}
+
+                  {item.icon === "work" && (
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="4" y="6" width="16" height="14" rx="2" />
+                      <path d="M9 6V4h6v2" />
+                      <path d="M4 11h16" />
+                      <path d="M10 11v2h4v-2" />
+                    </svg>
+                  )}
+
+                </div>
+
+                <h3 className="mt-8 text-xl font-semibold sm:text-2xl">
+                  {item.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-7 text-[#667085]">
-                  {text}
+                <p className="mt-4 text-sm leading-7 text-white/60 sm:text-base">
+                  {item.text}
                 </p>
+
               </div>
             ))}
+
           </div>
         </div>
       </section>

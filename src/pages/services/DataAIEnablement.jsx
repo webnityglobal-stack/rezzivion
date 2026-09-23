@@ -56,17 +56,17 @@ const relatedServices = [
   {
     title: "Legal Process Management",
     path: "/services/legal-process-management",
-    image: "/LPM.jpeg",
+    image: "/Lpm.png",
   },
   {
     title: "Finance & Accounting",
     path: "/services/finance-accounting",
-    image: "/Finance.jpeg",
+    image: "/finance-&-Accounting.png",
   },
   {
     title: "BFSI",
     path: "/services/bfsi",
-    image: "/BFSI.jpeg",
+    image: "/BFSI.png",
   },
 ];
 
@@ -283,36 +283,79 @@ export default function DataAIEnablement() {
       </section>
 
 
-      {/* IMPACT */}
-      <section className="bg-[#F7F8FA] py-20 sm:py-24">
+      {/* BUSINESS IMPACT */}
+      <section className="bg-[#07182F] py-20 text-white sm:py-24 lg:py-28">
         <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
             Business Impact
           </span>
 
-          <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
+          <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
             Designed for better data operations
           </h2>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+
             {[
-              ["Accurate Data", "Structured processing and quality checking"],
-              ["Organized Information", "Data structured for accessibility and downstream use"],
-              ["Faster Turnaround", "Efficient handling of recurring data workflows"],
-            ].map(([title, text]) => (
+              {
+                title: "Accurate Data",
+                text: "Structured processing and quality checking",
+                icon: "check",
+              },
+              {
+                title: "Organized Information",
+                text: "Data structured for accessibility and downstream use",
+                icon: "layers",
+              },
+              {
+                title: "Faster Turnaround",
+                text: "Efficient handling of recurring data workflows",
+                icon: "clock",
+              },
+            ].map((item) => (
               <div
-                key={title}
-                className="rounded-[24px] border border-[#E4E7EC] bg-white p-8"
+                key={item.title}
+                className="group rounded-[26px] border border-white/10 bg-white/[0.045] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#B8924A]/50 sm:p-9"
               >
-                <h3 className="text-xl font-semibold text-[#07182F]">
-                  {title}
+
+                <div className="flex h-[76px] w-[76px] items-center justify-center rounded-[22px] border border-[#B8924A]/30 bg-[#B8924A]/10 text-[#D8B36A]">
+
+                  {item.icon === "check" && (
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="m8 12 2.5 2.5L16 9" />
+                    </svg>
+                  )}
+
+                  {item.icon === "layers" && (
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="m12 3 8 4-8 4-8-4 8-4Z" />
+                      <path d="m4 12 8 4 8-4" />
+                      <path d="m4 16 8 4 8-4" />
+                    </svg>
+                  )}
+
+                  {item.icon === "clock" && (
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M12 7v5l3 2" />
+                    </svg>
+                  )}
+
+                </div>
+
+                <h3 className="mt-8 text-xl font-semibold sm:text-2xl">
+                  {item.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-7 text-[#667085]">
-                  {text}
+                <p className="mt-4 text-sm leading-7 text-white/60 sm:text-base">
+                  {item.text}
                 </p>
+
               </div>
             ))}
+
           </div>
         </div>
       </section>
