@@ -178,302 +178,166 @@ export default function LegalProcessManagement() {
             </p>
           </div>
 
-          <h3 className="mt-7 text-2xl font-semibold text-[#07182F] sm:text-3xl">Our Legal Management Services Include:</h3>
+          {/* <h3 className="mt-7 text-2xl font-semibold text-[#07182F] sm:text-3xl">Our Legal Management Services Include:</h3> */}
 
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {services.map((item, index) => (
-              <div key={item.title} className="group rounded-[24px] border border-[#E4E7EC] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#B8924A]/40 hover:bg-[#07182F] hover:shadow-[0_18px_45px_rgba(7,24,47,0.10)] sm:p-8">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#B8924A]/10 text-[#B8924A] transition group-hover:bg-[#B8924A] group-hover:text-white sm:h-[72px] sm:w-[72px]">
-                  <LegalIcon name={item.icon} size={34} strokeWidth={1.7} />
-                </div>
-                <h3 className="mt-7 text-lg font-semibold leading-7 text-[#07182F] transition group-hover:text-white sm:text-xl">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#667085] transition group-hover:text-white/60">{item.text}</p>
-                <div className="mt-7 h-px w-10 bg-[#B8924A] transition-all duration-300 group-hover:w-16" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          {/* =====================================================
+    PRE-JUDGMENT & POST-JUDGMENT SERVICES
+===================================================== */}
 
-      {/* SECTION 3 */}
-      <section className="bg-[#F7F8FA] py-10 sm:py-12 lg:py-14">
-        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+          <div className="mt-8 sm:mt-10">
 
-          {/* Heading */}
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
-              Legal Operations
-            </span>
-
-            <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] text-[#07182F] sm:mt-5 sm:text-4xl lg:text-5xl">
-              Supporting Every Stage of Legal Operations
+            <h2 className="mx-auto max-w-5xl text-center text-2xl font-semibold leading-tight tracking-[-0.02em] text-[#07182F] sm:text-3xl lg:text-4xl">
+              We Provide A Wide Range Of Pre- And Post-Judgment
+              <br className="hidden sm:block" />
+              Litigation Support. Our Services Include:
             </h2>
 
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#667085] sm:mt-5 sm:text-lg sm:leading-8">
-              Our legal management approach is designed to provide consistent
-              support throughout the legal process.
-            </p>
-          </div>
 
-          {/* Cards */}
-          <div className="mt-7 grid grid-cols-1 gap-4 sm:mt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            {/* =====================================================
+      TWO COLUMNS
+  ===================================================== */}
 
-            {stages.map((item) => (
+            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+
+              {/* =================================================
+        PRE-JUDGMENT
+    ================================================= */}
+
               <div
-                key={item.title}
                 className="
-            group
-            rounded-[22px]
-            border border-[#E4E7EC]
-            bg-white
-            p-5
-            text-center
-            transition-all duration-300
-            hover:-translate-y-1
-            hover:border-[#B8924A]/50
-            hover:shadow-[0_18px_40px_rgba(7,24,47,0.08)]
-            sm:rounded-[24px]
-            sm:p-6
-            md:text-left
-          "
+        rounded-[24px]
+        border border-[#E4E7EC]
+        bg-white
+        p-6
+        shadow-[0_8px_30px_rgba(7,24,47,0.04)]
+        sm:p-8
+        lg:p-9
+      "
               >
 
-                {/* Icon */}
-                <div
-                  className="
-              mx-auto
-              flex
-              h-16
-              w-16
-              items-center
-              justify-center
-              rounded-2xl
-              bg-[#07182F]
-              text-[#D8B36A]
-              transition-all duration-300
-              group-hover:bg-[#B8924A]
-              group-hover:text-white
-              sm:h-[68px]
-              sm:w-[68px]
-              md:mx-0
-            "
-                >
-                  <LegalIcon
-                    name={item.icon}
-                    size={32}
-                    strokeWidth={1.7}
-                  />
-                </div>
-
-                {/* Title */}
-                <h3
-                  className="
-              mt-4
-              text-lg
-              font-semibold
-              leading-6
-              text-[#07182F]
-              sm:mt-5
-              sm:text-xl
-            "
-                >
-                  {item.title}
+                <h3 className="text-xl font-semibold text-[#07182F] sm:text-2xl">
+                  Pre-judgment
                 </h3>
 
-                {/* Description */}
-                <p
-                  className="
-              mt-2.5
-              text-sm
-              leading-6
-              text-[#667085]
-              sm:mt-3
-              sm:leading-7
-            "
-                >
-                  {item.text}
-                </p>
+                <ul className="mt-6 space-y-4">
 
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5 */}
-      <section className="bg-[#07182F] py-20 text-white sm:py-24 lg:py-28">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">Operational Excellence</span>
-          <h2 className="mt-5 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] sm:text-4xl lg:text-5xl">
-            A Structured Approach To Better Legal Operations
-          </h2>
-
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {approach.map((item, index) => (
-              <div key={item.title} className="rounded-[24px] border border-white/10 bg-white/[0.045] p-6 transition hover:-translate-y-1 hover:bg-white/[0.07] sm:p-8">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#B8924A]/15 text-[#D8B36A] sm:h-[72px] sm:w-[72px]">
-                  <LegalIcon name={item.icon} size={36} strokeWidth={1.7} />
-                </div>
-                <h3 className="mt-6 text-xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/60 sm:text-base">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6 — OUR PROCESS */}
-      <section className="px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-        <div className="mx-auto max-w-[1440px]">
-
-          {/* Full Visual Process Container */}
-          <div className="relative min-h-[760px] overflow-hidden rounded-[28px] bg-[#07182F] shadow-[0_25px_70px_rgba(7,24,47,0.16)] sm:min-h-[700px] lg:min-h-[640px] lg:rounded-[34px]">
-
-            {/* FULL WIDTH IMAGE */}
-            <div className="absolute inset-0">
-              <img
-                src="/legal-process.png"
-                alt="Legal management process"
-                className="h-full w-full object-cover object-center"
-              />
-
-              {/* Desktop Image Overlay */}
-              <div className="absolute inset-0 hidden bg-gradient-to-r from-[#07182F]/95 via-[#07182F]/80 to-[#07182F]/25 lg:block" />
-
-              {/* Mobile / Tablet Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#07182F]/80 via-[#07182F]/65 to-[#07182F]/98 lg:hidden" />
-
-              {/* Subtle Gold Glow */}
-              <div className="absolute -right-24 top-1/4 h-72 w-72 rounded-full bg-[#B8924A]/10 blur-3xl" />
-            </div>
-
-            {/* CONTENT */}
-            <div className="relative z-10 flex min-h-[760px] items-center sm:min-h-[700px] lg:min-h-[640px]">
-
-              <div className="w-full px-5 py-10 sm:px-8 sm:py-12 lg:max-w-[980px] lg:px-12 xl:px-16">
-
-                {/* Section Heading */}
-                <div className="max-w-2xl">
-
-                  <div className="flex items-center gap-3">
-                    <span className="h-px w-10 bg-[#D8B36A]" />
-
-                    <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D8B36A] sm:text-sm">
-                      Our Process
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Pre-attorney suit review
                     </span>
-                  </div>
+                  </li>
 
-                  <h2 className="mt-4 text-3xl font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-4xl lg:text-5xl">
-                    How Our Legal Management Process Works
-                  </h2>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Suit assembly
+                    </span>
+                  </li>
 
-                  <p className="mt-4 max-w-xl text-sm leading-6 text-white/65 sm:text-base sm:leading-7">
-                    Our structured approach helps organizations organize legal
-                    operations, improve workflow visibility, manage documentation,
-                    and maintain better control throughout the legal lifecycle.
-                  </p>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Default request
+                    </span>
+                  </li>
 
-                </div>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Stipulations
+                    </span>
+                  </li>
 
-                {/* PROCESS GRID */}
-                <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Alias preparation
+                    </span>
+                  </li>
 
-                  {processSteps.map((item, index) => (
-                    <div
-                      key={item.number}
-                      className="group rounded-2xl border border-white/10 bg-[#07182F]/65 p-4 backdrop-blur-md transition-all duration-300 hover:border-[#D8B36A]/45 hover:bg-[#07182F]/85 sm:p-5"
-                    >
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Service follow-up and review
+                    </span>
+                  </li>
 
-                      <div className="flex gap-4">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Electronic filing
+                    </span>
+                  </li>
 
-                        {/* LARGE ICON */}
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#B8924A]/15 text-[#D8B36A] transition-all duration-300 group-hover:bg-[#B8924A] group-hover:text-white sm:h-14 sm:w-14">
-                          <LegalIcon
-                            name={item.icon}
-                            size={29}
-                            strokeWidth={1.7}
-                          />
-                        </div>
-
-                        {/* TEXT */}
-                        <div className="min-w-0">
-
-                          <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D8B36A]/75">
-                            Step {String(index + 1).padStart(2, "0")}
-                          </div>
-
-                          <h3 className="mt-1 text-sm font-semibold text-white sm:text-base">
-                            {item.title}
-                          </h3>
-
-                          <p className="mt-1 text-xs leading-5 text-white/55 sm:text-sm sm:leading-6">
-                            {item.text}
-                          </p>
-
-                        </div>
-
-                      </div>
-
-                    </div>
-                  ))}
-
-                </div>
+                </ul>
 
               </div>
+
+
+              {/* =================================================
+        POST-JUDGMENT
+    ================================================= */}
+
+              <div
+                className="
+        rounded-[24px]
+        border border-[#E4E7EC]
+        bg-white
+        p-6
+        shadow-[0_8px_30px_rgba(7,24,47,0.04)]
+        sm:p-8
+        lg:p-9
+      "
+              >
+
+                <h3 className="text-xl font-semibold text-[#07182F] sm:text-2xl">
+                  Post-judgment
+                </h3>
+
+                <ul className="mt-6 space-y-4">
+
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Judgment entry
+                    </span>
+                  </li>
+
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Garnishment preparation and filing
+                    </span>
+                  </li>
+
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Garnishment answer review
+                    </span>
+                  </li>
+
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Judgment review and validation for placed accounts
+                    </span>
+                  </li>
+
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 text-[#07182F]">◆</span>
+                    <span className="text-sm leading-7 text-[#667085] sm:text-base">
+                      Property sale for foreclosure
+                    </span>
+                  </li>
+
+                </ul>
+
+              </div>
+
             </div>
 
-            {/* Bottom Gold Accent */}
-            <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#B8924A] via-[#D8B36A] to-transparent" />
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* SECTION 7 */}
-      <section className="bg-[#F7F8FA] py-10 sm:py-12 lg:py-14">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">Business Benefits</span>
-          <h2 className="mt-5 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] text-[#07182F] sm:text-4xl lg:text-5xl">
-            Why Organizations Choose Our Legal Management Services
-          </h2>
-
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {benefits.map((item, index) => (
-              <div key={item.title} className="rounded-[24px] border border-[#E4E7EC] bg-white p-6 sm:p-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#B8924A]/10 text-[#B8924A] sm:h-[72px] sm:w-[72px]">
-                  <LegalIcon name={item.icon} size={34} strokeWidth={1.7} />
-                </div>
-                <h3 className="mt-6 text-xl font-semibold text-[#07182F]">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#667085]">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 8 */}
-      <section className="py-10 sm:py-12 lg:py-14">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">Industry Support</span>
-          <h2 className="mt-5 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] text-[#07182F] sm:text-4xl lg:text-5xl">
-            Legal Management Across Multiple Business Functions
-          </h2>
-          <p className="mt-5 max-w-3xl text-base leading-8 text-[#667085] sm:text-lg">
-            Our legal management solutions can support organizations operating across various sectors and regulatory environments.
-          </p>
-
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {industries.map((item, index) => (
-              <div key={item.title} className="rounded-[24px] border border-[#E4E7EC] bg-white p-6 sm:p-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#07182F] text-[#D8B36A] sm:h-[72px] sm:w-[72px]">
-                  <LegalIcon name={item.icon} size={36} strokeWidth={1.7} />
-                </div>
-                <h3 className="mt-6 text-xl font-semibold text-[#07182F]">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#667085]">{item.text}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
