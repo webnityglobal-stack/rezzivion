@@ -24,15 +24,38 @@ export default function Footer() {
   return (
     <footer className="bg-[#0D2342] text-white">
 
-      {/* Main Footer */}
-      <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12 lg:py-20">
+      {/* =====================================================
+          MAIN FOOTER
+      ===================================================== */}
+      <div className="mx-auto max-w-[1440px] px-6 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
 
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
+        {/* =====================================================
+            DESKTOP:
+            Brand | Company | Services | Get In Touch
 
-          {/* Brand */}
-          <div className="max-w-sm">
+            MOBILE:
+            Brand
+            Company | Services
+            Get In Touch
+        ===================================================== */}
+        <div
+          className="
+            grid
+            grid-cols-2
+            gap-x-8
+            gap-y-10
 
-            {/* Logo with white background */}
+            lg:grid-cols-[1.35fr_0.75fr_1.15fr_0.85fr]
+            lg:items-start
+            lg:gap-x-12
+            lg:gap-y-0
+          "
+        >
+
+          {/* =================================================
+              BRAND
+          ================================================= */}
+          <div className="col-span-2 lg:col-span-1">
             <Link
               to="/"
               className="inline-flex rounded-xl bg-white px-4 py-3 shadow-sm transition duration-300 hover:shadow-md"
@@ -44,28 +67,27 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="mt-6 text-sm leading-7 text-white/65">
+            <p className="mt-5 max-w-sm text-sm leading-7 text-white/65">
               A dependable extension of your business with structured
               delivery trained professionals quality controls and practical
-              technology adoption
+              technology adoption.
             </p>
 
-            <p className="mt-6 text-sm font-medium tracking-wide text-[#B8924A]">
+            <p className="mt-5 max-w-sm text-sm font-medium leading-6 tracking-wide text-[#B8924A]">
               YOUR VISION | OUR RESILIENCE | LASTING EXCELLENCE
             </p>
-
           </div>
 
 
-          {/* Company */}
+          {/* =================================================
+              COMPANY
+          ================================================= */}
           <div>
-
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8924A]">
               Company
             </h3>
 
-            <ul className="mt-6 space-y-4">
-
+            <ul className="mt-5 space-y-3">
               <li>
                 <Link
                   to="/"
@@ -110,55 +132,97 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
-
             </ul>
-
           </div>
 
 
-          {/* Services */}
+          {/* =================================================
+              SERVICES
+          ================================================= */}
           <div>
-
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8924A]">
               Services
             </h3>
 
-            <ul className="mt-6 space-y-4">
-
+            <ul className="mt-5 space-y-3">
               {serviceLinks.map((service) => (
                 <li key={service.path}>
-
                   <Link
                     to={service.path}
-                    className="text-sm leading-6 text-white/70 transition hover:text-white"
+                    className="block max-w-[230px] text-sm leading-6 text-white/70 transition hover:text-white"
                   >
                     {service.name}
                   </Link>
-
                 </li>
               ))}
-
             </ul>
-
           </div>
 
 
-          {/* Contact */}
-          <div>
+          {/* =================================================
+              GET IN TOUCH
+              
+              MOBILE:
+              Full width + centered
 
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8924A]">
-              Get In Touch
-            </h3>
+              DESKTOP:
+              Normal fourth column
+          ================================================= */}
+          <div
+            className="
+              col-span-2
+              flex
+              w-full
+              justify-center
+              border-t
+              border-white/10
+              pt-8
+              text-center
 
-            <div className="mt-6 space-y-5">
+              lg:col-span-1
+              lg:block
+              lg:border-t-0
+              lg:pt-0
+              lg:text-left
+            "
+          >
+            <div className="mx-auto w-fit lg:mx-0">
 
-              {/* Email */}
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8924A]">
+                Get In Touch
+              </h3>
+
+
+              {/* EMAIL */}
               <a
                 href="mailto:info@rezzivion.com"
-                className="group flex items-start gap-4"
+                className="
+                  group
+                  mt-5
+                  flex
+                  items-center
+                  justify-center
+                  gap-4
+                  lg:justify-start
+                "
               >
-
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] text-[#B8924A] transition group-hover:border-[#B8924A]/40">
+                <span
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-white/10
+                    bg-white/[0.05]
+                    text-[#B8924A]
+                    transition
+                    group-hover:border-[#B8924A]/40
+                  "
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -178,8 +242,7 @@ export default function Footer() {
                   </svg>
                 </span>
 
-                <div>
-
+                <div className="text-left">
                   <p className="text-xs uppercase tracking-wider text-white/40">
                     Email
                   </p>
@@ -187,16 +250,28 @@ export default function Footer() {
                   <p className="mt-1 text-sm text-white/75 transition group-hover:text-white">
                     info@rezzivion.com
                   </p>
-
                 </div>
-
               </a>
 
 
-              {/* Contact CTA */}
+              {/* LET'S TALK */}
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#B8924A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9a663]"
+                className="
+                  mt-5
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-full
+                  bg-[#B8924A]
+                  px-5
+                  py-3
+                  text-sm
+                  font-semibold
+                  text-white
+                  transition
+                  hover:bg-[#c9a663]
+                "
               >
                 Let's Talk
 
@@ -210,29 +285,56 @@ export default function Footer() {
                   <path d="M5 12h13" />
                   <path d="m13 6 6 6-6 6" />
                 </svg>
-
               </Link>
 
             </div>
-
           </div>
 
         </div>
-
       </div>
 
 
-      {/* Bottom Bar */}
+      {/* =====================================================
+          BOTTOM BAR
+      ===================================================== */}
       <div className="border-t border-white/10">
 
-        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between lg:px-12">
+        <div
+          className="
+            mx-auto
+            flex
+            max-w-[1440px]
+            flex-col
+            gap-3
+            px-6
+            py-5
+            text-center
+
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
+            sm:text-left
+
+            lg:px-12
+          "
+        >
 
           <p className="text-xs text-white/45">
             © {new Date().getFullYear()} Rezzivion
           </p>
 
-          <div className="flex items-center gap-6">
+          <div
+            className="
+              flex
+              flex-col
+              items-center
+              gap-2
 
+              sm:flex-row
+              sm:items-center
+              sm:gap-6
+            "
+          >
             <span className="text-xs text-white/45">
               Business Process Management
             </span>
@@ -243,11 +345,9 @@ export default function Footer() {
             >
               Get In Touch
             </Link>
-
           </div>
 
         </div>
-
       </div>
 
     </footer>
