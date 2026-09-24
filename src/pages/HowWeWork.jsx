@@ -308,17 +308,7 @@ const HowWeWork = () => {
               "
             />
 
-            <div className="absolute bottom-5 left-5 rounded-xl bg-[#10294B] px-5 py-4 text-white shadow-lg">
-
-              <p className="text-xs font-semibold tracking-[2px] text-[#E3B95E]">
-                STEP 01 — DISCOVER
-              </p>
-
-              <p className="mt-1 text-sm">
-                Understand before we execute.
-              </p>
-
-            </div>
+           
           </div>
 
 
@@ -405,8 +395,10 @@ const HowWeWork = () => {
           TRANSITION & OPERATE
       ===================================================== */}
       <section className="w-full bg-[#F7F8FA] py-20 sm:py-24">
+        
 
         <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-6 sm:px-10 lg:grid-cols-2 lg:px-16 xl:px-24">
+          
 
           {/* Content */}
           <div className="order-2 lg:order-1">
@@ -506,7 +498,8 @@ const HowWeWork = () => {
             />
 
           </div>
-
+          
+             
         </div>
       </section>
 
@@ -684,17 +677,7 @@ const HowWeWork = () => {
               "
             />
 
-            <div className="absolute bottom-5 left-5 rounded-xl bg-[#10294B] px-5 py-4 text-white shadow-lg">
-
-              <p className="text-xs font-semibold tracking-[2px] text-[#E3B95E]">
-                STEP 05 — IMPROVE
-              </p>
-
-              <p className="mt-1 text-sm">
-                Better processes. Better outcomes.
-              </p>
-
-            </div>
+            
 
           </div>
 

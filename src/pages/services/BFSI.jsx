@@ -32,11 +32,7 @@ const capabilities = [
     title: "Intelligent Process Automation",
     text: "Automate repetitive and rule-based activities to reduce manual effort, improve processing consistency, and allow teams to focus on higher-value work.",
   },
-  {
-    icon: "cloud",
-    title: "Cloud & Technology Modernization",
-    text: "Enable flexible and scalable technology environments that support evolving business requirements, growing workloads, and digital innovation.",
-  },
+  
 ];
 
 const technologySolutions = [
@@ -55,11 +51,7 @@ const technologySolutions = [
     title: "Advanced Analytics",
     text: "Transform operational and financial data into actionable insights through reporting, dashboards, analytics, and performance monitoring.",
   },
-  {
-    icon: "cloud",
-    title: "Cloud Enablement",
-    text: "Build scalable and flexible technology environments capable of supporting evolving financial operations and digital services.",
-  },
+ 
   {
     icon: "process",
     title: "Digital Process Management",
@@ -119,12 +111,12 @@ const ecosystem = [
   {
     title: "Insurance",
     text: "Policy operations, claims support, documentation, customer processes, compliance, and workflow management.",
-    image: "/images/insurance.png",
+    image: "/insurance.png",
   },
   {
     title: "FinTech",
     text: "Digital platforms, intelligent automation, data analytics, technology integration, and scalable operations.",
-    image: "/images/fintech.png",
+    image: "/fintech.png",
   },
 ];
 
@@ -372,8 +364,7 @@ export default function BFSI() {
                   {/* DESCRIPTION */}
                   <p className="mt-5 max-w-[700px] text-sm leading-6 text-white/75 sm:mt-5 sm:text-base sm:leading-7 lg:text-lg lg:leading-8">
                     Transform financial operations through digital transformation,
-                    intelligent automation, advanced analytics, AI, cloud
-                    technologies, and process optimization.
+                    intelligent automation, advanced analytics, and process optimization.
                   </p>
 
                   {/* BUTTON */}
@@ -419,8 +410,7 @@ export default function BFSI() {
             <p>
               Our BFSI solutions help banking, financial services, insurance,
               and FinTech organizations modernize their operations through
-              digital transformation, intelligent automation, advanced analytics,
-              AI, cloud technologies, and process optimization.
+              digital transformation, intelligent automation, advanced analytics, and process optimization.
             </p>
 
             <p>
@@ -747,7 +737,7 @@ export default function BFSI() {
             to="/contact"
             className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-7 py-4 text-sm font-semibold text-white transition hover:bg-[#D8B36A]"
           >
-            Talk To Our BFSI Experts
+            Let's Talk
             <Arrow />
           </Link>
 
