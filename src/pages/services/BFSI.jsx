@@ -2,93 +2,289 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer.jsx";
 
+/* =========================================================
+   BFSI DATA
+========================================================= */
+
 const capabilities = [
   {
-    title: "Customer Onboarding & Account Opening",
-    text: "Support for onboarding documentation and account opening processes",
+    icon: "transform",
+    title: "Digital Transformation",
+    text: "Modernize legacy environments and transform traditional processes into scalable digital workflows that improve agility, efficiency, and operational visibility.",
   },
   {
-    title: "KYC & KYB Processing",
-    text: "KYC and KYB processing, indexing and data validation",
+    icon: "customer",
+    title: "Customer Experience & Digital Journeys",
+    text: "Design seamless customer journeys across digital channels, helping financial organizations simplify interactions, improve accessibility, and create more connected experiences.",
   },
   {
-    title: "Loan & Credit Documentation",
-    text: "Operational support for loan and credit-related documentation",
+    icon: "ai",
+    title: "Data, Analytics & AI",
+    text: "Turn complex financial and operational data into meaningful insights using advanced analytics, intelligent automation, and AI-enabled decision support.",
   },
   {
-    title: "Payment & Transaction Processing",
-    text: "Structured support for payment operations and transaction processing",
+    icon: "shield",
+    title: "Risk, Compliance & Governance",
+    text: "Support structured compliance and governance processes with better documentation, monitoring, workflow controls, reporting, and operational visibility.",
   },
   {
-    title: "Reconciliation & Exception Management",
-    text: "Processing support for reconciliation and exception workflows",
+    icon: "automation",
+    title: "Intelligent Process Automation",
+    text: "Automate repetitive and rule-based activities to reduce manual effort, improve processing consistency, and allow teams to focus on higher-value work.",
   },
   {
-    title: "Disputes & Chargebacks",
-    text: "Operational support for disputes, chargebacks and service requests",
-  },
-  {
-    title: "Collections & Recovery",
-    text: "Support for defined collections and recovery processes",
-  },
-  {
-    title: "Customer & Account Data",
-    text: "Maintenance and quality support for customer and account information",
-  },
-  {
-    title: "Insurance Operations",
-    text: "Support for insurance policy servicing and claims documentation",
-  },
-  {
-    title: "MIS & Reporting",
-    text: "Operational reporting, MIS and dashboard support",
+    icon: "cloud",
+    title: "Cloud & Technology Modernization",
+    text: "Enable flexible and scalable technology environments that support evolving business requirements, growing workloads, and digital innovation.",
   },
 ];
 
-const controls = [
+const technologySolutions = [
   {
-    title: "Maker-Checker Controls",
-    text: "Independent checking across defined workflows",
+    icon: "brain",
+    title: "AI-Powered Intelligence",
+    text: "Use AI and intelligent technologies to identify patterns, automate tasks, generate insights, and support operational decision-making.",
   },
   {
-    title: "Access Controls",
-    text: "Controlled access aligned with process requirements",
+    icon: "workflow",
+    title: "Workflow Automation",
+    text: "Connect processes, approvals, documents, and teams through structured digital workflows that reduce unnecessary manual intervention.",
   },
   {
-    title: "Quality Sampling",
-    text: "Structured quality checks across processed work",
+    icon: "analytics",
+    title: "Advanced Analytics",
+    text: "Transform operational and financial data into actionable insights through reporting, dashboards, analytics, and performance monitoring.",
   },
   {
-    title: "Exception Queues",
-    text: "Defined handling of identified exceptions",
+    icon: "cloud",
+    title: "Cloud Enablement",
+    text: "Build scalable and flexible technology environments capable of supporting evolving financial operations and digital services.",
   },
   {
-    title: "SOP-Based Execution",
-    text: "Processes aligned with defined operating procedures",
+    icon: "process",
+    title: "Digital Process Management",
+    text: "Standardize and digitize business processes to improve consistency, transparency, and operational control.",
   },
   {
-    title: "Audit-Ready Records",
-    text: "Structured records supporting traceability and review",
+    icon: "secure",
+    title: "Secure Information Management",
+    text: "Support structured handling of sensitive financial information through controlled workflows, organized documentation, and governance processes.",
   },
 ];
 
-const relatedServices = [
+const lifecycle = [
   {
-    title: "Legal Process Management",
-    path: "/services/legal-process-management",
-    image: "/Lpm.png",
+    icon: "onboarding",
+    title: "Customer Onboarding",
+    text: "Streamline customer intake, documentation, verification, and account setup through structured digital workflows.",
   },
   {
-    title: "Finance & Accounting",
-    path: "/services/finance-accounting",
+    icon: "account",
+    title: "Account & Service Management",
+    text: "Coordinate customer information, service requests, documentation, and operational activities through centralized processes.",
+  },
+  {
+    icon: "transaction",
+    title: "Transaction & Operations Support",
+    text: "Improve high-volume operational processes with automation, workflow management, and real-time visibility.",
+  },
+  {
+    icon: "risk",
+    title: "Risk & Compliance",
+    text: "Organize compliance activities, regulatory requirements, monitoring, documentation, and reporting.",
+  },
+  {
+    icon: "data",
+    title: "Data & Analytics",
+    text: "Convert operational data into insights that help teams understand performance, identify opportunities, and support informed decisions.",
+  },
+  {
+    icon: "optimize",
+    title: "Continuous Optimization",
+    text: "Continuously improve workflows, technology adoption, and operational processes as business requirements evolve.",
+  },
+];
+
+const ecosystem = [
+  {
+    title: "Banking",
+    text: "Digital banking, customer operations, workflow management, compliance, analytics, and process modernization.",
+    image: "/BFSI.png",
+  },
+  {
+    title: "Financial Services",
+    text: "Financial operations, automation, data intelligence, customer servicing, and digital transformation.",
     image: "/finance-&-Accounting.png",
   },
   {
-    title: "Data & AI Enablement",
-    path: "/services/data-ai-enablement",
-    image: "/Data-AI.png",
+    title: "Insurance",
+    text: "Policy operations, claims support, documentation, customer processes, compliance, and workflow management.",
+    image: "/images/insurance.png",
+  },
+  {
+    title: "FinTech",
+    text: "Digital platforms, intelligent automation, data analytics, technology integration, and scalable operations.",
+    image: "/images/fintech.png",
   },
 ];
+
+/* =========================================================
+   ICONS
+========================================================= */
+
+function Icon({ name, size = 28 }) {
+  const common = {
+    width: size,
+    height: size,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "1.6",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": "true",
+  };
+
+  const icons = {
+    transform: (
+      <>
+        <rect x="3" y="4" width="7" height="6" rx="1" />
+        <rect x="14" y="14" width="7" height="6" rx="1" />
+        <path d="M10 7h4a3 3 0 0 1 3 3v4" />
+        <path d="m14 12 3 3 3-3" />
+      </>
+    ),
+
+    customer: (
+      <>
+        <circle cx="12" cy="8" r="3" />
+        <path d="M5 20a7 7 0 0 1 14 0" />
+        <path d="M19 6h2M20 5v2" />
+      </>
+    ),
+
+    ai: (
+      <>
+        <circle cx="12" cy="12" r="7" />
+        <path d="M9 12h6M12 9v6" />
+        <path d="M5 5 3 3M19 5l2-2M5 19l-2 2M19 19l2 2" />
+      </>
+    ),
+
+    shield: (
+      <>
+        <path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z" />
+        <path d="m8 12 2.5 2.5L16 9" />
+      </>
+    ),
+
+    automation: (
+      <>
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+        <path d="m5 5 2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+      </>
+    ),
+
+    cloud: (
+      <>
+        <path d="M7 18h10a4 4 0 0 0 .5-8A5.5 5.5 0 0 0 7 8.5 4.5 4.5 0 0 0 7 18Z" />
+        <path d="M9 14h6M12 11v6" />
+      </>
+    ),
+
+    brain: (
+      <>
+        <path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5 3 3 0 0 0 3 5h2" />
+        <path d="M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5 3 3 0 0 1-3 5h-2" />
+        <path d="M9 4v16M15 4v16M9 9h6M9 15h6" />
+      </>
+    ),
+
+    workflow: (
+      <>
+        <rect x="3" y="3" width="6" height="5" rx="1" />
+        <rect x="15" y="16" width="6" height="5" rx="1" />
+        <rect x="15" y="3" width="6" height="5" rx="1" />
+        <path d="M9 5.5h6M18 8v5a3 3 0 0 1-3 3H9" />
+      </>
+    ),
+
+    analytics: (
+      <>
+        <path d="M4 19V5M4 19h16" />
+        <path d="m7 15 4-4 3 2 5-6" />
+      </>
+    ),
+
+    process: (
+      <>
+        <rect x="4" y="3" width="16" height="18" rx="2" />
+        <path d="M8 8h8M8 12h8M8 16h5" />
+        <path d="m15 16 1.5 1.5L19 15" />
+      </>
+    ),
+
+    secure: (
+      <>
+        <rect x="5" y="10" width="14" height="10" rx="2" />
+        <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+        <circle cx="12" cy="15" r="1" />
+      </>
+    ),
+
+    onboarding: (
+      <>
+        <circle cx="9" cy="8" r="3" />
+        <path d="M3 20a6 6 0 0 1 12 0" />
+        <path d="M17 8v6M14 11h6" />
+      </>
+    ),
+
+    account: (
+      <>
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <circle cx="12" cy="9" r="2.5" />
+        <path d="M8 17a4 4 0 0 1 8 0" />
+      </>
+    ),
+
+    transaction: (
+      <>
+        <path d="M4 7h14" />
+        <path d="m15 4 3 3-3 3" />
+        <path d="M20 17H6" />
+        <path d="m9 14-3 3 3 3" />
+      </>
+    ),
+
+    risk: (
+      <>
+        <path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z" />
+        <path d="M12 8v4" />
+        <circle cx="12" cy="15.5" r=".8" />
+      </>
+    ),
+
+    data: (
+      <>
+        <ellipse cx="12" cy="5" rx="7" ry="3" />
+        <path d="M5 5v7c0 1.7 3.1 3 7 3s7-1.3 7-3V5" />
+        <path d="M5 12v7c0 1.7 3.1 3 7 3s7-1.3 7-3v-7" />
+      </>
+    ),
+
+    optimize: (
+      <>
+        <circle cx="12" cy="12" r="8" />
+        <path d="M12 8v4l3 2" />
+        <path d="m17 3 3 3" />
+      </>
+    ),
+  };
+
+  return <svg {...common}>{icons[name]}</svg>;
+}
 
 function Arrow() {
   return (
@@ -99,6 +295,9 @@ function Arrow() {
       fill="none"
       stroke="currentColor"
       strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
     >
       <path d="M5 12h14" />
       <path d="m13 6 6 6-6 6" />
@@ -106,283 +305,341 @@ function Arrow() {
   );
 }
 
+/* =========================================================
+   BFSI PAGE
+========================================================= */
+
 export default function BFSI() {
   return (
     <main className="w-full overflow-x-hidden bg-white text-[#172033]">
 
-      {/* HERO */}
+      {/* =====================================================
+    SECTION 1 — HERO
+===================================================== */}
       <section className="relative overflow-hidden bg-[#07182F] text-white">
-        <div className="relative mx-auto w-full max-w-[1440px] px-4 py-6 sm:px-8 sm:py-8 lg:px-12">
+        <div className="mx-auto w-full max-w-[1440px] px-4 pb-5 pt-3 sm:px-8 sm:pb-8 sm:pt-4 lg:px-12 lg:pb-10 lg:pt-5">
 
+          {/* Back Link */}
           <Link
             to="/services"
-            className="mb-8 inline-flex items-center gap-3 text-sm text-white/65 hover:text-[#D8B36A]"
+            className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-white/70 transition hover:text-[#D8B36A] sm:mb-5"
           >
             ← All Services
           </Link>
 
-          <div className="relative min-h-[560px] overflow-hidden rounded-[28px] border border-white/10 sm:min-h-[620px] lg:min-h-[680px]">
+          {/* HERO CARD */}
+          <div className="relative isolate overflow-hidden rounded-[22px] border border-white/10 bg-[#07182F] shadow-[0_25px_70px_rgba(0,0,0,0.22)] sm:rounded-[28px]">
+
+            {/* FULL IMAGE
+          Natural width/height is maintained.
+          No object-cover cropping.
+      */}
             <img
               src="/BFSI.png"
-              alt="BFSI Operations"
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              alt="Banking Financial Services and Insurance"
+              className="block h-auto min-h-[520px] w-full object-contain object-center sm:min-h-0"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#07182F]/65 to-[#07182F]/15" />
+            {/* DARK OVERLAY */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#07182F]/95 via-[#07182F]/72 to-[#07182F]/20" />
 
-             <div className="relative z-10 flex min-h-[560px] items-center px-5 py-12 sm:min-h-[620px] sm:px-10 lg:min-h-[680px] lg:px-16 -translate-y-8 sm:-translate-y-10 lg:-translate-y-12">
-              <div className="max-w-4xl">
-                <div className="mb-6 flex items-center gap-3">
-                  <span className="h-px w-12 bg-[#D8B36A]" />
-                  <span className="text-base font-bold uppercase tracking-[0.24em] text-[#D8B36A] sm:text-lg">
-                    BFSI
-                  </span>
+            {/* Extra bottom gradient for readability */}
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#07182F]/70 to-transparent" />
+
+            {/* CONTENT */}
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full px-5 py-8 sm:px-10 sm:py-10 lg:px-16 lg:py-12">
+
+                <div className="max-w-[850px]">
+
+                  {/* CATEGORY */}
+                  <div className="mb-4 flex items-center gap-3 sm:mb-5">
+                    <span className="h-px w-10 bg-[#D8B36A] sm:w-14" />
+
+                    <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#D8B36A] sm:text-sm sm:tracking-[0.22em]">
+                      Banking, Financial Services & Insurance
+                    </span>
+                  </div>
+
+                  {/* HEADING */}
+                  <h1 className="max-w-[820px] text-[38px] font-semibold leading-[1.03] tracking-[-0.035em] text-white sm:text-5xl lg:text-[64px] xl:text-[70px]">
+                    Modernizing Financial Services
+                    <span className="block">
+                      For A Digital-First World
+                    </span>
+                  </h1>
+
+                  {/* DESCRIPTION */}
+                  <p className="mt-5 max-w-[700px] text-sm leading-6 text-white/75 sm:mt-5 sm:text-base sm:leading-7 lg:text-lg lg:leading-8">
+                    Transform financial operations through digital transformation,
+                    intelligent automation, advanced analytics, AI, cloud
+                    technologies, and process optimization.
+                  </p>
+
+                  {/* BUTTON */}
+                  <Link
+                    to="/contact"
+                    className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-black/10 transition-all duration-300 hover:bg-[#D8B36A] hover:-translate-y-0.5 sm:mt-7 sm:px-7 sm:py-4"
+                  >
+                    Let's Talk
+                    <Arrow />
+                  </Link>
+
                 </div>
-
-                <h1 className="text-4xl font-semibold leading-[1.06] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
-                  Structured back-office support for financial services operations
-                </h1>
-
-                <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
-                  Operational support for banks, fintechs, lenders, insurers and
-                  financial services organizations managing high-volume processes
-                </p>
-
-                <Link
-                  to="/contact"
-                  className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3.5 text-sm font-semibold text-white hover:bg-[#D8B36A]"
-                >
-                  Let’s Talk
-                  <Arrow />
-                </Link>
               </div>
             </div>
+
           </div>
         </div>
       </section>
-
-
-      {/* INTRO */}
+      {/* =====================================================
+          SECTION 2 — INTRO
+      ===================================================== */}
       <section className="py-14 sm:py-20 lg:py-24">
         <div className="mx-auto w-full max-w-[1100px] px-4 sm:px-8 lg:px-10">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
-            BFSI Operations
+            BFSI Solutions
           </span>
 
-          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#07182F] sm:text-5xl">
-            Financial services operations are evolving rapidly
+          <h2 className="mt-4 max-w-5xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#07182F] sm:text-5xl">
+            Transforming Financial Services For A Smarter, More Connected Future
           </h2>
 
-          <div className="mt-6 max-w-4xl space-y-5 text-base leading-7 sm:text-lg sm:leading-8 text-[#667085]">
+          <div className="mt-6 max-w-5xl space-y-5 text-base leading-7 text-[#667085] sm:text-lg sm:leading-8">
+
             <p>
-              Banks, fintechs, lenders and insurers manage high volumes of
-              documentation, customer information and recurring operational
-              processes that require accuracy, consistency and strong controls
+              The financial services landscape is changing rapidly. Customers
+              expect faster, simpler, and more personalized digital experiences,
+              while financial organizations must manage increasing regulatory
+              requirements, operational complexity, cybersecurity concerns, and
+              growing volumes of data.
             </p>
 
             <p>
-              Rezzivion provides structured back-office support across
-              onboarding, KYC/KYB, loan documentation, payment operations,
-              reconciliation, disputes, collections, insurance servicing and
-              reporting
+              Our BFSI solutions help banking, financial services, insurance,
+              and FinTech organizations modernize their operations through
+              digital transformation, intelligent automation, advanced analytics,
+              AI, cloud technologies, and process optimization.
             </p>
+
+            <p>
+              By connecting people, processes, data, and technology, we help
+              organizations create more efficient operations, strengthen
+              governance, improve decision-making, and deliver consistent
+              customer experiences across the financial lifecycle.
+            </p>
+
           </div>
 
           <div className="mt-8 w-full overflow-hidden rounded-[24px] bg-[#F7F8FA]">
             <img
               src="/images/why-operational-partner.png"
-              alt="Financial services operations"
+              alt="Modern financial services operations"
               className="block h-auto w-full object-cover"
             />
           </div>
+
         </div>
       </section>
 
 
-      {/* CAPABILITIES */}
+      {/* =====================================================
+          SECTION 3 — KEY CAPABILITIES
+      ===================================================== */}
       <section className="bg-[#F7F8FA] py-14 sm:py-20 lg:py-24">
         <div className="mx-auto w-full max-w-[1240px] px-4 sm:px-8 lg:px-10">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
             Key Capabilities
           </span>
 
-          <h2 className="mt-5 max-w-3xl text-3xl font-semibold text-[#07182F] sm:text-4xl lg:text-5xl">
-            Supporting high-volume financial operations
+          <h2 className="mt-5 max-w-4xl text-3xl font-semibold leading-tight text-[#07182F] sm:text-4xl lg:text-5xl">
+            Building Smarter, More Efficient Financial Operations
           </h2>
 
-          <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-[#667085] sm:text-base sm:leading-8">
+            Our capabilities combine technology, process expertise, data
+            intelligence, and operational discipline to help financial
+            organizations modernize and scale.
+          </p>
+
+          <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
             {capabilities.map((item) => (
               <div
                 key={item.title}
                 className="group rounded-[22px] border border-[#E4E7EC] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#07182F] hover:bg-[#07182F] hover:shadow-[0_18px_40px_rgba(7,24,47,0.10)] sm:p-6"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/10 text-[#B8924A]">
-                  <Arrow />
+
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#B8924A]/10 text-[#B8924A] transition group-hover:bg-[#B8924A] group-hover:text-white">
+                  <Icon name={item.icon} size={30} />
                 </div>
 
-                <h3 className="mt-4 text-lg font-semibold leading-6 text-[#07182F] group-hover:text-white">
+                <h3 className="mt-5 text-lg font-semibold leading-6 text-[#07182F] group-hover:text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-[#667085] group-hover:text-white/60">
+                <p className="mt-3 text-sm leading-6 text-[#667085] group-hover:text-white/65">
                   {item.text}
                 </p>
+
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
 
-      {/* CONTROLS */}
+      {/* =====================================================
+          SECTION 4 — TECHNOLOGY
+      ===================================================== */}
       <section className="bg-[#07182F] py-14 text-white sm:py-20 lg:py-24">
         <div className="mx-auto w-full max-w-[1240px] px-4 sm:px-8 lg:px-10">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
-            Control & Quality
+            Technology & Innovation
           </span>
 
-          <h2 className="mt-5 max-w-3xl text-3xl font-semibold sm:text-4xl lg:text-5xl">
-            Built around controlled execution
+          <h2 className="mt-5 max-w-4xl text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+            Technology That Enables Smarter Financial Operations
           </h2>
 
-          <p className="mt-5 max-w-3xl text-sm leading-7 sm:text-base sm:leading-8 text-white/60">
-            BFSI operations can incorporate structured controls across defined
-            workflows, with regulated decisions and approvals remaining with
-            the client where required
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-white/60 sm:text-base sm:leading-8">
+            Modern BFSI operations depend on connected technology, intelligent
+            workflows, reliable data, and secure information management.
           </p>
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {controls.map((item) => (
+
+            {technologySolutions.map((item) => (
               <div
                 key={item.title}
-                className="rounded-[22px] border border-white/10 bg-white/[0.04] p-6 sm:p-7"
+                className="group rounded-[22px] border border-white/10 bg-white/[0.04] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#B8924A]/50 hover:bg-white/[0.07] sm:p-7"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B8924A]/20 text-[#D8B36A]">
-                  {item.title === "Maker-Checker Controls" && (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
-                      <circle cx="9" cy="8" r="3" />
-                      <path d="M3.5 19a5.5 5.5 0 0 1 11 0" />
-                      <path d="m15 14 2 2 4-4" />
-                    </svg>
-                  )}
-                  {item.title === "Access Controls" && (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
-                      <rect x="5" y="10" width="14" height="10" rx="2" />
-                      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
-                      <circle cx="12" cy="15" r="1" />
-                    </svg>
-                  )}
-                  {item.title === "Quality Sampling" && (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
-                      <path d="M12 3 19 6v5.5c0 4.3-2.8 7.5-7 9-4.2-1.5-7-4.7-7-9V6l7-3Z" />
-                      <path d="m8.5 12 2.3 2.3 4.7-5" />
-                    </svg>
-                  )}
-                  {item.title === "Exception Queues" && (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
-                      <rect x="5" y="4" width="14" height="16" rx="2" />
-                      <path d="M8 8h8M8 12h5M8 16h3" />
-                      <path d="m16 14 3 3" />
-                    </svg>
-                  )}
-                  {item.title === "SOP-Based Execution" && (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
-                      <path d="M6 4h9l3 3v13H6z" />
-                      <path d="M15 4v4h4M9 12h6M9 16h5" />
-                    </svg>
-                  )}
-                  {item.title === "Audit-Ready Records" && (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
-                      <path d="M6 4h12v16H6z" />
-                      <path d="M9 8h6M9 12h6M9 16h3" />
-                      <path d="m15 16 1.5 1.5 3-3" />
-                    </svg>
-                  )}
+
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#B8924A]/30 bg-[#B8924A]/10 text-[#D8B36A] transition group-hover:bg-[#B8924A] group-hover:text-white">
+                  <Icon name={item.icon} size={30} />
                 </div>
 
-                <h3 className="mt-5 text-lg font-semibold">
+                <h3 className="mt-5 text-lg font-semibold text-white sm:text-xl">
                   {item.title}
                 </h3>
 
                 <p className="mt-3 text-sm leading-7 text-white/60">
                   {item.text}
                 </p>
+
               </div>
             ))}
+
           </div>
+
         </div>
       </section>
 
 
-      {/* BUSINESS IMPACT */}
-      <section className="bg-[#07182F] py-14 text-white sm:py-20 lg:py-24">
+      {/* =====================================================
+    SECTION 5 — FINANCIAL LIFECYCLE
+===================================================== */}
+      <section className="py-10 sm:py-14 lg:py-18">
         <div className="mx-auto w-full max-w-[1240px] px-4 sm:px-8 lg:px-10">
 
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
-            Business Impact
-          </span>
+          {/* Section Heading */}
+          <div className="max-w-4xl">
 
-          <h2 className="mt-4 max-w-3xl text-3xl font-semibold sm:text-4xl lg:text-5xl">
-            Designed for practical BFSI outcomes
-          </h2>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#B8924A] sm:text-xs">
+              Financial Lifecycle
+            </span>
 
-          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            <h2 className="mt-3 text-[28px] font-semibold leading-[1.12] tracking-[-0.025em] text-[#07182F] sm:mt-4 sm:text-4xl lg:text-5xl">
+              Driving Efficiency Across The Financial Lifecycle
+            </h2>
 
-            {[
-              {
-                title: "Faster Processing",
-                text: "Efficient execution across recurring financial operations",
-                icon: "speed",
-              },
-              {
-                title: "Stronger Data Quality",
-                text: "Structured processing and validation supporting reliable information",
-                icon: "quality",
-              },
-              {
-                title: "Reduced Operational Workload",
-                text: "Operational support that helps internal teams focus on higher-value priorities",
-                icon: "work",
-              },
-            ].map((item) => (
+            <p className="mt-4 max-w-3xl text-sm leading-6 text-[#667085] sm:mt-5 sm:text-base sm:leading-8">
+              From customer onboarding to continuous optimization, structured
+              digital processes can help financial organizations improve
+              consistency, visibility, and operational efficiency.
+            </p>
+
+          </div>
+
+          {/* Lifecycle Cards */}
+          <div className="mt-7 grid grid-cols-1 gap-3 sm:mt-9 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+
+            {lifecycle.map((item) => (
               <div
                 key={item.title}
-                className="group rounded-[22px] border border-white/10 bg-white/[0.045] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#B8924A]/50 sm:p-7"
+                className="
+            group
+            rounded-[20px]
+            border border-[#E4E7EC]
+            bg-white
+            p-5
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:border-[#B8924A]/50
+            hover:shadow-[0_18px_45px_rgba(7,24,47,0.08)]
+            sm:rounded-[22px]
+            sm:p-6
+            lg:p-7
+          "
               >
 
-                <div className="flex h-16 w-16 items-center justify-center rounded-[22px] border border-[#B8924A]/30 bg-[#B8924A]/10 text-[#D8B36A]">
-
-                  {item.icon === "speed" && (
-                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M4 14a8 8 0 1 1 16 0" />
-                      <path d="m12 12 4-4" />
-                      <path d="M6 18h12" />
-                    </svg>
-                  )}
-
-                  {item.icon === "quality" && (
-                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z" />
-                      <path d="m8 12 2.5 2.5L16 9" />
-                    </svg>
-                  )}
-
-                  {item.icon === "work" && (
-                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <rect x="4" y="6" width="16" height="14" rx="2" />
-                      <path d="M9 6V4h6v2" />
-                      <path d="M4 11h16" />
-                      <path d="M10 11v2h4v-2" />
-                    </svg>
-                  )}
-
+                {/* Icon */}
+                <div
+                  className="
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
+              rounded-[15px]
+              bg-[#07182F]
+              text-[#D8B36A]
+              transition-all duration-300
+              group-hover:bg-[#B8924A]
+              group-hover:text-white
+              sm:h-14
+              sm:w-14
+              sm:rounded-2xl
+            "
+                >
+                  <Icon
+                    name={item.icon}
+                    size={27}
+                  />
                 </div>
 
-                <h3 className="mt-6 text-xl font-semibold sm:text-2xl">
+                {/* Title */}
+                <h3
+                  className="
+              mt-4
+              text-[17px]
+              font-semibold
+              leading-6
+              text-[#07182F]
+              sm:mt-5
+              sm:text-lg
+              lg:text-xl
+            "
+                >
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-white/60 sm:text-base">
+                {/* Description */}
+                <p
+                  className="
+              mt-2.5
+              text-[13px]
+              leading-6
+              text-[#667085]
+              sm:mt-3
+              sm:text-sm
+              sm:leading-7
+            "
+                >
                   {item.text}
                 </p>
 
@@ -390,79 +647,115 @@ export default function BFSI() {
             ))}
 
           </div>
+
         </div>
       </section>
 
-
-      {/* RELATED */}
-      <section className="py-14 sm:py-20">
+      {/* =====================================================
+          SECTION 6 — FINANCIAL ECOSYSTEM
+      ===================================================== */}
+      <section className="bg-[#F7F8FA] py-14 sm:py-20 lg:py-24">
         <div className="mx-auto w-full max-w-[1240px] px-4 sm:px-8 lg:px-10">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
-            Explore More
+            Financial Ecosystem
           </span>
 
-          <h2 className="mt-5 text-3xl font-semibold text-[#07182F] sm:text-4xl">
-            Explore our other capabilities
+          <h2 className="mt-5 max-w-4xl text-3xl font-semibold leading-tight text-[#07182F] sm:text-4xl lg:text-5xl">
+            Built For The Evolving Financial Ecosystem
           </h2>
 
-          <div className="mt-9 grid gap-4 md:grid-cols-3">
-            {relatedServices.map((service) => (
-              <Link
-                key={service.path}
-                to={service.path}
-                className="group overflow-hidden rounded-[22px] border border-[#E4E7EC]"
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-[#667085] sm:text-base sm:leading-8">
+            Our BFSI solutions can support organizations across banking,
+            financial services, insurance, and FinTech through technology-led
+            transformation and scalable operational solutions.
+          </p>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+
+            {ecosystem.map((item) => (
+              <div
+                key={item.title}
+                className="group overflow-hidden rounded-[24px] border border-[#E4E7EC] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(7,24,47,0.10)]"
               >
-                <div className="w-full overflow-hidden bg-[#F7F8FA]">
+
+                <div className="relative aspect-[16/8] overflow-hidden bg-[#E9EDF2]">
                   <img
-                    src={service.image}
-                    alt={service.title}
-                    className="block h-auto w-full object-contain transition duration-500 group-hover:scale-[1.02]"
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#07182F]/65 via-transparent to-transparent" />
+
+                  <div className="absolute bottom-4 left-5">
+                    <span className="rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-[#07182F]">
+                      {item.title}
+                    </span>
+                  </div>
                 </div>
 
-                <div className="flex items-center justify-between p-5 sm:p-6">
-                  <h3 className="font-semibold text-[#07182F]">
-                    {service.title}
+                <div className="p-6 sm:p-7">
+                  <h3 className="text-xl font-semibold text-[#07182F]">
+                    {item.title}
                   </h3>
-                  <Arrow />
+
+                  <p className="mt-3 text-sm leading-7 text-[#667085]">
+                    {item.text}
+                  </p>
                 </div>
-              </Link>
+
+              </div>
             ))}
+
           </div>
+
         </div>
       </section>
 
 
-      {/* CTA */}
+      {/* =====================================================
+          SECTION 7 — CTA
+      ===================================================== */}
       <section className="relative overflow-hidden">
+
         <img
           src="/images/how-we-work-cta.png"
           alt=""
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-[#07182F]/85" />
+        <div className="absolute inset-0 bg-[#07182F]/88" />
 
         <div className="relative mx-auto w-full max-w-[1240px] px-4 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D8B36A]">
-            Let’s Explore the Right Fit
+            Let’s Build The Future Of Financial Services
           </span>
 
-          <h2 className="mt-5 max-w-4xl text-3xl font-semibold text-white sm:text-5xl lg:text-6xl">
-            Start with one process, validate the value, and scale with confidence
+          <h2 className="mt-5 max-w-5xl text-3xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+            Build A Smarter, More Connected Financial Operation
           </h2>
+
+          <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
+            Modernize your processes, strengthen operational control, and
+            create digital experiences designed for the evolving financial
+            services landscape.
+          </p>
 
           <Link
             to="/contact"
-            className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-7 py-4 text-sm font-semibold text-white hover:bg-[#D8B36A]"
+            className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#B8924A] px-7 py-4 text-sm font-semibold text-white transition hover:bg-[#D8B36A]"
           >
-            Let’s Talk
+            Talk To Our BFSI Experts
             <Arrow />
           </Link>
+
         </div>
       </section>
 
       <Footer />
+
     </main>
   );
 }

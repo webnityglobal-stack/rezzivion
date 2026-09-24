@@ -139,7 +139,7 @@ export default function LegalProcessManagement() {
                   </span>
                 </div>
                 <h1 className="max-w-3xl text-3xl font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl">
-                  Streamline Legal Operations. Improve Accuracy. Strengthen Compliance.
+                  Streamline Legal Operations  Strengthen Compliance
                 </h1>
                 <p className="mt-4 max-w-2xl text-sm leading-6 text-white/75 sm:text-base sm:leading-7">
                   Managing legal processes requires accuracy, coordination, documentation, and timely execution.
@@ -152,7 +152,7 @@ export default function LegalProcessManagement() {
                   organized and transparent.
                 </p>
                 <Link to="/contact" className="mt-4 inline-flex w-fit items-center gap-3 rounded-full bg-[#B8924A] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(184,146,74,0.25)] transition hover:-translate-y-0.5 hover:bg-[#D8B36A]">
-                  Talk To Our Legal Experts <Arrow />
+                  Let's Talk <Arrow />
                 </Link>
               </div>
             </div>
@@ -197,51 +197,106 @@ export default function LegalProcessManagement() {
 
       {/* SECTION 3 */}
       <section className="bg-[#F7F8FA] py-10 sm:py-12 lg:py-14">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">Legal Operations</span>
-          <h2 className="mt-5 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] text-[#07182F] sm:text-4xl lg:text-5xl">
-            Supporting Every Stage of Legal Operations
-          </h2>
-          <p className="mt-5 max-w-3xl text-base leading-8 text-[#667085] sm:text-lg">
-            Our legal management approach is designed to provide consistent support throughout the legal process.
-          </p>
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
 
-          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {stages.map((item, index) => (
-              <div key={item.title} className="rounded-[24px] border border-[#E4E7EC] bg-white p-6 sm:p-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#07182F] text-[#D8B36A] sm:h-[72px] sm:w-[72px]">
-                  <LegalIcon name={item.icon} size={34} strokeWidth={1.7} />
-                </div>
-                <h3 className="mt-6 text-xl font-semibold text-[#07182F]">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#667085]">{item.text}</p>
-              </div>
-            ))}
+          {/* Heading */}
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+              Legal Operations
+            </span>
+
+            <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] text-[#07182F] sm:mt-5 sm:text-4xl lg:text-5xl">
+              Supporting Every Stage of Legal Operations
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#667085] sm:mt-5 sm:text-lg sm:leading-8">
+              Our legal management approach is designed to provide consistent
+              support throughout the legal process.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* SECTION 4 */}
-      <section className="py-10 sm:py-12 lg:py-14">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">Flexible Legal Solutions</span>
-          <h2 className="mt-5 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] text-[#07182F] sm:text-4xl lg:text-5xl">
-            Legal Management Solutions Built Around Your Workflow
-          </h2>
-          <p className="mt-5 max-w-3xl text-base leading-8 text-[#667085] sm:text-lg">
-            Every organization has different legal processes, approval structures, and compliance requirements. Our solutions can be structured
-            around your existing workflow rather than forcing your team into a one-size-fits-all system.
-          </p>
+          {/* Cards */}
+          <div className="mt-7 grid grid-cols-1 gap-4 sm:mt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
 
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {solutions.map((item, index) => (
-              <div key={item.title} className="rounded-[24px] border border-[#E4E7EC] bg-[#F7F8FA] p-6 sm:p-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#B8924A]/10 text-[#B8924A] sm:h-[72px] sm:w-[72px]">
-                  <LegalIcon name={item.icon} size={34} strokeWidth={1.7} />
+            {stages.map((item) => (
+              <div
+                key={item.title}
+                className="
+            group
+            rounded-[22px]
+            border border-[#E4E7EC]
+            bg-white
+            p-5
+            text-center
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:border-[#B8924A]/50
+            hover:shadow-[0_18px_40px_rgba(7,24,47,0.08)]
+            sm:rounded-[24px]
+            sm:p-6
+            md:text-left
+          "
+              >
+
+                {/* Icon */}
+                <div
+                  className="
+              mx-auto
+              flex
+              h-16
+              w-16
+              items-center
+              justify-center
+              rounded-2xl
+              bg-[#07182F]
+              text-[#D8B36A]
+              transition-all duration-300
+              group-hover:bg-[#B8924A]
+              group-hover:text-white
+              sm:h-[68px]
+              sm:w-[68px]
+              md:mx-0
+            "
+                >
+                  <LegalIcon
+                    name={item.icon}
+                    size={32}
+                    strokeWidth={1.7}
+                  />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-[#07182F]">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#667085]">{item.text}</p>
+
+                {/* Title */}
+                <h3
+                  className="
+              mt-4
+              text-lg
+              font-semibold
+              leading-6
+              text-[#07182F]
+              sm:mt-5
+              sm:text-xl
+            "
+                >
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  className="
+              mt-2.5
+              text-sm
+              leading-6
+              text-[#667085]
+              sm:mt-3
+              sm:leading-7
+            "
+                >
+                  {item.text}
+                </p>
+
               </div>
             ))}
+
           </div>
         </div>
       </section>
