@@ -1,68 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer.jsx";
-const services = [
-  { icon: "FileText", title: "Legal Document Management", text: "Organize, classify, maintain, and track legal documents through structured digital workflows." },
-  { icon: "BriefcaseBusiness", title: "Case & Matter Management", text: "Centralize case information, activities, documents, deadlines, and communications for better visibility." },
-  { icon: "Workflow", title: "Legal Workflow Management", text: "Standardize repetitive legal processes and create efficient workflows for improved productivity." },
-  { icon: "ShieldCheck", title: "Compliance Management", text: "Track regulatory requirements, important deadlines, documentation, and compliance activities." },
-  { icon: "FileSignature", title: "Contract Management", text: "Manage contracts throughout their lifecycle, including creation, review, approvals, renewals, and expiration tracking." },
-  { icon: "SearchCheck", title: "Legal Research & Documentation Support", text: "Assist legal teams with structured research, information gathering, document preparation, and record organization." },
-];
-
-const stages = [
-  { icon: "ClipboardCheck", title: "Legal Intake & Assessment", text: "We organize incoming legal requests, collect required information, categorize matters, and establish the appropriate workflow for each case." },
-  { icon: "Files", title: "Document Preparation & Management", text: "We help prepare, organize, classify, and maintain legal documents while ensuring that relevant records remain easily accessible." },
-  { icon: "Route", title: "Review & Workflow Coordination", text: "Legal matters are routed through defined review and approval processes, helping teams maintain consistency and reduce unnecessary delays." },
-  { icon: "CalendarCheck", title: "Compliance & Deadline Tracking", text: "Important deadlines, renewals, obligations, and compliance activities can be monitored through structured processes and reporting." },
-  { icon: "FolderKanban", title: "Case & Matter Monitoring", text: "Centralized tracking provides visibility into ongoing matters, pending actions, documents, responsibilities, and status updates." },
-  { icon: "Archive", title: "Closure & Record Management", text: "Once a matter is completed, relevant documentation and records can be organized and maintained for future reference and audit requirements." },
-];
-
-const solutions = [
-  { icon: "BriefcaseBusiness", title: "Matter Management", text: "Centralized management of legal matters, case information, documents, activities, and status." },
-  { icon: "FileSignature", title: "Contract Lifecycle Management", text: "Manage contracts from drafting and review through approval, execution, renewal, and closure." },
-  { icon: "Files", title: "Document & Records Management", text: "Create an organized system for storing, categorizing, retrieving, and maintaining legal records." },
-  { icon: "ShieldCheck", title: "Compliance Tracking", text: "Monitor compliance activities, deadlines, documentation, and recurring obligations." },
-  { icon: "Settings2", title: "Legal Operations Support", text: "Provide structured operational assistance to legal teams to improve productivity and process consistency." },
-  { icon: "BarChart3", title: "Reporting & Analytics", text: "Generate meaningful reports that provide visibility into workload, case status, turnaround times, and operational activities." },
-];
-
-const approach = [
-  { icon: "LayoutDashboard", title: "Centralized Documentation", text: "Keep legal documents, records, and matter-related information organized in a structured environment." },
-  { icon: "FolderKanban", title: "Matter & Case Coordination", text: "Track legal matters from intake to completion while maintaining visibility across every stage." },
-  { icon: "RefreshCw", title: "Workflow Automation", text: "Reduce manual effort by creating standardized workflows for recurring legal processes and approvals." },
-  { icon: "LockKeyhole", title: "Secure Information Management", text: "Support controlled access and organized handling of sensitive legal information and documentation." },
-  { icon: "Eye", title: "Reporting & Visibility", text: "Gain clearer visibility into ongoing matters, pending tasks, deadlines, and operational performance." },
-  { icon: "CircleCheckBig", title: "Compliance & Quality Control", text: "Establish consistent processes that help teams monitor requirements and maintain accurate records." },
-];
-
-const benefits = [
-  { icon: "Cog", title: "Improved Operational Efficiency", text: "Streamlined workflows help legal teams manage more work with greater consistency." },
-  { icon: "FileText", title: "Better Document Control", text: "Structured document management makes important information easier to organize and retrieve." },
-  { icon: "Eye", title: "Greater Process Visibility", text: "Centralized tracking provides a clearer view of ongoing matters and pending activities." },
-  { icon: "Workflow", title: "Reduced Administrative Work", text: "Standardized workflows can reduce repetitive manual activities and unnecessary follow-ups." },
-  { icon: "ShieldCheck", title: "Improved Compliance Tracking", text: "Organized monitoring helps teams stay aware of deadlines, requirements, and recurring obligations." },
-  { icon: "Target", title: "Scalable Legal Operations", text: "Processes can be adapted as your organization, legal workload, and operational requirements grow." },
-];
-
-const industries = [
-  { icon: "Landmark", title: "Banking & Financial Services", text: "Legal documentation, compliance processes, contracts, and matter management." },
-  { icon: "HeartPulse", title: "Healthcare", text: "Contract administration, documentation workflows, compliance support, and records management." },
-  { icon: "Building2", title: "Corporate & Enterprise", text: "Contracts, corporate legal matters, documentation, approvals, and compliance tracking." },
-  { icon: "Shield", title: "Insurance", text: "Claims-related legal processes, documentation, case coordination, and regulatory workflows." },
-  { icon: "House", title: "Real Estate", text: "Agreements, property-related documentation, compliance, and legal matter management." },
-  { icon: "Users", title: "Professional Services", text: "Contract management, legal documentation, workflow coordination, and operational support." },
-];
-
-const processSteps = [
-  { icon: "SearchCheck", number: "01", title: "Discover", text: "We understand your existing legal processes, operational challenges, documentation requirements, and business objectives." },
-  { icon: "FolderKanban", number: "02", title: "Organize", text: "We structure your legal information, documents, workflows, responsibilities, and processes into clearly defined categories." },
-  { icon: "Settings2", number: "03", title: "Implement", text: "We establish the required workflows, tracking mechanisms, documentation systems, and operational processes." },
-  { icon: "Cog", number: "04", title: "Manage", text: "Our team supports day-to-day legal operations while monitoring tasks, documents, deadlines, and workflow progress." },
-  { icon: "Eye", number: "05", title: "Monitor", text: "Regular tracking and reporting provide visibility into ongoing matters and help identify process gaps." },
-  { icon: "Lightbulb", number: "06", title: "Improve", text: "We continuously identify opportunities to simplify processes, reduce manual work, and improve operational efficiency." },
-];
 
 const relatedServices = [
   { title: "Finance & Accounting", path: "/services/finance-accounting", image: "/finance-&-Accounting.png" },
@@ -339,6 +277,296 @@ export default function LegalProcessManagement() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* =====================================================
+    SEPARATE SECTION — COLLECTION LITIGATION SUPPORT
+===================================================== */}
+      <section className="bg-[#F7F8FA] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+
+          {/* SECTION HEADER */}
+          <div className="max-w-4xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8924A]">
+              Collection Litigation Support
+            </span>
+
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.025em] text-[#07182F] sm:text-4xl lg:text-5xl">
+              End-to-End Collection Litigation Support
+            </h2>
+
+            <p className="mt-4 max-w-4xl text-sm leading-7 text-[#667085] sm:text-base sm:leading-8">
+              End-to-end operational support across the collection litigation
+              lifecycle, helping clients improve turnaround, consistency,
+              documentation, and case visibility.
+            </p>
+
+            <div className="mt-5 h-1 w-20 rounded-full bg-[#B8924A]" />
+          </div>
+
+
+          {/* =================================================
+        SERVICE CARDS
+    ================================================= */}
+          <div
+            className="
+        mt-8
+        flex
+        gap-5
+        overflow-x-auto
+        pb-4
+        snap-x
+        snap-mandatory
+        scrollbar-hide
+
+        lg:grid
+        lg:grid-cols-3
+        lg:gap-6
+        lg:overflow-visible
+        lg:pb-0
+      "
+          >
+
+            {/* DOCUMENT PROCESSING */}
+            <div
+              className="
+          group
+          min-w-[290px]
+          snap-start
+          rounded-[22px]
+          border
+          border-[#D9E0EA]
+          bg-[#F8FAFC]
+          p-6
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:border-[#B8924A]/50
+          hover:bg-white
+          hover:shadow-[0_18px_45px_rgba(7,24,47,0.08)]
+          sm:min-w-[340px]
+          lg:min-w-0
+          lg:p-7
+        "
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#07182F] text-[#D8B36A] transition group-hover:bg-[#B8924A] group-hover:text-white">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-7 w-7"
+                >
+                  <path d="M6 3h9l3 3v15H6z" />
+                  <path d="M15 3v4h4" />
+                  <path d="M9 12h6M9 16h6" />
+                </svg>
+              </div>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#07182F]">
+                Document Processing
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-[#667085]">
+                Retrieve and organize case documents from client systems and
+                portals. Validate completeness, apply case-specific requirements,
+                and route files for review.
+              </p>
+            </div>
+
+
+            {/* SUIT REVIEW */}
+            <div
+              className="
+          group
+          min-w-[290px]
+          snap-start
+          rounded-[22px]
+          border
+          border-[#D9E0EA]
+          bg-[#F8FAFC]
+          p-6
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:border-[#B8924A]/50
+          hover:bg-white
+          hover:shadow-[0_18px_45px_rgba(7,24,47,0.08)]
+          sm:min-w-[340px]
+          lg:min-w-0
+          lg:p-7
+        "
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#07182F] text-[#D8B36A] transition group-hover:bg-[#B8924A] group-hover:text-white">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-7 w-7"
+                >
+                  <path d="M4 5h16v14H4z" />
+                  <path d="M8 9h8M8 13h6" />
+                </svg>
+              </div>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#07182F]">
+                Suit Review & Preparation
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-[#667085]">
+                Review accounts after the demand period, validate litigation
+                requirements, and prepare complete suit packages for attorney
+                review and filing.
+              </p>
+            </div>
+
+
+            {/* ELECTRONIC FILING */}
+            <div
+              className="
+          group
+          min-w-[290px]
+          snap-start
+          rounded-[22px]
+          border
+          border-[#D9E0EA]
+          bg-[#F8FAFC]
+          p-6
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:border-[#B8924A]/50
+          hover:bg-white
+          hover:shadow-[0_18px_45px_rgba(7,24,47,0.08)]
+          sm:min-w-[340px]
+          lg:min-w-0
+          lg:p-7
+        "
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#07182F] text-[#D8B36A] transition group-hover:bg-[#B8924A] group-hover:text-white">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-7 w-7"
+                >
+                  <path d="M5 4h14v16H5z" />
+                  <path d="M8 8h8M8 12h8M8 16h5" />
+                </svg>
+              </div>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#07182F]">
+                Electronic Filing & Retrieval
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-[#667085]">
+                Prepare and submit approved filings through applicable court
+                systems. Retrieve filed documents, update case records, and
+                maintain organized documentation.
+              </p>
+            </div>
+
+
+            {/* JUDGMENT & HEARING */}
+            <div
+              className="
+          group
+          min-w-[290px]
+          snap-start
+          rounded-[22px]
+          border
+          border-[#D9E0EA]
+          bg-[#F8FAFC]
+          p-6
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:border-[#B8924A]/50
+          hover:bg-white
+          hover:shadow-[0_18px_45px_rgba(7,24,47,0.08)]
+          sm:min-w-[340px]
+          lg:min-w-0
+          lg:p-7
+        "
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#07182F] text-[#D8B36A] transition group-hover:bg-[#B8924A] group-hover:text-white">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-7 w-7"
+                >
+                  <path d="M4 19h16" />
+                  <path d="M6 17V9l6-4 6 4v8" />
+                  <path d="M9 17v-5h6v5" />
+                </svg>
+              </div>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#07182F]">
+                Judgment & Hearing Support
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-[#667085]">
+                Prepare hearing and judgment support packages for eligible cases,
+                capture hearing outcomes, and update systems with approved
+                judgment information and adjustments.
+              </p>
+            </div>
+
+
+            {/* POST-JUDGMENT SUPPORT */}
+            <div
+              className="
+          group
+          min-w-[290px]
+          snap-start
+          rounded-[22px]
+          border
+          border-[#D9E0EA]
+          bg-[#F8FAFC]
+          p-6
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:border-[#B8924A]/50
+          hover:bg-white
+          hover:shadow-[0_18px_45px_rgba(7,24,47,0.08)]
+          sm:min-w-[340px]
+          lg:min-w-0
+          lg:p-7
+        "
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#07182F] text-[#D8B36A] transition group-hover:bg-[#B8924A] group-hover:text-white">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-7 w-7"
+                >
+                  <path d="M4 19h16" />
+                  <path d="M6 17l4-4 3 3 5-6" />
+                  <path d="M15 10h3v3" />
+                </svg>
+              </div>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#07182F]">
+                Post-Judgment Support
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-[#667085]">
+                Support garnishments, property liens, receiverships, asset
+                verification, and post-garnishment actions, including order
+                tracking, sale coordination, and related documentation.
+              </p>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
